@@ -1,0 +1,192 @@
+@charset "UTF-8";
+body {
+  background-color: #e9e0cc;
+}
+
+body::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 500vh;
+  background-image: url(../images/bg.png);
+  opacity: 0.3;
+  background-blend-mode: lighten;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  width: 350px;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+header h1 img {
+  width: 100%;
+}
+header #h_txt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #26150b;
+  border-bottom: 2px solid #26150b;
+}
+header #h_txt p {
+  text-transform: capitalize;
+  padding: 10px 0;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  font-family: "Abril Fatface", cursive;
+}
+
+main .wrap1 {
+  border: 1px solid #26150b;
+  width: 1020px;
+  margin: 100px auto;
+}
+main .wrap1 .img_g {
+  width: 1000px;
+  margin: 10px auto;
+  position: relative;
+}
+main .wrap1 .img_g .forest {
+  width: 100%;
+  height: 900px;
+  background-image: url(../images/forest.png), url(../images/bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-blend-mode: luminosity;
+  border: 2px solid #26150b;
+}
+main .wrap1 .img_g .book {
+  position: absolute;
+  bottom: 300px;
+  left: 150px;
+  width: 300px;
+  z-index: 300;
+}
+main .wrap1 .img_g .book img {
+  width: 100%;
+}
+main .wrap1 .img_g .post {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+main .wrap1 .img_g .post img {
+  width: 100%;
+}
+main .wrap1 .img_g .post:after {
+  content: "Look at my PF";
+  font-family: "Allura", cursive;
+  font-size: 2.5rem;
+  height: 50px;
+  color: #26150b;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .wrap1 .img_g .key {
+  position: absolute;
+  top: 230px;
+  right: 195px;
+  width: 230px;
+  z-index: 300;
+  transform: rotate(12deg);
+}
+main .wrap1 .img_g .key img {
+  width: 100%;
+}
+main .wrap1 .img_g .book,
+main .wrap1 .img_g .post,
+main .wrap1 .img_g .key {
+  background-repeat: no-repeat;
+}
+main .wrap2 {
+  text-align: center;
+  border-top: 1px solid #26150b;
+  border-bottom: 1px solid #26150b;
+  padding: 110px 0;
+}
+main .wrap2 h1 {
+  margin-bottom: 100px;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+}
+main .wrap2 h1 span {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.5rem;
+}
+main .wrap2 ul {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+main .wrap2 ul li h2 {
+  font-size: 1.3rem;
+  font-family: "Abril Fatface", cursive;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #26150b;
+}
+main .wrap2 ul li .contents {
+  border-top: 1px solid #26150b;
+  padding-top: 15px;
+}
+main .wrap2 ul li .contents p {
+  line-height: 1.8;
+}
+main .wrap2 ul li .contents p span {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+main .wrap2 ul li .certificate_g p:last-child {
+  margin-top: 20px;
+}
+main .wrap2 ul li .education_g p {
+  margin-top: 20px;
+}
+main .wrap2 ul li .education_g p:first-child {
+  margin-top: 0;
+}
+main .wrap2 .main02_img {
+  position: relative;
+  width: 1200px;
+  display: inline-block;
+}
+main .wrap2 .main02_img a { /* 열쇠 이미지 */
+  width: 250px;
+  display: inline-block;
+  position: absolute;
+  top: -250px;
+  left: -50px;
+  transform: scaleX(-1);
+}
+main .wrap2 .main02_img a img {
+  width: 100%;
+}
+main .wrap2 .main02_img p { /* 손 이미지 */
+  width: 170px;
+  position: absolute;
+  top: -110px;
+  left: 55px;
+}
+main .wrap2 .main02_img p img {
+  width: 100%;
+}
+main .wrap3 { /* book img */ }/*# sourceMappingURL=main.css.map */
