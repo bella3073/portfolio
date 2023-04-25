@@ -7,7 +7,6 @@ body::after {
   content: "";
   display: inline-block;
   width: 100%;
-  height: 500vh;
   background-image: url(../images/bg.png);
   opacity: 0.3;
   background-blend-mode: lighten;
@@ -113,28 +112,29 @@ main .wrap1 .img_g .key {
 }
 main .wrap2 {
   text-align: center;
+  position: relative;
   border-top: 1px solid #26150b;
   border-bottom: 1px solid #26150b;
   padding: 110px 0;
 }
-main .wrap2 h1 {
+main .wrap2 > h1 {
   margin-bottom: 100px;
   font-size: 1.5rem;
   line-height: 1.8;
   letter-spacing: -0.02em;
 }
-main .wrap2 h1 span {
+main .wrap2 > h1 span {
   font-family: "Abril Fatface", cursive;
   font-size: 1.5rem;
 }
-main .wrap2 ul {
+main .wrap2 > ul {
   width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-main .wrap2 ul li h2 {
+main .wrap2 > ul li h2 {
   font-size: 1.3rem;
   font-family: "Abril Fatface", cursive;
   text-transform: capitalize;
@@ -142,26 +142,26 @@ main .wrap2 ul li h2 {
   margin-bottom: 4px;
   border-bottom: 1px solid #26150b;
 }
-main .wrap2 ul li .contents {
+main .wrap2 > ul li .contents {
   border-top: 1px solid #26150b;
   padding-top: 15px;
 }
-main .wrap2 ul li .contents p {
+main .wrap2 > ul li .contents p {
   line-height: 1.8;
 }
-main .wrap2 ul li .contents p span {
+main .wrap2 > ul li .contents p span {
   font-family: "Abril Fatface", cursive;
   letter-spacing: 0.02em;
   font-weight: 400;
   text-transform: capitalize;
 }
-main .wrap2 ul li .certificate_g p:last-child {
+main .wrap2 > ul li .certificate_g p:last-child {
   margin-top: 20px;
 }
-main .wrap2 ul li .education_g p {
+main .wrap2 > ul li .education_g p {
   margin-top: 20px;
 }
-main .wrap2 ul li .education_g p:first-child {
+main .wrap2 > ul li .education_g p:first-child {
   margin-top: 0;
 }
 main .wrap2 .main02_img {
@@ -189,4 +189,462 @@ main .wrap2 .main02_img p { /* 손 이미지 */
 main .wrap2 .main02_img p img {
   width: 100%;
 }
-main .wrap3 { /* book img */ }/*# sourceMappingURL=main.css.map */
+main .wrap2 .wrap3 {
+  display: none; /* ------------------------------------------open book display_none!!!!! */
+}
+main .wrap2 .wrap3 > .wrap3_img { /* book img */
+  width: 1000px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .wrap2 .wrap3 > .wrap3_img img {
+  width: 100%;
+}
+main .wrap2 .wrap3 > .wrap3_img .lock {
+  background-image: url(../images/lock_shadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 260px;
+  right: -45px;
+  transform: rotate(-20deg);
+}
+main .wrap2 .wrap3 > .wrap3_img .key {
+  background-image: url(../images/key1_shadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+}
+main .wrap2 .wrap3 > .wrap3_img .hand {
+  background-image: url(../images/hand_shadow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 170px;
+  position: absolute;
+  bottom: -35px;
+  left: 30px;
+  transform: rotate(-17deg) scaleX(-1);
+}
+main .wrap2 .wrap3 .contents {
+  width: 550px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main .wrap2 .wrap3 .contents .b_contents {
+  z-index: 500;
+}
+main .wrap2 .wrap3 .contents .b_contents h1 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+  font-family: "Abril Fatface", cursive;
+  text-transform: capitalize;
+}
+main .wrap2 .wrap3 .contents .b_left h1 {
+  width: 150px;
+  position: absolute;
+  top: -520px;
+  left: -25px;
+  border-bottom: 1px solid #26150b;
+}
+main .wrap2 .wrap3 .contents .b_left h1:after {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background: #26150b;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g {
+  position: absolute;
+  top: -415px;
+  left: -7px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li { /* 포토샵 */
+  /* 일러스트 */
+  /* html */
+  /* css */
+  /* scss */
+  /* j-script */
+  /* j-query */
+  /* php include */
+  /* figma */
+  /* git hub */
+  /* gunboard */
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar {
+  content: "";
+  display: inline-block;
+  width: 240px;
+  height: 7px;
+  background: #aca18d;
+  border-radius: 10px;
+  margin-bottom: 21.2px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar:after {
+  content: "";
+  display: inline-block;
+  height: 7px;
+  position: absolute;
+  left: 0;
+  background: #7a6d53;
+  border-radius: 10px;
+  margin-bottom: 21.2px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar1:after {
+  width: 220px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar2:after {
+  width: 170px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar3:after {
+  width: 210px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar4:after {
+  width: 200px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar5:after {
+  width: 200px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar6:after {
+  width: 150px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar8:after {
+  width: 100px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar9:after {
+  width: 220px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar10:after {
+  width: 190px;
+}
+main .wrap2 .wrap3 .contents .b_left .bar_g li .bar11:after {
+  width: 100px;
+}
+main .wrap2 .wrap3 .contents .b_right h1 {
+  width: 150px;
+  position: absolute;
+  top: -520px;
+  right: -5px;
+  border-bottom: 1px solid #26150b;
+}
+main .wrap2 .wrap3 .contents .b_right h1:after {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background: #26150b;
+}
+main .wrap2 .wrap3 .contents .b_right .see_more {
+  position: absolute;
+  top: -95px;
+  right: -4px;
+  font-weight: 1000;
+}
+main .wrap2 .wrap3:before {
+  content: "";
+  display: block;
+  background: rgba(207, 195, 169, 0.5529411765);
+  width: 100%;
+  height: 775px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .wrap4 {
+  width: 1400px;
+  margin: 140px auto;
+  position: relative;
+}
+main .wrap4 .w4_contents {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 110px 0;
+}
+main .wrap4 .w4_contents .w4_left {
+  text-align: center;
+  margin-left: 70px;
+}
+main .wrap4 .w4_contents .w4_left p {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+main .wrap4 .w4_contents .w4_left h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  padding: 30px 0 20px;
+}
+main .wrap4 .w4_contents .w4_left h1 span {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+main .wrap4 .w4_contents .w4_left .img_box {
+  content: "";
+  display: inline-block;
+  width: 400px;
+  height: 275px;
+  border: 1px solid #26150b;
+}
+main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 곳. */ }
+main .wrap4 .w4_contents .w4_left .concept {
+  font-size: 1rem;
+  padding: 20px 0 12px;
+}
+main .wrap4 .w4_contents .w4_left .concept span {
+  font-weight: 600;
+}
+main .wrap4 .w4_contents .w4_left .current span {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #26150b;
+  border-radius: 50%;
+}
+main .wrap4 .w4_contents .w4_left .current .active {
+  background-color: #26150b;
+}
+main .wrap4 .w4_contents .w4_right li {
+  margin-right: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 5px 0;
+}
+main .wrap4 .w4_contents .w4_right li .butterfly {
+  width: 35px;
+  padding-right: 10px;
+}
+main .wrap4 .w4_contents .w4_right li .butterfly img {
+  width: 100%;
+}
+main .wrap4 .w4_contents .w4_right li h2 {
+  font-weight: 800;
+  padding-right: 5px;
+}
+main .wrap4 .w4_contents .w4_right li:first-child {
+  margin-top: 30px;
+}
+main .wrap4 .w4_contents .w4_right .process {
+  padding-top: 30px;
+}
+main .wrap4 .figma_txt {
+  font-weight: 800;
+  font-size: 1.2rem;
+  border: 1px solid #26150b;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 330px;
+  left: 150px;
+  font-style: italic;
+}
+main .wrap4 > p {
+  font-weight: 800;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 330px;
+  left: 580px;
+  font-style: italic;
+}
+main .wrap4 > p span {
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-style: italic;
+  position: relative;
+  top: 0;
+  left: 35px;
+}
+main .wrap4 .direction {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 332px;
+  left: 0;
+}
+main .wrap4 .direction .prev {
+  background-image: url(../images/direction.png);
+  transform: scaleX(-1);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+}
+main .wrap4 .direction .next {
+  background-image: url(../images/direction.png);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+}
+main .wrap5 {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #26150b;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+main .wrap5 h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-style: italic;
+  position: absolute;
+  top: 175px;
+  left: 260px;
+}
+main .wrap5 .contents {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main .wrap5 .contents h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  font-style: italic;
+  position: absolute;
+  color: #26150b;
+}
+main .wrap5 .contents .img_box {
+  content: "";
+  display: inline-block;
+  width: 500px;
+  height: 371px;
+  border: 1px solid #26150b;
+  margin-bottom: 50px;
+}
+main .wrap5 .contents .txt_box p {
+  font-size: 1.2rem;
+}
+main .wrap5 .contents .txt_box p span {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+main .wrap5 .contents1 h2 {
+  bottom: 70px;
+  left: 80px;
+}
+main .wrap5 .contents1 .img_box {
+  margin-top: 200px;
+}
+main .wrap5 .contents1 .txt_box {
+  margin-top: 360px;
+}
+main .wrap5 .contents1 .txt_box p {
+  padding: 0 0 10px 50px;
+}
+main .wrap5 .contents2 h2 {
+  bottom: 70px;
+  right: 80px;
+}
+main .wrap5 .contents2 .txt_box {
+  text-align: right;
+  margin-top: 120px;
+  padding: 0;
+}
+main .wrap5 .contents2 .txt_box p {
+  padding: 0 50px 10px 0;
+}
+main .wrap5 .contents3 h2 {
+  bottom: 200px;
+  left: 80px;
+}
+main .wrap5 .contents3 .img_box {
+  margin-bottom: 200px;
+  padding: 0 0 10px;
+  width: 530px;
+  border: none;
+}
+main .wrap5 .contents3 .img_box img {
+  width: 100%;
+}
+main .wrap5 .contents3 .txt_box {
+  padding: 0;
+}
+main .wrap5 .contents3 .txt_box p {
+  padding: 0 0 10px 50px;
+}
+main .wrap6 {
+  width: 1200px;
+  margin: 300px auto 80px;
+  text-align: center;
+}
+main .wrap6 h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: capitalize;
+}
+main .wrap6 .swiper .swiper-wrapper .swiper-slide {
+  padding-top: 100px;
+}
+main .wrap6 .swiper .swiper-wrapper .swiper-slide a {
+  content: "";
+  display: inline-block;
+  height: 400px;
+  width: 500px;
+  border: 1px solid #26150b;
+}
+
+footer .footer_top {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+}
+footer .footer_top h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+}
+footer .footer_top p {
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+footer .footer_top .code {
+  width: 110px;
+  display: inline-block;
+  padding: 50px 0 20px;
+}
+footer .footer_top .code img {
+  width: 100%;
+}
+footer .line span {
+  border: 1px solid #26150b;
+  width: 100%;
+  height: 1px;
+  content: "";
+  display: inline-block;
+}
+footer .line .btm_line {
+  margin: 5px 0 30px;
+}/*# sourceMappingURL=main.css.map */
