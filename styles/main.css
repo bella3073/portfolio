@@ -1,19 +1,36 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #aca18d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #504530;
+  border-radius: 5px;
+}
+
+body, html {
+  cursor: none;
+}
+
 body {
   background-color: #e9e0cc;
 }
 
-body::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  background-image: url(../images/bg.png);
-  opacity: 0.3;
-  background-blend-mode: lighten;
-  position: absolute;
-  top: 0;
+.pen {
+  width: 50px;
+  position: fixed;
   left: 0;
-  z-index: 1000;
+  top: 0;
+  z-index: 9999;
+  transform: translate(0, -100%);
+}
+.pen img {
+  width: 100%;
 }
 
 header {
@@ -188,9 +205,6 @@ main .wrap2 .main02_img p { /* 손 이미지 */
 }
 main .wrap2 .main02_img p img {
   width: 100%;
-}
-main .wrap2 .wrap3 {
-  display: none; /* ------------------------------------------open book display_none!!!!! */
 }
 main .wrap2 .wrap3 > .wrap3_img { /* book img */
   width: 1000px;
@@ -406,7 +420,13 @@ main .wrap4 .w4_contents .w4_left .img_box {
   height: 275px;
   border: 1px solid #26150b;
 }
-main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 곳. */ }
+main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 곳. */
+  display: inline-block;
+  width: 360px;
+  height: 235px;
+  background: #26150b;
+  margin-top: 20px;
+}
 main .wrap4 .w4_contents .w4_left .concept {
   font-size: 1rem;
   padding: 20px 0 12px;
@@ -541,12 +561,30 @@ main .wrap5 .contents .img_box {
   border: 1px solid #26150b;
   margin-bottom: 50px;
 }
+main .wrap5 .contents .img_box a { /* 랜딩페이지 이미지 넣을 곳. */
+  display: inline-block;
+  width: 460px;
+  height: 331px;
+  background: #26150b;
+  margin: 20px 0 0 20px;
+  overflow-y: scroll;
+}
+main .wrap5 .contents .img_box a img {
+  width: 100%;
+}
 main .wrap5 .contents .txt_box p {
   font-size: 1.2rem;
+  text-transform: capitalize;
 }
 main .wrap5 .contents .txt_box p span {
   font-weight: 800;
   font-size: 1.2rem;
+}
+main .wrap5 .contents .txt_box p a {
+  font-size: 1.2rem;
+  background-color: rgba(122, 109, 83, 0.4901960784);
+  border-radius: 50%;
+  padding: 0 3px;
 }
 main .wrap5 .contents1 h2 {
   bottom: 70px;
@@ -554,6 +592,9 @@ main .wrap5 .contents1 h2 {
 }
 main .wrap5 .contents1 .img_box {
   margin-top: 200px;
+}
+main .wrap5 .contents1 .img_box a img {
+  width: 100%;
 }
 main .wrap5 .contents1 .txt_box {
   margin-top: 360px;
@@ -586,6 +627,11 @@ main .wrap5 .contents3 .img_box {
 main .wrap5 .contents3 .img_box img {
   width: 100%;
 }
+main .wrap5 .contents3 .img_box a {
+  position: absolute;
+  left: 135px;
+  bottom: 205px;
+}
 main .wrap5 .contents3 .txt_box {
   padding: 0;
 }
@@ -609,9 +655,14 @@ main .wrap6 .swiper .swiper-wrapper .swiper-slide {
 main .wrap6 .swiper .swiper-wrapper .swiper-slide a {
   content: "";
   display: inline-block;
-  height: 400px;
+  height: 700px;
   width: 500px;
   border: 1px solid #26150b;
+}
+main .wrap6 .swiper .swiper-wrapper .slide1 a {
+  background-image: url(../images/sns/butterfly_exhibition.png);
+  background-size: cover;
+  background-position: center;
 }
 
 footer .footer_top {
