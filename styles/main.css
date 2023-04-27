@@ -70,25 +70,31 @@ main .wrap1 .img_g {
   width: 1000px;
   margin: 10px auto;
   position: relative;
+  overflow: hidden;
 }
 main .wrap1 .img_g .forest {
   width: 100%;
   height: 900px;
-  background-image: url(../images/forest.png), url(../images/bg.png);
-  background-repeat: no-repeat, no-repeat;
+  background-image: url(../images/forest_long.png), url(../images/bg.png);
+  background-repeat: repeat-x, no-repeat;
   background-position: center, center;
   background-blend-mode: luminosity;
   border: 2px solid #26150b;
+  animation: forest_move 100s linear alternate-reverse infinite;
 }
 main .wrap1 .img_g .book {
+  background-image: url(../images/book3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 250px;
   position: absolute;
   bottom: 300px;
-  left: 150px;
+  left: 160px;
   width: 300px;
   z-index: 300;
-}
-main .wrap1 .img_g .book img {
-  width: 100%;
+  -webkit-animation: book 3s ease both;
+          animation: book 3s ease both;
 }
 main .wrap1 .img_g .post {
   position: absolute;
@@ -96,36 +102,77 @@ main .wrap1 .img_g .post {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
+  background-repeat: no-repeat;
 }
 main .wrap1 .img_g .post img {
   width: 100%;
 }
-main .wrap1 .img_g .post:after {
-  content: "Look at my PF";
+main .wrap1 .img_g .post #look {
   font-family: "Allura", cursive;
   font-size: 2.5rem;
-  height: 50px;
   color: #26150b;
+  width: 270px;
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+main .wrap1 .img_g .post #look > span {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  height: 50%;
+  background-color: #26150b;
+}
+main .wrap1 .img_g .post #look:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
 main .wrap1 .img_g .key {
+  background-image: url(../images/key.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 200px;
   position: absolute;
   top: 230px;
-  right: 195px;
+  right: 210px;
   width: 230px;
   z-index: 300;
-  transform: rotate(12deg);
+  transform: rotate(-15deg);
+  -webkit-animation: key01 2s 0.5s ease both;
+          animation: key01 2s 0.5s ease both;
 }
-main .wrap1 .img_g .key img {
-  width: 100%;
-}
-main .wrap1 .img_g .book,
-main .wrap1 .img_g .post,
-main .wrap1 .img_g .key {
+main .wrap1 .img_g .light span {
+  background-image: url(../images/light3.png);
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .wrap1 .img_g .light span:nth-child(1) {
+  top: 100px;
+  left: 170px;
+  animation: light01 13s linear alternate-reverse infinite;
+}
+main .wrap1 .img_g .light span:nth-child(2) {
+  top: 800px;
+  left: 900px;
+  animation: light02 13s linear alternate-reverse infinite;
+}
+main .wrap1 .img_g .light span:nth-child(3) {
+  top: 600px;
+  left: 900px;
+  animation: light03 10s linear alternate-reverse infinite;
+}
+main .wrap1 .img_g .light span:nth-child(4) {
+  top: 800px;
+  left: 370px;
+  animation: light04 13s linear alternate-reverse infinite;
 }
 main .wrap2 {
   text-align: center;
@@ -143,6 +190,12 @@ main .wrap2 > h1 {
 main .wrap2 > h1 span {
   font-family: "Abril Fatface", cursive;
   font-size: 1.5rem;
+  background: linear-gradient(to right, #26150b, #e1d5b7, #26150b, #e1d5b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  -webkit-animation: bg 8s linear infinite;
+          animation: bg 8s linear infinite;
 }
 main .wrap2 > ul {
   width: 1200px;
@@ -192,19 +245,24 @@ main .wrap2 .main02_img a { /* 열쇠 이미지 */
   position: absolute;
   top: -250px;
   left: -50px;
-  transform: scaleX(-1);
+  animation: key02 1s linear alternate-reverse infinite;
 }
 main .wrap2 .main02_img a img {
   width: 100%;
 }
-main .wrap2 .main02_img p { /* 손 이미지 */
-  width: 170px;
+main .wrap2 .main02_img p {
+  width: 100px;
+  font-weight: 800;
   position: absolute;
-  top: -110px;
-  left: 55px;
-}
-main .wrap2 .main02_img p img {
-  width: 100%;
+  top: -45px;
+  left: 30px;
+  animation: key02_txt 1s linear alternate-reverse infinite;
+  text-transform: capitalize;
+  background: #26150b;
+  color: lightgoldenrodyellow;
+  display: inline-block;
+  line-height: 1.5;
+  border-radius: 7px;
 }
 main .wrap2 .wrap3 > .wrap3_img { /* book img */
   width: 1000px;
@@ -216,6 +274,18 @@ main .wrap2 .wrap3 > .wrap3_img { /* book img */
 main .wrap2 .wrap3 > .wrap3_img img {
   width: 100%;
 }
+main .wrap2 .wrap3 > .wrap3_img .personality {
+  background-image: url(../images/book_contents.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 280px;
+  height: 275px;
+  position: absolute;
+  top: 130px;
+  right: 170px;
+  -webkit-animation: persona 2.5s ease both;
+          animation: persona 2.5s ease both;
+}
 main .wrap2 .wrap3 > .wrap3_img .lock {
   background-image: url(../images/lock_shadow.png);
   background-repeat: no-repeat;
@@ -226,16 +296,36 @@ main .wrap2 .wrap3 > .wrap3_img .lock {
   top: 260px;
   right: -45px;
   transform: rotate(-20deg);
+  animation: lock 0.8s linear alternate-reverse infinite;
 }
 main .wrap2 .wrap3 > .wrap3_img .key {
   background-image: url(../images/key1_shadow.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 420px;
-  height: 420px;
+  width: 210px;
+  height: 260px;
   position: absolute;
-  bottom: -100px;
-  right: -80px;
+  bottom: 0;
+  right: 50px;
+  transition: all 1s;
+}
+main .wrap2 .wrap3 > .wrap3_img .key a {
+  display: block;
+  width: 100%;
+  height: 300px;
+  content: "";
+}
+main .wrap2 .wrap3 > .wrap3_img .key p {
+  position: absolute;
+  top: 30px;
+  left: 75px;
+  animation: key03 1s linear alternate-reverse infinite;
+  font-weight: 700;
+}
+main .wrap2 .wrap3 > .wrap3_img .key:hover {
+  bottom: 70px;
+  right: -110px;
+  transform: rotate(120deg);
 }
 main .wrap2 .wrap3 > .wrap3_img .hand {
   background-image: url(../images/hand_shadow.png);
@@ -367,10 +457,17 @@ main .wrap2 .wrap3 .contents .b_right h1:after {
   background: #26150b;
 }
 main .wrap2 .wrap3 .contents .b_right .see_more {
+  padding: 10px;
+  display: inline-block;
   position: absolute;
-  top: -95px;
-  right: -4px;
+  top: -105px;
+  right: -14px;
   font-weight: 1000;
+}
+main .wrap2 .wrap3 .contents .b_right .see_more span {
+  font-weight: 1000;
+  display: inline-block;
+  animation: text 1.5s ease alternate-reverse infinite;
 }
 main .wrap2 .wrap3:before {
   content: "";
@@ -564,10 +661,9 @@ main .wrap5 .contents .img_box {
 main .wrap5 .contents .img_box a { /* 랜딩페이지 이미지 넣을 곳. */
   display: inline-block;
   width: 460px;
-  height: 331px;
+  height: 331px; /* height:260px; */
   background: #26150b;
   margin: 20px 0 0 20px;
-  overflow-y: scroll;
 }
 main .wrap5 .contents .img_box a img {
   width: 100%;
@@ -616,7 +712,8 @@ main .wrap5 .contents2 .txt_box p {
 }
 main .wrap5 .contents3 h2 {
   bottom: 200px;
-  left: 80px;
+  left: 120px;
+  z-index: 100;
 }
 main .wrap5 .contents3 .img_box {
   margin-bottom: 200px;
@@ -629,7 +726,7 @@ main .wrap5 .contents3 .img_box img {
 }
 main .wrap5 .contents3 .img_box a {
   position: absolute;
-  left: 135px;
+  left: 170px;
   bottom: 205px;
 }
 main .wrap5 .contents3 .txt_box {
@@ -698,4 +795,402 @@ footer .line span {
 }
 footer .line .btm_line {
   margin: 5px 0 30px;
+}
+
+@-webkit-keyframes forest_move {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 5000px;
+  }
+}
+
+@keyframes forest_move {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 5000px;
+  }
+}
+@-webkit-keyframes key01 {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 230px;
+  }
+}
+@keyframes key01 {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 230px;
+  }
+}
+@-webkit-keyframes key02 {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes key02 {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@-webkit-keyframes key03 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes key03 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes key02_txt {
+  0% {
+    transform: skew(-10deg);
+  }
+  100% {
+    transform: skew(10deg);
+  }
+}
+@keyframes key02_txt {
+  0% {
+    transform: skew(-10deg);
+  }
+  100% {
+    transform: skew(10deg);
+  }
+}
+@-webkit-keyframes book {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes book {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bg {
+  0% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 400%;
+  }
+}
+@keyframes bg {
+  0% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 400%;
+  }
+}
+@-webkit-keyframes lock {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes lock {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes persona {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  40% {
+    opacity: 0.3;
+    transform: rotate(45deg);
+  }
+  70% {
+    opacity: 0.3;
+    transform: rotate(-20deg);
+  }
+  90% {
+    opacity: 0.3;
+    transform: rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes persona {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  40% {
+    opacity: 0.3;
+    transform: rotate(45deg);
+  }
+  70% {
+    opacity: 0.3;
+    transform: rotate(-20deg);
+  }
+  90% {
+    opacity: 0.3;
+    transform: rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes text {
+  100% {
+    background: #26150b;
+    color: #e1d5b7;
+  }
+}
+@keyframes text {
+  100% {
+    background: #26150b;
+    color: #e1d5b7;
+  }
+}
+@-webkit-keyframes light01 {
+  0% {
+    top: 100px;
+    left: 170px;
+  }
+  25% {
+    top: 200px;
+    left: 40px;
+  }
+  50% {
+    top: 400px;
+    left: 300px;
+  }
+  75% {
+    top: 600px;
+    left: 140px;
+  }
+  90% {
+    top: 740px;
+    right: 70px;
+  }
+  100% {
+    top: 700px;
+    right: 100px;
+  }
+}
+@keyframes light01 {
+  0% {
+    top: 100px;
+    left: 170px;
+  }
+  25% {
+    top: 200px;
+    left: 40px;
+  }
+  50% {
+    top: 400px;
+    left: 300px;
+  }
+  75% {
+    top: 600px;
+    left: 140px;
+  }
+  90% {
+    top: 740px;
+    right: 70px;
+  }
+  100% {
+    top: 700px;
+    right: 100px;
+  }
+}
+@-webkit-keyframes light02 {
+  0% {
+    top: 750px;
+    left: 800px;
+  }
+  25% {
+    top: 600px;
+    left: 600px;
+  }
+  50% {
+    top: 450px;
+    left: 700px;
+  }
+  75% {
+    top: 300px;
+    left: 600px;
+  }
+  100% {
+    top: 100px;
+    left: 900px;
+  }
+}
+@keyframes light02 {
+  0% {
+    top: 750px;
+    left: 800px;
+  }
+  25% {
+    top: 600px;
+    left: 600px;
+  }
+  50% {
+    top: 450px;
+    left: 700px;
+  }
+  75% {
+    top: 300px;
+    left: 600px;
+  }
+  100% {
+    top: 100px;
+    left: 900px;
+  }
+}
+@-webkit-keyframes light03 {
+  0% {
+    top: 600px;
+    left: 900px;
+  }
+  20% {
+    top: 800px;
+    left: 750px;
+  }
+  40% {
+    top: 350px;
+    left: 600px;
+  }
+  60% {
+    top: 200px;
+    left: 500px;
+  }
+  80% {
+    top: 400px;
+    left: 700px;
+  }
+  100% {
+    top: 300px;
+    left: 900px;
+  }
+}
+@keyframes light03 {
+  0% {
+    top: 600px;
+    left: 900px;
+  }
+  20% {
+    top: 800px;
+    left: 750px;
+  }
+  40% {
+    top: 350px;
+    left: 600px;
+  }
+  60% {
+    top: 200px;
+    left: 500px;
+  }
+  80% {
+    top: 400px;
+    left: 700px;
+  }
+  100% {
+    top: 300px;
+    left: 900px;
+  }
+}
+@-webkit-keyframes light04 {
+  0% {
+    top: 800px;
+    left: 370px;
+  }
+  20% {
+    top: 400px;
+    left: 500px;
+  }
+  40% {
+    top: 100px;
+    left: 300px;
+  }
+  60% {
+    top: 350px;
+    left: 140px;
+  }
+  80% {
+    top: 740px;
+    right: 70px;
+  }
+  100% {
+    top: 500px;
+    right: 100px;
+  }
+}
+@keyframes light04 {
+  0% {
+    top: 800px;
+    left: 370px;
+  }
+  20% {
+    top: 400px;
+    left: 500px;
+  }
+  40% {
+    top: 100px;
+    left: 300px;
+  }
+  60% {
+    top: 350px;
+    left: 140px;
+  }
+  80% {
+    top: 740px;
+    right: 70px;
+  }
+  100% {
+    top: 500px;
+    right: 100px;
+  }
 }/*# sourceMappingURL=main.css.map */
