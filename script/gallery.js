@@ -26,10 +26,13 @@ const img = document.querySelectorAll('#imgs > div > a')
 let imgT = document.createElement('img')
 console.log(img,imgT)
 
+view.style.display = 'none';
+
 img.forEach((t,i)=>{
     t.addEventListener('click',(e)=>{
         e.preventDefault()
-        imgT.src = `./images/sns/${i}.jpg`
+        // console.log(t,i) 확인
+        imgT.src = `./images/sns/poster0${i+1}.png`
         view.style.display = 'block'
         view.children[0].appendChild(imgT)
     })

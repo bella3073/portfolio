@@ -763,7 +763,7 @@ main .wrap5 .contents3 .txt_box p {
 }
 main .wrap6 {
   width: 1200px;
-  margin: 200px auto 600px;
+  margin: 200px auto 650px;
   text-align: center;
   position: relative;
 }
@@ -785,9 +785,10 @@ main .wrap6 .img_view {
 }
 main .wrap6 .img_view .contents {
   display: inline-block;
-  width: 550px;
-  height: 700px;
-  margin: 80px auto 0;
+  width: 900px;
+  height: 90vh;
+  margin: 50px auto;
+  overflow-y: scroll;
   background: lightgoldenrodyellow;
 }
 main .wrap6 .img_view .contents img {
@@ -796,8 +797,8 @@ main .wrap6 .img_view .contents img {
 main .wrap6 > #imgs {
   position: absolute;
   left: 0;
-  top: 320px;
-  width: 300%;
+  top: 345px;
+  width: 350%;
   height: 100%;
   display: flex;
   justify-content: space-around;

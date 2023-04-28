@@ -489,41 +489,25 @@ main {
         }
     }//e:wrap5
     .wrap6 {
-        width:1200px; margin:200px auto 600px; text-align:center;
+        width:1200px; margin:200px auto 650px; text-align:center;
         position:relative;
         h1 {font-size:2rem; font-weight:800; font-style:italic; text-transform:capitalize;}
-        // .swiper {
-        //     .swiper-wrapper {
-        //         .swiper-slide {
-        //             padding-top:100px;
-        //             a {
-        //                 content:''; display:inline-block; height:700px; width:500px;
-        //                 border:1px solid $line-color;
-        //             }
-        //         }
-        //         .slide1 {
-        //             a {
-        //                 background-image:url(../images/sns/butterfly_exhibition.png);
-        //                 background-size:cover;
-        //                 background-position:center;
-        //             }
-        //         }
-        //     }
-        // } =====================================================04.28 확인중
         .img_view {
             position:fixed; top:0; left:0; z-index:999;
             background:rgba(0,0,0,0.7); width:100%; height:100vh;
             cursor: pointer;
             .contents {
                 display:inline-block;
-                width:550px; height:700px; margin:80px auto 0;
+                width:900px; height:90vh; margin:50px auto;
+                overflow-y: scroll; 
                 background:lightgoldenrodyellow;
+                
                 img {width:100%;}
             }
         }
         > #imgs {
-            position:absolute; left:0; top:320px;
-            width:300%; height:100%; display:flex;
+            position:absolute; left:0; top:345px;
+            width:350%; height:100%; display:flex;
             justify-content:space-around; align-items:center; margin:0 25%;
             > div{
                 max-width: 9%; perspective:500px; z-index:1;
