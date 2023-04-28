@@ -1,0 +1,25 @@
+body,html{
+    margin:0;
+    overflow:hidden;
+    height:100%;
+}
+#imgs{
+    position:absolute;
+    left:0; top:0;
+    width:150%;
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin:0 25%;  
+}
+#imgs > div{
+    max-width: 9%;
+    perspective:500px;
+    z-index:1;
+}
+#imgs img{
+    display:block;
+    max-width:100%;
+    height:auto;  
+}

@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2023 PORTFOLIO</title>
+    <!-- jquery CDN 연결 필수-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/pen_favicon.png" type="image/x-icon">
     <link rel="icon" href="./images/pen_favicon.png" type="image/x-icon">
@@ -16,10 +18,12 @@
     <!-- css -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/animation.css">
 </head>
 <body>
     <!-- 마우스 -->
-    <div class="pen"><img src="./images/pen_mouse.png" alt=""></div>
+    <div class="pen"><!-- <img src="./images/pen_mouse.png" alt=""> --></div>
+    <!-- <div class="hand"></div> -->
 
     <!-- header -->
     <header>
@@ -199,7 +203,7 @@
             <div class="contents contents1">
                 <h2>01.</h2>
                 <div class="img_box">
-                    <a href="http://127.0.0.1:5501/project/randing/frenchaube/index.html">
+                    <a href="./project/randing/frenchaube/index.html">
                         <img src="./images/frenchaube.gif" alt="frenchaube 랜딩페이지 바로가기">
                     </a>
                 </div>
@@ -224,26 +228,27 @@
                 </div>
                 <h2>02.</h2>
                 <div class="img_box">
-                    <a href="http://127.0.0.1:5501/project/randing/demimod/index.html"><img src="./images/demimod.gif" alt="demimod 랜딩페이지 바로가기"></a>
+                    <a href="./project/randing/demimod/index.html"><img src="./images/demimod.gif" alt="demimod 랜딩페이지 바로가기"></a>
                 </div>
             </div>
             <div class="contents contents3">
                 <h2>03.</h2>
                 <div class="img_box">
                     <img src="./images/txt_box.png" alt="">
-                    <a href="http://127.0.0.1:5501/project/randing/opertum/index.html"><img src="./images/opertum.gif" alt="opertum 랜딩페이지 바로가기"></a>
+                    <a href="./project/randing/opertum/index.html"><img src="./images/opertum.gif" alt="opertum 랜딩페이지 바로가기"></a>
                 </div>
                 <div class="txt_box">
                     <p><span>Site : </span>Opertum</p>
                     <p><span>Purpose : </span>상품 및 이벤트 홍보페이지</p>
-                    <p><span>Tool : </span>figma, html, scss, script</p>
+                    <p><span>Tool : </span><a href="https://www.figma.com/file/lf7m3V8DP2q0yiACsGusmu/Untitled?node-id=0%3A1&t=6KNMhJO99Xi8Ze9D-1">figma,</a> 
+                        html, scss, script</p>
                     <p><span>Participation : </span>개인작업 (100%)</p>
                 </div>
             </div>
         </div><!--e:landing page -->
         <div class="wrap6">
             <h1>sns & poster design page</h1>
-            <div class="swiper">
+            <!-- <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1"><a href="#"></a></div>
                     <div class="swiper-slide slide2"><a href="#"></a></div>
@@ -251,6 +256,21 @@
                     <div class="swiper-slide slide4"><a href="#"></a></div>
                     <div class="swiper-slide slide5"><a href="#"></a></div>
                 </div>
+            </div> -->
+            <div class="img_view" title="창을 누르면 닫힙니다.">
+                <div class="contents"><img src="./images/sns/" alt=""></div>
+            </div>
+            <div id="imgs">
+                <div><a href="#"><img src="./images/sns/1.png" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/butterfly_exhibition.png" alt=""></a></div>
+                <div><a href="#"><img src="./images/sns/1.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/2.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/3.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/1.png" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/butterfly_exhibition.png" alt=""></a></div>
+                <div><a href="#"><img src="./images/sns/1.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/2.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="./images/sns/3.jpg" alt=""/></a></div>
             </div>
         </div>
     </main>
@@ -267,7 +287,7 @@
     </footer>
 
     <!-- script -->
-    <script src="./script/mouse.js"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/gallery.js"></script>
 </body>
 </html>

@@ -9,20 +9,24 @@ $color:#e1d5b7;
 ::-webkit-scrollbar-track {background:#aca18d;}
 ::-webkit-scrollbar-thumb {background:#504530; border-radius:5px;}
 
-body,html {cursor:none;}
+body,html {cursor:none; overflow-x:hidden;}
 body {background-color:#e9e0cc;}
-// body::after { 마지막에 지우기......
-//     content:''; display:inline-block; width:100%;
-//     background-image: url(../images/bg.png); opacity:1;
-//     background-blend-mode:lighten; 
-//     position:absolute; top:0; left:0; z-index:1000;
-// }
-//mouse
+// mouse
 .pen {
-    width:50px;
+    background-image:url(../images/pen_mouse.png);
+    @include bk-no-cover;
+    width:50px; height:50px;
     position:fixed; left:0; top:0; z-index:9999;
     transform:translate(0,-100%);
-    img {width:100%;}
+    // img {width:100%;}
+}
+.hand {
+    background-image:url(../images/hand.png);
+    @include bk-no-cover;
+    position:fixed; left:0; top:0; z-index:9999;
+    transform:translate(0,0);
+    width:100px; height:65px;
+    pointer-events:none
 }
 
 // header
@@ -78,13 +82,11 @@ main {
                     color:$line-color; width:270px;
                     position:absolute; top:60%; left:50%;
                     transform:translate(-50%, -50%);
-                    > span {
-                        position: absolute; top: 12px; right: 0;
-                        height: 50%;
-                        background-color: $line-color;
+                    span {
+                        border-right: .05em solid;
+                        animation: caratteri 1s steps(1) infinite;
                     }
                 }
-                #look:hover {animation-play-state: paused;}
             }
             .key {
                 background-image:url(../images/key.png);
@@ -283,17 +285,17 @@ main {
                                 border-radius: 10px;
                                 margin-bottom:21.2px;
                             }
-                            .bar1:after {width:220px;}/* 포토샵 */
-                            .bar2:after {width:170px;}/* 일러스트 */
-                            .bar3:after {width:210px;}/* html */
-                            .bar4:after {width:200px;}/* css */
-                            .bar5:after {width:200px;}/* scss */
-                            .bar6:after {width:150px;}/* j-script */
-                            .bar7:after {}/* j-query */
-                            .bar8:after {width:100px}/* php include */
-                            .bar9:after {width:220px;}/* figma */
-                            .bar10:after {width:190px;}/* git hub */
-                            .bar11:after {width:100px;}/* gunboard */
+                            .bar1:after {animation:bar1 1.5s ease both;}/* 포토샵 */
+                            .bar2:after {animation:bar2 2s linear both}/* 일러스트 */
+                            .bar3:after {animation:bar3 2.5s ease both;}/* html */
+                            .bar4:after {animation:bar4 1.5s ease both;}/* css */
+                            .bar5:after {animation:bar5 1s ease both;}/* scss */
+                            .bar6:after {animation:bar6 1.5s linear both}/* j-script */
+                            .bar7:after {animation:bar7 1.5s ease both;}/* j-query */
+                            .bar8:after {animation:bar6 2.3s linear both}/* php include */
+                            .bar9:after {animation:bar9 2s ease both;}/* figma */
+                            .bar10:after {animation:bar10 1s ease both;}/* git hub */
+                            .bar11:after {animation:bar6 1.5s linear both}/* gunboard */
                         }
                     }
                 }//e:book_left
@@ -433,7 +435,7 @@ main {
                 width:500px; height:371px;
                 border:1px solid $line-color;
                 margin-bottom:50px;
-                a {/* 랜딩페이지 이미지 넣을 곳. */
+                a {/* 랜딩페이지 이미지 넣는 곳. */
                     display:inline-block; width:460px; height:331px; /* height:260px; */
                     background:#26150b; margin:20px 0 0 20px;
                     img {width:100%;}
@@ -444,8 +446,10 @@ main {
                     font-size:1.2rem; text-transform:capitalize;
                     span {font-weight:800; font-size:1.2rem;}
                     a {
+                        display:inline-block;
                         font-size:1.2rem; background-color:#7a6d537d;
                         border-radius:50%; padding:0 3px;
+                        animation:key03 1s linear alternate-reverse infinite;
                     }
                 }
             }
@@ -485,25 +489,49 @@ main {
         }
     }//e:wrap5
     .wrap6 {
-        width:1200px; margin:300px auto 80px; text-align:center;
+        width:1200px; margin:200px auto 600px; text-align:center;
+        position:relative;
         h1 {font-size:2rem; font-weight:800; font-style:italic; text-transform:capitalize;}
-        .swiper {
-            .swiper-wrapper {
-                .swiper-slide {
-                    padding-top:100px;
-                    a {
-                        content:''; display:inline-block; height:700px; width:500px;
-                        border:1px solid $line-color;
-                    }
-                }
-                .slide1 {
-                    a {
-                        background-image:url(../images/sns/butterfly_exhibition.png);
-                        background-size:cover;
-                        background-position:center;
-                    }
+        // .swiper {
+        //     .swiper-wrapper {
+        //         .swiper-slide {
+        //             padding-top:100px;
+        //             a {
+        //                 content:''; display:inline-block; height:700px; width:500px;
+        //                 border:1px solid $line-color;
+        //             }
+        //         }
+        //         .slide1 {
+        //             a {
+        //                 background-image:url(../images/sns/butterfly_exhibition.png);
+        //                 background-size:cover;
+        //                 background-position:center;
+        //             }
+        //         }
+        //     }
+        // } =====================================================04.28 확인중
+        .img_view {
+            position:fixed; top:0; left:0; z-index:999;
+            background:rgba(0,0,0,0.7); width:100%; height:100vh;
+            cursor: pointer;
+            .contents {
+                display:inline-block;
+                width:550px; height:700px; margin:80px auto 0;
+                background:lightgoldenrodyellow;
+                img {width:100%;}
+            }
+        }
+        > #imgs {
+            position:absolute; left:0; top:320px;
+            width:300%; height:100%; display:flex;
+            justify-content:space-around; align-items:center; margin:0 25%;
+            > div{
+                max-width: 9%; perspective:500px; z-index:1;
+                a {
+                    img{display:block; max-width:100%; height:auto;}
                 }
             }
+            
         }
     }//e:wrap6
 }//e:main
@@ -528,83 +556,3 @@ footer {
         .btm_line {margin:5px 0 30px;}
     }
 }//e:footer
-
-@keyframes forest_move {
-    0% {background-position-x:0}
-    100% {background-position-x:5000px}
-}
-@keyframes key01 {
-    0% {top:-200px;}
-    100% {top:230px;}
-}
-@keyframes key02 {
-    0% {transform:translateY(-10px)}
-    100% {transform:translateY(20px)}
-}
-@keyframes key03 {
-    0% {transform:translateY(0)}
-    100% {transform:translateY(5px)}
-}
-@keyframes key02_txt {
-    0% {transform:skew(-10deg)}
-    100% {transform:skew(10deg)}
-}
-@keyframes book {
-    0% {opacity:0;}
-    25% {opacity:0.5;}
-    50% {opacity:0.3;}
-    100% {opacity:1;}
-}
-@keyframes bg {
-    0% {background-position-x:100%;}
-    100% {background-position-x:400%;}
-}
-@keyframes lock {
-    0% {transform:rotate(-20deg);}
-    100% {transform:rotate(-10deg);}
-}
-@keyframes persona {
-    0% {opacity:0; transform:rotate(-45deg);}
-    40% {opacity:0.3; transform:rotate(45deg);}
-    70% {opacity:0.3; transform:rotate(-20deg);}
-    90% {opacity:0.3; transform:rotate(10deg);}
-    100% {opacity:1; transform:rotate(0deg);}
-}
-@keyframes text {
-    0% {}
-    100% {background:$line-color; color:$color;}
-}
-
-//light keyframes=====================================
-@keyframes light01 {
-    0% {top:100px; left:170px;}
-    25% {top:200px; left:40px;}
-    50% {top:400px; left:300px;}
-    75% {top:600px; left:140px;}
-    90% {top:740px; right:70px;}
-    100% {top:700px; right:100px;}
-}
-@keyframes light02 {
-    0% {top:750px; left:800px;}
-    25% {top:600px; left:600px;}
-    50% {top:450px; left:700px;}
-    75% {top:300px; left:600px;}
-    100% {top:100px; left:900px;}
-}
-@keyframes light03 {
-    0% {top:600px; left:900px;}
-    20% {top:800px; left:750px;}
-    40% {top:350px; left:600px;}
-    60% {top:200px; left:500px;}
-    80% {top:400px; left:700px;}
-    100% {top:300px; left:900px;}
-}
-@keyframes light04 {
-    0% {top:800px; left:370px;}
-    20% {top:400px; left:500px;}
-    40% {top:100px; left:300px;}
-    60% {top:350px; left:140px;}
-    80% {top:740px; right:70px;}
-    100% {top:500px; right:100px;}
-}
-//e:light keyframes================================

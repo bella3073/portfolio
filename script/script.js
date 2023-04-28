@@ -1,3 +1,12 @@
+// mouse
+const pen = document.querySelector('.pen')
+
+window.addEventListener('mousemove',(e)=>{
+    // console.log(e) 작동확인
+    pen.style.left = `${e.clientX}px`
+    pen.style.top = `${e.clientY}px`
+})
+
 // main01 post text
 document.addEventListener('DOMContentLoaded',function(event){
     var dataText = ["Look at my Portfolio"];
@@ -33,22 +42,52 @@ document.addEventListener('DOMContentLoaded',function(event){
 const book = document.querySelector('.wrap3')
 const key = document.querySelector('.main02_img a')
 const book_key = document.querySelector('.wrap3_img .key')
-const book_n_key = document.querySelectorAll('wrap2 > .main02_img')
-console.log(book,key,book_key)
+const key2 = document.querySelector('.main02_img > a > img')
+const key2_text = document.querySelector('.main02_img > p')
+console.log(book,key,book_key,key2,key2_text)
 
 //1. main03 open_book_g 가리기
 book.style.display = 'none'
 
-//2.key img 클릭 시, book 나타남
-key.addEventListener('click',(e)=>{
-    e.preventDefault()
+//2.key img에 마우스 올리면 hand img로 변경됨
+key.addEventListener('mouseover',()=>{
     // console.log(this) 확인완료
-    book.style.display = 'block'
+    pen.classList.add('hand')
+    
+    //4.key img 클릭 시, book 나타남
+    key.addEventListener('click',(e)=>{
+        e.preventDefault()
+        console.log(this)
+        book.style.display = 'block'
+        key2.style.display = 'none'
+        key2_text.style.display = 'none'
+    })
+})
+//3.key img에서 마우스를 아웃시키면 key img로 돌아옴
+key.addEventListener('mouseout',()=>{
+    // console.log(this) 확인완료
+    pen.classList.remove('hand')
 })
 
-//3. open book key 클릭 시, book 사라짐
-book_key.addEventListener('click',(e)=>{
-    e.preventDefault()
+
+// 책 위에 있는 열쇠 부분
+
+//5.book key에 마우스 올리면 hand img로 변경
+book_key.addEventListener('mouseover',()=>{
     // console.log(this) 확인완료
-    book.style.display = 'none'
+    pen.classList.add('hand')
+
+    //6. open book key 클릭 시, book 사라짐
+    book_key.addEventListener('click',(e)=>{
+        e.preventDefault()
+        // console.log(this) 확인완료
+        book.style.display = 'none'
+        key2.style.display = 'block'
+        key2_text.style.display = 'block'
+    })
+})
+//7.book key에서 마우스를 아웃시키면 key img로 돌아옴
+book_key.addEventListener('mouseout',()=>{
+    // console.log(this) 확인완료
+    pen.classList.remove('hand')
 })

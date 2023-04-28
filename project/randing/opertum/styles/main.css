@@ -57,7 +57,7 @@ header .curtain_txt p {
 header .curtain_txt h1 {
   font-size: 2rem;
   font-weight: 800;
-  background: lightgoldenrodyellow;
+  background: #fafad2;
   border-radius: 50%;
   padding: 10px 40px;
   display: inline-block;
@@ -99,7 +99,7 @@ main .event p:last-child {
 }
 main .event p:last-child a {
   background: #2f2110;
-  color: lightgoldenrodyellow;
+  color: #fafad2;
   padding: 5px 8px;
 }
 main .bg {
@@ -157,7 +157,7 @@ main .product_g li .pro_img_g .pro_inform .inform_box {
   padding: 40px 0;
   margin-top: 30px;
   border: 1px solid #2f2110;
-  background: lightgoldenrodyellow;
+  background: #fafad2;
   width: 340px;
 }
 main .product_g li .pro_img_g .pro_inform .inform_box a {
@@ -165,7 +165,7 @@ main .product_g li .pro_img_g .pro_inform .inform_box a {
   text-transform: capitalize;
   margin-top: 20px;
   background: #2f2110;
-  color: lightgoldenrodyellow;
+  color: #fafad2;
   padding: 5px;
   font-style: italic;
 }
@@ -247,7 +247,7 @@ main .container li h2 {
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: capitalize;
-  background: lightgoldenrodyellow;
+  background: #fafad2;
   margin: 20px;
   animation: skew 0.8s ease alternate-reverse infinite;
 }
@@ -283,7 +283,7 @@ main .last_main h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
   background: #2f2110;
-  color: lightgoldenrodyellow;
+  color: #fafad2;
   border-radius: 50%;
   animation: skew 1s ease alternate-reverse infinite;
 }

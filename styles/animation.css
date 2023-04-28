@@ -1,0 +1,130 @@
+@keyframes forest_move {
+0% {background-position-x:0}
+100% {background-position-x:5000px}
+}
+@keyframes key01 {
+0% {top:-200px;}
+100% {top:230px;}
+}
+@keyframes key02 {
+0% {transform:translateY(-10px)}
+100% {transform:translateY(20px)}
+}
+@keyframes key03 {
+0% {transform:translateY(0)}
+100% {transform:translateY(5px)}
+}
+@keyframes key02_txt {
+0% {transform:skew(-10deg)}
+100% {transform:skew(10deg)}
+}
+@keyframes book {
+0% {opacity:0;}
+25% {opacity:0.5;}
+50% {opacity:0.3;}
+100% {opacity:1;}
+}
+@keyframes bg {
+0% {background-position-x:100%;}
+100% {background-position-x:400%;}
+}
+@keyframes lock {
+0% {transform:rotate(-20deg);}
+100% {transform:rotate(-10deg);}
+}
+@keyframes persona {
+0% {opacity:0; transform:rotate(-45deg);}
+40% {opacity:0.3; transform:rotate(45deg);}
+70% {opacity:0.3; transform:rotate(-20deg);}
+90% {opacity:0.3; transform:rotate(10deg);}
+100% {opacity:1; transform:rotate(0deg);}
+}
+@keyframes text {
+0% {}
+100% {background:#26150b; color:#e1d5b7;}
+}
+@keyframes caratteri {
+50% {border-color: transparent;}
+}
+
+/* //light keyframes */
+@keyframes light01 {
+0% {top:100px; left:170px;}
+25% {top:200px; left:40px;}
+50% {top:400px; left:300px;}
+75% {top:600px; left:140px;}
+90% {top:740px; right:70px;}
+100% {top:700px; right:100px;}
+}
+@keyframes light02 {
+0% {top:750px; left:800px;}
+25% {top:600px; left:600px;}
+50% {top:450px; left:700px;}
+75% {top:300px; left:600px;}
+100% {top:100px; left:900px;}
+}
+@keyframes light03 {
+0% {top:600px; left:900px;}
+20% {top:800px; left:750px;}
+40% {top:350px; left:600px;}
+60% {top:200px; left:500px;}
+80% {top:400px; left:700px;}
+100% {top:300px; left:900px;}
+}
+@keyframes light04 {
+0% {top:800px; left:370px;}
+20% {top:400px; left:500px;}
+40% {top:100px; left:300px;}
+60% {top:350px; left:140px;}
+80% {top:740px; right:70px;}
+100% {top:500px; right:100px;}
+}
+/* //e:light keyframes================================ */
+
+
+/* book left skill bar keyframes */
+@keyframes bar1 {
+0% {width:0;}
+100% {width:220px;}
+}
+@keyframes bar2 {
+0% {width:0;}
+100% {width:170px;}
+}
+@keyframes bar3 {
+0% {width:0;}
+100% {width:210px;}
+}
+@keyframes bar4 {
+0% {width:0;}
+100% {width:200px;}
+}
+@keyframes bar5 {
+0% {width:0;}
+100% {width:200px;}
+}
+@keyframes bar6 {
+0% {width:0;}
+100% {width:150px;}
+}
+@keyframes bar7 {
+0% {width:0;}
+100% {width:120px;}
+}
+@keyframes bar8 {
+0% {width:0;}
+100% {width:100px;}
+}
+@keyframes bar9 {
+0% {width:0;}
+100% {width:220px;}
+}
+@keyframes bar10 {
+0% {width:0;}
+100% {width:190px;}
+}
+@keyframes bar11 {
+0% {width:0;}
+100% {width:100px;}
+}
+/* e::book left skill bar keyframes=================== */
