@@ -526,27 +526,34 @@ main .wrap4 .w4_contents .w4_left p {
 main .wrap4 .w4_contents .w4_left h1 {
   font-size: 2rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
   padding: 30px 0 20px;
 }
 main .wrap4 .w4_contents .w4_left h1 span {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.03em;
+  letter-spacing: 0.03em;
 }
 main .wrap4 .w4_contents .w4_left .img_box {
   content: "";
   display: inline-block;
   width: 400px;
-  height: 275px;
+  height: 315px;
   border: 1px solid #26150b;
 }
 main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 곳. */
   display: inline-block;
   width: 360px;
-  height: 235px;
-  background: #26150b;
+  height: 273px;
   margin-top: 20px;
+  overflow: hidden;
+  background-image: url(../images/benefit_main.png);
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.5s;
+}
+main .wrap4 .w4_contents .w4_left .img_box a:hover {
+  background-size: 120%;
 }
 main .wrap4 .w4_contents .w4_left .concept {
   font-size: 1rem;
@@ -583,6 +590,11 @@ main .wrap4 .w4_contents .w4_right li .butterfly img {
 main .wrap4 .w4_contents .w4_right li h2 {
   font-weight: 800;
   padding-right: 5px;
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+}
+main .wrap4 .w4_contents .w4_right li p {
+  text-transform: capitalize;
 }
 main .wrap4 .w4_contents .w4_right li:first-child {
   margin-top: 30px;
@@ -591,16 +603,27 @@ main .wrap4 .w4_contents .w4_right .process {
   padding-top: 30px;
 }
 main .wrap4 .figma_txt {
-  font-weight: 800;
-  font-size: 1.2rem;
-  border: 1px solid #26150b;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 50%;
   position: absolute;
   bottom: 330px;
   left: 150px;
+  width: 90px;
+  height: 40px;
+}
+main .wrap4 .figma_txt a {
+  font-weight: 800;
+  font-size: 1.2rem;
   font-style: italic;
+  border: 1px solid #26150b;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 100%;
+  line-height: 37px;
+  background: #aca18d;
+}
+main .wrap4 .figma_txt a:hover {
+  box-shadow: 0 0 10px #aca18d;
+  z-index: -1;
 }
 main .wrap4 > p {
   font-weight: 800;
@@ -618,6 +641,30 @@ main .wrap4 > p span {
   top: 0;
   left: 35px;
 }
+main .wrap4 .prev {
+  background-image: url(../images/direction.png);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  top: -332px;
+  left: 0;
+  animation: direction2 0.7s linear alternate-reverse infinite;
+}
+main .wrap4 .next {
+  background-image: url(../images/direction.png);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  top: -332px;
+  right: -1190px;
+  animation: direction 0.7s linear alternate-reverse infinite;
+}
 main .wrap4 .direction {
   display: flex;
   flex-flow: row nowrap;
@@ -626,23 +673,6 @@ main .wrap4 .direction {
   position: relative;
   bottom: 332px;
   left: 0;
-}
-main .wrap4 .direction .prev {
-  background-image: url(../images/direction.png);
-  transform: scaleX(-1);
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
-}
-main .wrap4 .direction .next {
-  background-image: url(../images/direction.png);
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
 }
 main .wrap5 {
   width: 1200px;
@@ -763,7 +793,7 @@ main .wrap5 .contents3 .txt_box p {
 }
 main .wrap6 {
   width: 1200px;
-  margin: 200px auto 650px;
+  margin: 200px auto 720px;
   text-align: center;
   position: relative;
 }
@@ -785,7 +815,7 @@ main .wrap6 .img_view {
 }
 main .wrap6 .img_view .contents {
   display: inline-block;
-  width: 900px;
+  width: 700px;
   height: 90vh;
   margin: 50px auto;
   overflow-y: scroll;
@@ -797,8 +827,8 @@ main .wrap6 .img_view .contents img {
 main .wrap6 > #imgs {
   position: absolute;
   left: 0;
-  top: 345px;
-  width: 350%;
+  top: 385px;
+  width: 400%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -806,14 +836,80 @@ main .wrap6 > #imgs {
   margin: 0 25%;
 }
 main .wrap6 > #imgs > div {
-  max-width: 9%;
+  max-width: 10%;
   perspective: 500px;
   z-index: 1;
 }
+main .wrap6 > #imgs > div a {
+  display: inline-block;
+  border: 1px solid #26150b;
+  margin-right: 50px;
+}
 main .wrap6 > #imgs > div a img {
   display: block;
+  padding: 15px;
   max-width: 100%;
   height: auto;
+}
+main .wrap6 > #imgs > div:nth-child(1) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(2) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(3) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(4) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(5) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(6) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(7) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(8) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(9) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(10) a img {
+  filter: grayscale(50%);
+}
+main .wrap6 > #imgs > div:nth-child(1):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(2):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(3):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(4):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(5):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(6):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(7):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(8):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(9):hover a img {
+  filter: grayscale(0);
+}
+main .wrap6 > #imgs > div:nth-child(10):hover a img {
+  filter: grayscale(0);
 }
 
 footer .footer_top {

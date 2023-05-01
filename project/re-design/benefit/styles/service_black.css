@@ -1,0 +1,273 @@
+body, html {
+  overflow-x: hidden;
+  background: #000;
+}
+
+header .nav_g {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, 0);
+  /* logo */
+}
+header .nav_g nav a {
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+  line-height: 2;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-radius: 3px;
+}
+header .nav_g nav a:hover {
+  background: rgba(225, 225, 225, 0.3);
+  border-radius: 3px;
+}
+header .nav_g h1 a img {
+  filter: grayscale(100%);
+}
+header .nav_g .h_right {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  align-items: center;
+  width: 360px;
+}
+header .nav_g .h_right select {
+  border: none;
+  outline: none;
+  padding: 2px 5px;
+  background: #000;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 3px;
+}
+header .nav_g .h_right select option {
+  color: #000;
+  background: #fff;
+}
+header .nav_g .h_right > .color {
+  padding: 10px;
+  margin-left: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+header .nav_g .h_right > .color:hover {
+  background: rgba(225, 225, 225, 0.3);
+  border-radius: 3px;
+}
+header .nav_g .h_right .inform_g {
+  padding: 15px 20px;
+  position: relative;
+}
+header .nav_g .h_right .inform_g a {
+  display: inline-block;
+  width: 25px;
+}
+header .nav_g .h_right .inform_g a img {
+  width: 100%;
+}
+header .nav_g .h_right .inform_g .inform {
+  background: rgba(225, 225, 225, 0.3);
+  padding: 6px 3px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 3px;
+}
+header .nav_g .h_right .inform_g .inform a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  font-weight: 700;
+  padding: 8px 0;
+  margin-bottom: 4px;
+  color: #fff;
+}
+header .nav_g .h_right .inform_g .inform a:last-child {
+  margin-bottom: 0;
+}
+header .nav_g .h_right .inform_g .inform a:hover {
+  color: #000;
+}
+header .nav_g .h_right .menu {
+  position: relative;
+  padding: 15px;
+}
+header .nav_g .h_right .menu a {
+  display: flex;
+  flex-flow: column nowrap;
+}
+header .nav_g .h_right .menu a span {
+  display: inline-block;
+  content: "";
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+header .nav_g .h_right .menu a span:last-child {
+  margin: 0;
+}
+header .nav_g .h_right .menu .menu_inform {
+  background: rgba(225, 225, 225, 0.3);
+  padding: 6px 3px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 3px;
+}
+header .nav_g .h_right .menu .menu_inform > a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  font-weight: 700;
+  padding: 8px 0;
+  margin-bottom: 4px;
+  color: #fff;
+  text-transform: uppercase;
+}
+header .nav_g .h_right .menu .menu_inform > .color {
+  display: none;
+}
+header .nav_g .h_right .menu .menu_inform > a:hover {
+  color: #000;
+}
+header .nav_g .h_right .menu .menu_inform p {
+  text-align: center;
+}
+header .nav_g .h_right .menu .menu_inform p select {
+  display: none;
+  color: #fff;
+}
+header .nav_g .h_right .menu .menu_inform select:hover {
+  color: #000;
+}
+
+main {
+  text-align: center;
+  width: 100%;
+}
+main h1 {
+  padding: 170px 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+main > p {
+  padding: 15px 0 70px;
+  font-weight: 600;
+  color: #888;
+}
+main .bnr_g {
+  width: 100%;
+}
+main .bnr_g .swiper-wrpper .swiper-slide {
+  height: 690px;
+  width: 100%;
+}
+main .notice {
+  margin: 100px 0 70px;
+  display: inline-block;
+  width: 700px;
+  padding: 50px 0;
+  border: 3px dashed #fff;
+}
+main .notice h2 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+main .notice p {
+  color: #fff;
+}
+main .find a {
+  background: #fff;
+  color: #000;
+  width: 300px;
+  margin: 0 auto;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 20px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 10px 50px;
+}
+main .find a:hover {
+  box-shadow: 0 0 10px #ffffff;
+}
+
+@-webkit-keyframes text {
+  0% {
+    transform: skew(-10deg);
+    letter-spacing: 0;
+  }
+  100% {
+    transform: skew(10deg);
+    letter-spacing: 0.05em;
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: skew(-10deg);
+    letter-spacing: 0;
+  }
+  100% {
+    transform: skew(10deg);
+    letter-spacing: 0.05em;
+  }
+}
+@media screen and (min-width: 1101px) {
+  .nav_g .h_right .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .nav_g nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .notice {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 670px) {
+  main .find a {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 620px) {
+  header .nav_g .h_right > select {
+    display: none;
+  }
+  header .nav_g .h_right > .dark {
+    display: none;
+  }
+  header .nav_g .h_right .menu .menu_inform p select {
+    display: inline-block;
+  }
+  header .nav_g .h_right .menu .menu_inform > .dark {
+    display: inline-block;
+  }
+}/*# sourceMappingURL=service_black.css.map */
