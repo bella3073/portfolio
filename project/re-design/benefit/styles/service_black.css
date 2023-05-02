@@ -261,13 +261,13 @@ main .find a:hover {
   header .nav_g .h_right > select {
     display: none;
   }
-  header .nav_g .h_right > .dark {
+  header .nav_g .h_right > .color {
     display: none;
   }
   header .nav_g .h_right .menu .menu_inform p select {
     display: inline-block;
   }
-  header .nav_g .h_right .menu .menu_inform > .dark {
+  header .nav_g .h_right .menu .menu_inform > .color {
     display: inline-block;
   }
 }/*# sourceMappingURL=service_black.css.map */

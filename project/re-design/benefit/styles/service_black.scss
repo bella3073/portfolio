@@ -151,11 +151,11 @@ main {
         .nav_g {
             .h_right {
                 > select {display:none;}
-                > .dark {display:none;}
+                > .color {display:none;}
                 .menu {
                     .menu_inform {
                         p {select {display:inline-block;}}
-                        > .dark {display:inline-block;}
+                        > .color {display:inline-block;}
                     }
                 }
             }

@@ -1,0 +1,341 @@
+@charset "UTF-8";
+main {
+  text-align: center;
+}
+main h1 {
+  padding-top: 170px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 59, 111, 0.6156862745);
+  text-transform: uppercase;
+}
+main .best > h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: #979ed5;
+  text-transform: capitalize;
+  position: relative;
+  top: 60px;
+  left: -250px;
+  animation: skew_text 1s linear alternate-reverse infinite;
+  padding: 0 5px;
+}
+main .best .best_img { /* 베스트 상품 이미지 위지  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0 150px;
+  width: 100%;
+}
+main .best .best_img > a {
+  display: inline-block;
+  content: "";
+  background-image: url(../images/best/best_pro.png);
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  animation: move_img 0.8s linear alternate-reverse infinite;
+  transition: all 0.5s;
+  position: relative;
+  top: 20px;
+  left: -78px;
+}
+main .best .best_img > a:hover {
+  filter: grayscale(100%);
+}
+main .best .best_img .best_text {
+  position: relative;
+  bottom: -80px;
+  right: 0;
+  text-align: right;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px 0;
+}
+main .best .best_img .best_text h2 {
+  font-weight: 700;
+  color: #979ed5;
+  font-size: 1.2rem;
+}
+main .best .best_img .best_text .color {
+  margin: 25px 0;
+}
+main .best .best_img .best_text .color li {
+  width: 400px;
+}
+main .best .best_img .best_text .color li .color_img {
+  display: inline-block;
+  content: "";
+  width: 70px;
+  right: 70px;
+  position: absolute;
+  top: -80px;
+  right: 0;
+}
+main .best .best_img .best_text .color li .color_img img {
+  width: 100%;
+}
+main .best .best_img .best_text .color li a {
+  display: inline-block;
+  width: 80px;
+  margin: 3px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+main .best .best_img .best_text .color li a:hover {
+  background: rgba(255, 255, 255, 0.5529411765);
+  color: rgba(255, 59, 111, 0.6156862745);
+  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+  border: none;
+}
+main .best .best_img .best_text .price {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+main .best .best_img .best_text .price p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+main .best .best_img .best_text .price p a {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+}
+main .best .best_img .best_text .price p .like {
+  background-image: url(../images/best/heart.png);
+  background-size: cover;
+  background-position: center;
+}
+main .best .best_img .best_text .price p .like:hover {
+  background-image: url(../images/best/heart2.png);
+}
+main .best .best_img .best_text .price p .basket {
+  background-image: url(../images/best/shopping-cart.png);
+  background-size: cover;
+  background-position: center;
+}
+main .best .best_img .best_text .price p .basket:hover {
+  background-image: url(../images/best/shopping-cart2.png);
+}
+main .best .best_img .best_text .price p:last-child {
+  margin: 0;
+}
+main .best .best_img .best_text > a {
+  display: inline-block;
+  border: 1px solid rgba(255, 59, 111, 0.6156862745);
+  padding: 9px 13px;
+  color: rgba(255, 59, 111, 0.6156862745);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 120px;
+  text-align: center;
+  margin: 15px 0 0 auto;
+}
+main .best .best_img .best_text > a:hover {
+  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+}
+main .product_g {
+  border: 1px solid #ffbecf;
+  width: 95%;
+  margin: 0 auto 100px;
+  border-radius: 30px;
+}
+main .product_g .first_line {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main .product_g .first_line .product {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+main .product_g .first_line .product h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #979ed5;
+  text-transform: uppercase;
+  margin: 70px 0 0;
+}
+main .product_g .first_line .product .pro_img {
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  margin: 15px 0 35px;
+  transition: all 0.5s;
+}
+main .product_g .first_line .product .pro_1 {
+  background-image: url(../images/best/pro01.png);
+}
+main .product_g .first_line .product .pro_2 {
+  background-image: url(../images/best/pro02.png);
+}
+main .product_g .first_line .product .pro_3 {
+  background-image: url(../images/best/pro03.png);
+}
+main .product_g .first_line .product .pro_4 {
+  background-image: url(../images/best/pro04.png);
+}
+main .product_g .first_line .product .pro_5 {
+  background-image: url(../images/best/pro05.png);
+}
+main .product_g .first_line .product .pro_6 {
+  background-image: url(../images/best/pro06.png);
+}
+main .product_g .first_line .product .pro_7 {
+  background-image: url(../images/best/pro01.png);
+}
+main .product_g .first_line .product .pro_8 {
+  background-image: url(../images/best/pro08.png);
+}
+main .product_g .first_line .product .pro_img:hover {
+  filter: grayscale(100%);
+}
+main .product_g .first_line .product .pro_text h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+main .product_g .first_line .product .pro_text select {
+  width: 200px;
+  border: none;
+  text-align: center;
+  padding: 5px 0;
+  margin: 20px 0 25px;
+  outline: none;
+}
+main .product_g .first_line .product .pro_text .only_type {
+  margin: 26px 0 37px;
+}
+main .product_g .first_line .product .pro_text > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .product_g .first_line .product .pro_text > p span {
+  font-weight: 700;
+}
+main .product_g .first_line .product .pro_text > p a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+main .product_g .first_line .product .pro_text > p .like {
+  background-image: url(../images/best/heart.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 5px 0 10px;
+}
+main .product_g .first_line .product .pro_text > p .like:hover {
+  background-image: url(../images/best/heart2.png);
+}
+main .product_g .first_line .product .pro_text > p .basket {
+  background-image: url(../images/best/shopping-cart.png);
+  background-size: cover;
+  background-position: center;
+}
+main .product_g .first_line .product .pro_text > p .basket:hover {
+  background-image: url(../images/best/shopping-cart2.png);
+}
+main .product_g .first_line .product .pro_text > a {
+  display: inline-block;
+  border: 1px solid rgba(255, 59, 111, 0.6156862745);
+  padding: 7px;
+  color: rgba(255, 59, 111, 0.6156862745);
+  font-weight: 700;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  margin: 20px 0 70px;
+}
+main .product_g .first_line .product .pro_text > a:hover {
+  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+}
+
+@-webkit-keyframes move_img {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes move_img {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes skew_text {
+  0% {
+    transform: skew(-15deg);
+  }
+  100% {
+    transform: skew(15deg);
+  }
+}
+@keyframes skew_text {
+  0% {
+    transform: skew(-15deg);
+  }
+  100% {
+    transform: skew(15deg);
+  }
+}
+@media screen and (max-width: 1320px) {
+  main .product_g .first_line .product {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .product_g .first_line .product {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 950px) {
+  main .best > h2 {
+    top: 60px;
+    left: 0;
+  }
+  main .best .best_img {
+    flex-flow: column nowrap;
+  }
+  main .best .best_img > a {
+    left: 0;
+  }
+  main .best .best_img .best_text {
+    text-align: center;
+  }
+  main .best .best_img .best_text .color li .color_img {
+    top: -90px;
+    right: -85px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  main .best .best_img .best_text .price {
+    justify-content: center;
+  }
+  main .best .best_img .best_text > a {
+    margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 660px) {
+  main .product_g .first_line .product {
+    width: 80%;
+  }
+}/*# sourceMappingURL=best.css.map */

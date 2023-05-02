@@ -18,7 +18,9 @@ text-align: center;
 width: 90px;
 line-height: 2;
 font-weight: 700;
-color: #fff;
+color: #979ed5;
+background: #fff;
+border-radius: 3px;
 }
 header .nav_g nav a:hover {
 background: rgba(246, 83, 125, 0.3);
@@ -35,9 +37,10 @@ header .nav_g .h_right select {
 border: none;
 outline: none;
 padding: 2px 5px;
-background: none;
+background: #fff;
 font-weight: 700;
-color: #fff;
+color: #979ed5;
+border-radius: 3px;
 }
 header .nav_g .h_right select option {
 color: #000;
@@ -45,13 +48,14 @@ color: #000;
 header .nav_g .h_right > .dark {
 padding: 10px;
 margin-left: 7px;
-color: #fff;
+color: #979ed5;
 font-weight: 700;
 text-transform: uppercase;
 }
 header .nav_g .h_right .dark:hover {
 background: rgba(0, 0, 0, 0.3);
 border-radius: 3px;
+color: #000;
 }
 header .nav_g .h_right .inform_g {
 padding: 15px 20px;
@@ -104,7 +108,7 @@ display: inline-block;
 content: "";
 width: 25px;
 height: 4px;
-background: #fff;
+background: #979ed5;
 margin-bottom: 4px;
 border-radius: 3px;
 }
@@ -189,17 +193,17 @@ display: none;
             <a href="#">베스트셀러</a>
             <a href="#">제품보기</a>
             <a href="#">매장찾기</a>
-            <a href="#">서비스예약</a>
+            <a href="./service.html">서비스예약</a>
         </nav>
-        <h1><a href="#"><img src="./images/logo.svg" alt="베네피트 홈페이지"></a></h1>
+        <h1><a href="./index.html"><img src="./images/logo.svg" alt="베네피트 홈페이지"></a></h1>
         <div class="h_right">
             <select name="LAN">
                 <option value="ko">KO</option>
                 <option value="en">EN</option>
             </select>
-            <a href="./index_black.html" class="dark">Dark</a>
+            <a href="./service_black.html" class="dark">Dark</a>
             <div class="inform_g">
-                <a href="#"><img src="./images/icon.png" alt="내 정보"></a>
+                <a href="#"><img src="./images/black/icon_p.png" alt="내 정보"></a>
                 <div class="inform">
                     <a href="#">로그인</a>
                     <a href="#">회원가입</a>
@@ -216,8 +220,8 @@ display: none;
                     <a href="#">베스트셀러</a>
                     <a href="#">제품보기</a>
                     <a href="#">매장찾기</a>
-                    <a href="#">서비스예약</a>
-                    <a href="./index_black.html" class="dark">Dark</a>
+                    <a href="./service.html">서비스예약</a>
+                    <a href="./service_black.html" class="dark">Dark</a>
                     <p>
                         <select name="LAN">
                             <option value="ko">KO</option>

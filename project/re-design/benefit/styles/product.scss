@@ -1,0 +1,73 @@
+$color1:#979ed5;
+$color2:#888;
+$color3:#ffbecf;
+@mixin background {background-size:cover; background-position:center;}
+
+main {
+    text-align:center;
+    h1 {padding-top:170px; font-size:1.5rem; font-weight:700; color:#ff3b6f9d; text-transform: uppercase;}
+    .top_list {
+        display:flex; justify-content:center;
+        position:relative;
+        li {
+            .top_ca {/* 상위 카테고리명 */
+                display:inline-block; padding:10px 0; margin:100px 0 35px 20px; width:100px;
+                font-weight:700; color:$color1;
+            }
+            .top_ca:last-child {margin-left:0;}
+            .top_ca:hover {background:rgba(246,83,125,0.3); border-radius:3px;}
+            /* 하위 카테고리=========================================================================== */
+            .sub {
+                display:flex;
+                position:absolute; bottom:-30px; left:50%;
+                transform:translate(-50%,-50%);
+                li {
+                    a {/* 하위 카테고리명 */
+                        display:inline-block; padding:5px; margin:5px; color:$color2;
+                    }
+                    a:hover {color:#000;}
+                }
+            }
+            .eye {}
+            .lip {display:none;}
+            .face {display:none;}
+        }
+    }//e:top_list
+    .bg_border {
+        .product_g {
+            .product {
+                .pro_img {}
+                .pro_0 {}
+                .pro_2 {}
+                .pro_2 {}
+                .pro_3 {}
+                .pro_4 {}
+                .pro_5 {}
+                .pro_6 {}
+                .pro_7 {}
+                .pro_8 {}
+                .pro_9 {}
+                .pro_10 {}
+                .pro_11 {}
+                .pro_12 {}
+                .pro_13 {}
+                .pro_14 {}
+                //e:상품 이미지
+                .pro_text {
+                    h3 {}/* 상품명 */
+                    select {/* 목록 */
+                        option {}
+                    }
+                    .only_type {}/* Only one type */
+                    p {
+                        span {}/* 가격 */
+                        a {}
+                        .like {}/* 하트 이모티콘 */
+                        .basket {}/* 장바구니 이모티콘 */
+                    }
+                    a {}/* 구매하기 */
+                }
+            }
+        }
+    }
+}

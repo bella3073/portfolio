@@ -1,0 +1,65 @@
+@charset "UTF-8";
+main {
+  text-align: center;
+}
+main h1 {
+  padding-top: 170px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 59, 111, 0.6156862745);
+  text-transform: uppercase;
+}
+main .top_list {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+main .top_list li {
+  /* 하위 카테고리=========================================================================== */
+}
+main .top_list li .top_ca { /* 상위 카테고리명 */
+  display: inline-block;
+  padding: 10px 0;
+  margin: 100px 0 35px 20px;
+  width: 100px;
+  font-weight: 700;
+  color: #979ed5;
+}
+main .top_list li .top_ca:last-child {
+  margin-left: 0;
+}
+main .top_list li .top_ca:hover {
+  background: rgba(246, 83, 125, 0.3);
+  border-radius: 3px;
+}
+main .top_list li .sub {
+  display: flex;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .top_list li .sub li a { /* 하위 카테고리명 */
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  color: #888;
+}
+main .top_list li .sub li a:hover {
+  color: #000;
+}
+main .top_list li .lip {
+  display: none;
+}
+main .top_list li .face {
+  display: none;
+}
+main .bg_border .product_g .product .pro_text { /* 상품명 */
+  /* Only one type */
+  /* 구매하기 */
+}
+main .bg_border .product_g .product .pro_text select { /* 목록 */ }
+main .bg_border .product_g .product .pro_text p { /* 가격 */
+  /* 하트 이모티콘 */
+  /* 장바구니 이모티콘 */
+}/*# sourceMappingURL=product.css.map */
