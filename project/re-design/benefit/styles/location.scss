@@ -98,3 +98,48 @@ main {text-align:center;
         width:70%; height:700px; background:$color1; margin:0 auto 100px;
     }
 }
+
+// 반응형
+@media screen and (min-width:1101px) {
+    .nav_g {
+        .h_right {
+            .menu {display:none;}
+        }
+    }
+}
+@media screen and (max-width:1100px) {
+    .nav_g {
+        nav {display:none;}
+    }
+}
+@media screen and (max-width:750px) {
+    main {
+        .notice {
+            width:95%;
+        }
+    }
+}
+@media screen and (max-width:670px) {
+    main {
+        .find {
+            a {width:180px;}
+        }
+    }
+}
+
+@media screen and (max-width:620px) {
+    header {
+        .nav_g {
+            .h_right {
+                > select {display:none;}
+                > .dark {display:none;}
+                .menu {
+                    .menu_inform {
+                        p {select {display:inline-block;}}
+                        > .dark {display:inline-block;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -400,15 +400,6 @@ main {
             }
             a:hover {box-shadow: 0 0 10px #aca18d; z-index:-1;}
         }
-        > p {
-            font-weight:800; font-size:1.2rem;
-            position:absolute; bottom:330px; left:545px;
-            font-style:italic;
-            span {
-                font-weight:800; font-size:1.2rem; font-style:italic;
-                position:relative; top:0; left:35px;
-            }
-        }
         .prev {
             background-image:url(../images/direction.png);
             background-size:cover;
