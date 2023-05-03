@@ -389,7 +389,7 @@ main {
             }//e:w4_right
         }
         .figma_txt {
-            position:absolute; bottom:330px; left:150px;
+            position:absolute; bottom:330px; left:120px;
             width:90px; height:40px;
             a {
                 font-weight:800; font-size:1.2rem; font-style:italic;
@@ -402,7 +402,7 @@ main {
         }
         > p {
             font-weight:800; font-size:1.2rem;
-            position:absolute; bottom:330px; left:580px;
+            position:absolute; bottom:330px; left:545px;
             font-style:italic;
             span {
                 font-weight:800; font-size:1.2rem; font-style:italic;
@@ -414,7 +414,7 @@ main {
             background-size:cover;
             background-position:center;
             width:100px; height:30px; display:inline-block;
-            position:relative; top:-332px; left:0;
+            position:relative; top:-332px; left:-50px;
             animation:direction2 0.7s linear alternate-reverse infinite;
         }
         .next {
@@ -422,7 +422,7 @@ main {
             background-size:cover;
             background-position:center;
             width:100px; height:30px; display:inline-block;
-            position:relative; top:-332px; right:-1190px;
+            position:relative; top:-332px; right:-1240px;
             animation:direction 0.7s linear alternate-reverse infinite;
         }
         .direction {

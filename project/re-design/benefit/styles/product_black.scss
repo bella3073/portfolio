@@ -4,6 +4,7 @@ $color3:#ffbecf;
 @mixin background {background-size:cover; background-position:center;}
 @mixin flex-row {display:flex; flex-flow:row nowrap;}
 
+body {background:#000;}
 header {
     .nav_g {
         width:100%;
@@ -14,29 +15,30 @@ header {
         nav {
             a {
             display:inline-block; text-align:center;
-            width:90px;line-height:2; font-weight:700; color:#979ed5; background:#fff; border-radius:3px;
+            width:90px;line-height:2; font-weight:700; color:#fff;
+            background:#000; border-radius:3px;
             }
-            a:hover {background:rgba(246,83,125,0.3); border-radius:3px;}
+            a:hover {background:rgba(225,225,225,0.3); border-radius:3px;}
         }
-        h1 {a {img {}}}/* logo */
+        h1 {a {img {filter:grayscale(100%);}}}/* logo */
         .h_right {
             @include flex-row; justify-content:right;
             align-items:center; width:360px;
             select {
                 border:none; outline:none; padding:2px 5px;
-                background:#fff; font-weight:700; color:#979ed5; border-radius:3px;
-                option {color:#000;}
+                background:#000; font-weight:700; color:#fff; border-radius:3px; 
+                option {color:#fff; background:#000;}
             }
-            > .dark {
-                padding:7px; margin-left:7px; color:#979ed5; font-weight:700;
-                text-transform:uppercase; display:inline-block; border-radius:3px; background:#fff;
+            > .color {
+                padding:7px; margin-left:7px; font-weight:700;
+                text-transform:uppercase; color:#fff; display:inline-block; border-radius:3px; background:#000;
             }
-            .dark:hover {background:rgba(0,0,0,0.3); border-radius:3px; color:#000;}
+            > .color:hover {background:rgba(225,225,225,0.3); border-radius:3px;}
             .inform_g {padding:15px 20px; position:relative;
                 a {display:inline-block; width:25px;
                     img {width:100%;}
                 }
-                .inform {background:rgba(246,83,125,0.3); padding:6px 3px;
+                .inform {background:rgba(225,225,225,0.3); padding:6px 3px;
                     display:flex; flex-flow:column nowrap; justify-content:center;
                     position:absolute; top:52px; left:50%;
                     transform:translate(-50%,0); border-radius:3px;
@@ -46,7 +48,7 @@ header {
                         padding:8px 0; margin-bottom:4px; color:#fff;
                     }
                     a:last-child {margin-bottom:0;}
-                    a:hover {color:#ff3b6f;}
+                    a:hover {color:#000;}
                 }
             }
             .menu {
@@ -56,13 +58,13 @@ header {
                     span {
                         display:inline-block; content:'';
                         width:25px; height:4px;
-                        background:#979ed5;
+                        background:#fff;
                         margin-bottom:4px; border-radius:3px;
                     }
                     span:last-child {margin:0;}
                 }
                 .menu_inform {
-                    background:rgba(246,83,125,0.3); padding:6px 3px;
+                    background:rgba(225,225,225,0.3); padding:6px 3px;
                     display:flex; flex-flow:column nowrap; justify-content:center;
                     position:absolute; top:52px; left:50%;
                     transform:translate(-50%,0); border-radius:3px;
@@ -72,10 +74,11 @@ header {
                         padding:8px 0; margin-bottom:4px; color:#fff;
                         text-transform:uppercase;
                     }
-                    > .dark {display:none;}
-                    > a:hover {color:#ff3b6f;}
+                    > .color {display:none;}
+                    > a:hover {color:#000;}
                     p {text-align:center;
-                        select {display:none;}}
+                        select {display:none; color:#fff;}}
+                        select:hover {color:#000;}
                 }
             }
         }
@@ -83,17 +86,17 @@ header {
 }//e:header
 main {
     text-align:center;
-    h1 {padding-top:170px; font-size:1.5rem; font-weight:700; color:#ff3b6f9d; text-transform: uppercase;}
+    h1 {padding-top:170px; font-size:1.5rem; font-weight:700; color:#fff; text-transform: uppercase;}
     .top_list {
         display:flex; justify-content:center;
         position:relative;
         li {
             .top_ca {/* 상위 카테고리명 */
                 display:inline-block; padding:10px 0; margin:100px 0 40px 20px; width:100px;
-                font-weight:700; color:$color1;
+                font-weight:700; color:$color2;
             }
             .top_ca:last-child {margin-left:0;}
-            .top_ca:hover {box-shadow:0 0 10px rgba(246,83,125,0.3); border-radius:3px;}
+            .top_ca:hover {box-shadow:0 0 10px #fff; border-radius:3px;}
             /* 하위 카테고리=========================================================================== */
             .sub {
                 display:flex;
@@ -117,12 +120,12 @@ main {
             display:inline-flex; justify-content:center; align-items:center;
             border:1px solid $color2; padding:5px 10px; margin-top:70px; border-radius:3px;
             input {
-                border:none; outline:none; margin-right:5px;
+                border:none; outline:none; margin-right:5px; background:#000; color:#fff;
             }
             button {width:20px; img {width:100%;}}
         }
     }
-    .bg_border {border:1px solid $color3; width:95%; margin:100px auto 100px; border-radius:30px;
+    .bg_border {border:1px solid #fff; width:95%; margin:100px auto 100px; border-radius:30px;
         .product_g {
             display:flex; flex-flow:row wrap; justify-content:center;
             .product {
@@ -147,26 +150,26 @@ main {
                 .pro_img:hover {filter:grayscale(100%);}
                 //e:상품 이미지
                 .pro_text {
-                    h3 {font-weight:700; text-transform:capitalize;}/* 상품명 */
+                    h3 {font-weight:700; text-transform:capitalize; color:#fff;}/* 상품명 */
                     select {/* 목록 */
                         width:200px; border:none; text-align:center; padding:5px 0; margin:20px 0 25px;
-                        outline:none;
+                        outline:none;  color:#fff; background:#000;
                         option {}
                     }
-                    .only_type {margin:26px 0 37px;}/* Only one type */
+                    .only_type {margin:26px 0 37px;  color:#fff;}/* Only one type */
                     > p {display:flex; align-items:center; justify-content: center;
-                        span {font-weight:700;}/* 가격 */
+                        span {font-weight:700;  color:#fff;}/* 가격 */
                         a {display:inline-block; width:20px; height: 20px;}
                         .like {background-image:url(../images/best/heart.png); @include background; margin:0 5px 0 10px;}/* 하트 이모티콘 */
-                        .like:hover {background-image:url(../images/best/heart2.png);}
+                        .like:hover {background-image:url(../images/best/heart_w.png);}
                         .basket {background-image:url(../images/best/shopping-cart.png); @include background;}/* 장바구니 이모티콘 */
-                        .basket:hover {background-image:url(../images/best/shopping-cart2.png);}
+                        .basket:hover {background-image:url(../images/best/shopping-cart_w.png);}
                     }
                     > a {/* 구매하기 */
-                        display:inline-block; border:1px solid #ff3b6f9d; padding:7px; color:#ff3b6f9d;
+                        display:inline-block; border:1px solid #fff; padding:7px; color:#fff;
                         font-weight:700; border-radius:5px; width:100px; text-align:center; margin:20px 0 70px;
                     }
-                    > a:hover {box-shadow:0 0 10px #ff3b6f9d;}
+                    > a:hover {box-shadow:0 0 10px #fff;}
                 }
             }
         }

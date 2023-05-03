@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background: #000;
+}
+
 header .nav_g {
   width: 100%;
   display: flex;
@@ -18,13 +22,16 @@ header .nav_g nav a {
   width: 90px;
   line-height: 2;
   font-weight: 700;
-  color: #979ed5;
-  background: #fff;
+  color: #fff;
+  background: #000;
   border-radius: 3px;
 }
 header .nav_g nav a:hover {
-  background: rgba(246, 83, 125, 0.3);
+  background: rgba(225, 225, 225, 0.3);
   border-radius: 3px;
+}
+header .nav_g h1 a img {
+  filter: grayscale(100%);
 }
 header .nav_g .h_right {
   display: flex;
@@ -37,28 +44,28 @@ header .nav_g .h_right select {
   border: none;
   outline: none;
   padding: 2px 5px;
-  background: #fff;
+  background: #000;
   font-weight: 700;
-  color: #979ed5;
+  color: #fff;
   border-radius: 3px;
 }
 header .nav_g .h_right select option {
-  color: #000;
+  color: #fff;
+  background: #000;
 }
-header .nav_g .h_right > .dark {
+header .nav_g .h_right > .color {
   padding: 7px;
   margin-left: 7px;
-  color: #979ed5;
   font-weight: 700;
   text-transform: uppercase;
-  background: #fff;
+  color: #fff;
   display: inline-block;
   border-radius: 3px;
+  background: #000;
 }
-header .nav_g .h_right .dark:hover {
-  background: rgba(0, 0, 0, 0.3);
+header .nav_g .h_right > .color:hover {
+  background: rgba(225, 225, 225, 0.3);
   border-radius: 3px;
-  color: #000;
 }
 header .nav_g .h_right .inform_g {
   padding: 15px 20px;
@@ -72,7 +79,7 @@ header .nav_g .h_right .inform_g a img {
   width: 100%;
 }
 header .nav_g .h_right .inform_g .inform {
-  background: rgba(246, 83, 125, 0.3);
+  background: rgba(225, 225, 225, 0.3);
   padding: 6px 3px;
   display: flex;
   flex-flow: column nowrap;
@@ -96,7 +103,7 @@ header .nav_g .h_right .inform_g .inform a:last-child {
   margin-bottom: 0;
 }
 header .nav_g .h_right .inform_g .inform a:hover {
-  color: #ff3b6f;
+  color: #000;
 }
 header .nav_g .h_right .menu {
   position: relative;
@@ -111,7 +118,7 @@ header .nav_g .h_right .menu a span {
   content: "";
   width: 25px;
   height: 4px;
-  background: #979ed5;
+  background: #fff;
   margin-bottom: 4px;
   border-radius: 3px;
 }
@@ -119,7 +126,7 @@ header .nav_g .h_right .menu a span:last-child {
   margin: 0;
 }
 header .nav_g .h_right .menu .menu_inform {
-  background: rgba(246, 83, 125, 0.3);
+  background: rgba(225, 225, 225, 0.3);
   padding: 6px 3px;
   display: flex;
   flex-flow: column nowrap;
@@ -140,17 +147,21 @@ header .nav_g .h_right .menu .menu_inform > a {
   color: #fff;
   text-transform: uppercase;
 }
-header .nav_g .h_right .menu .menu_inform > .dark {
+header .nav_g .h_right .menu .menu_inform > .color {
   display: none;
 }
 header .nav_g .h_right .menu .menu_inform > a:hover {
-  color: #ff3b6f;
+  color: #000;
 }
 header .nav_g .h_right .menu .menu_inform p {
   text-align: center;
 }
 header .nav_g .h_right .menu .menu_inform p select {
   display: none;
+  color: #fff;
+}
+header .nav_g .h_right .menu .menu_inform select:hover {
+  color: #000;
 }
 
 main {
@@ -160,7 +171,7 @@ main h1 {
   padding-top: 170px;
   font-size: 1.5rem;
   font-weight: 700;
-  color: rgba(255, 59, 111, 0.6156862745);
+  color: #fff;
   text-transform: uppercase;
 }
 main .best > h2 {
@@ -168,7 +179,7 @@ main .best > h2 {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
-  background: #979ed5;
+  background: #888;
   text-transform: capitalize;
   position: relative;
   top: 60px;
@@ -211,7 +222,7 @@ main .best .best_img .best_text {
 }
 main .best .best_img .best_text h2 {
   font-weight: 700;
-  color: #979ed5;
+  color: #fff;
   font-size: 1.2rem;
 }
 main .best .best_img .best_text .color {
@@ -239,14 +250,13 @@ main .best .best_img .best_text .color li a {
   text-align: center;
   padding: 10px 0;
   font-weight: 700;
-  color: #888;
-  border: 1px solid #888;
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 5px;
 }
 main .best .best_img .best_text .color li a:hover {
   background: rgba(255, 255, 255, 0.5529411765);
-  color: rgba(255, 59, 111, 0.6156862745);
-  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+  box-shadow: 0 0 10px #fff;
   border: none;
 }
 main .best .best_img .best_text .price {
@@ -258,6 +268,7 @@ main .best .best_img .best_text .price p {
   font-size: 1.2rem;
   font-weight: 700;
   margin-right: 12px;
+  color: #fff;
 }
 main .best .best_img .best_text .price p a {
   display: inline-block;
@@ -270,7 +281,7 @@ main .best .best_img .best_text .price p .like {
   background-position: center;
 }
 main .best .best_img .best_text .price p .like:hover {
-  background-image: url(../images/best/heart2.png);
+  background-image: url(../images/best/heart_w.png);
 }
 main .best .best_img .best_text .price p .basket {
   background-image: url(../images/best/shopping-cart.png);
@@ -278,16 +289,16 @@ main .best .best_img .best_text .price p .basket {
   background-position: center;
 }
 main .best .best_img .best_text .price p .basket:hover {
-  background-image: url(../images/best/shopping-cart2.png);
+  background-image: url(../images/best/shopping-cart_w.png);
 }
 main .best .best_img .best_text .price p:last-child {
   margin: 0;
 }
 main .best .best_img .best_text > a {
   display: inline-block;
-  border: 1px solid rgba(255, 59, 111, 0.6156862745);
+  border: 1px solid #fff;
   padding: 9px 13px;
-  color: rgba(255, 59, 111, 0.6156862745);
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 5px;
@@ -296,10 +307,10 @@ main .best .best_img .best_text > a {
   margin: 15px 0 0 auto;
 }
 main .best .best_img .best_text > a:hover {
-  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+  box-shadow: 0 0 10px #fff;
 }
 main .product_g {
-  border: 1px solid #ffbecf;
+  border: 1px solid #fff;
   width: 95%;
   margin: 0 auto 100px;
   border-radius: 30px;
@@ -319,7 +330,7 @@ main .product_g .first_line .product {
 main .product_g .first_line .product h2 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #979ed5;
+  color: #fff;
   text-transform: uppercase;
   margin: 70px 0 0;
 }
@@ -361,6 +372,7 @@ main .product_g .first_line .product .pro_img:hover {
 main .product_g .first_line .product .pro_text h3 {
   font-weight: 700;
   text-transform: capitalize;
+  color: #fff;
 }
 main .product_g .first_line .product .pro_text select {
   width: 200px;
@@ -369,6 +381,8 @@ main .product_g .first_line .product .pro_text select {
   padding: 5px 0;
   margin: 20px 0 25px;
   outline: none;
+  color: #fff;
+  background: #000;
 }
 main .product_g .first_line .product .pro_text .only_type {
   margin: 26px 0 37px;
@@ -380,6 +394,7 @@ main .product_g .first_line .product .pro_text > p {
 }
 main .product_g .first_line .product .pro_text > p span {
   font-weight: 700;
+  color: #fff;
 }
 main .product_g .first_line .product .pro_text > p a {
   display: inline-block;
@@ -393,7 +408,7 @@ main .product_g .first_line .product .pro_text > p .like {
   margin: 0 5px 0 10px;
 }
 main .product_g .first_line .product .pro_text > p .like:hover {
-  background-image: url(../images/best/heart2.png);
+  background-image: url(../images/best/heart_w.png);
 }
 main .product_g .first_line .product .pro_text > p .basket {
   background-image: url(../images/best/shopping-cart.png);
@@ -401,13 +416,13 @@ main .product_g .first_line .product .pro_text > p .basket {
   background-position: center;
 }
 main .product_g .first_line .product .pro_text > p .basket:hover {
-  background-image: url(../images/best/shopping-cart2.png);
+  background-image: url(../images/best/shopping-cart_w.png);
 }
 main .product_g .first_line .product .pro_text > a {
   display: inline-block;
-  border: 1px solid rgba(255, 59, 111, 0.6156862745);
+  border: 1px solid #fff;
   padding: 7px;
-  color: rgba(255, 59, 111, 0.6156862745);
+  color: #fff;
   font-weight: 700;
   border-radius: 5px;
   width: 100px;
@@ -415,7 +430,7 @@ main .product_g .first_line .product .pro_text > a {
   margin: 20px 0 70px;
 }
 main .product_g .first_line .product .pro_text > a:hover {
-  box-shadow: 0 0 10px rgba(255, 59, 111, 0.6156862745);
+  box-shadow: 0 0 10px #fff;
 }
 
 @-webkit-keyframes move_img {
@@ -492,4 +507,4 @@ main .product_g .first_line .product .pro_text > a:hover {
   main .product_g .first_line .product {
     width: 80%;
   }
-}/*# sourceMappingURL=best.css.map */
+}/*# sourceMappingURL=best_black.css.map */

@@ -49,11 +49,14 @@ header .nav_g .h_right select option {
   color: #000;
 }
 header .nav_g .h_right > .dark {
-  padding: 10px;
+  padding: 7px;
   margin-left: 7px;
   color: #979ed5;
   font-weight: 700;
   text-transform: uppercase;
+  display: inline-block;
+  border-radius: 3px;
+  background: #fff;
 }
 header .nav_g .h_right .dark:hover {
   background: rgba(0, 0, 0, 0.3);

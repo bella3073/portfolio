@@ -1,8 +1,3 @@
-const tint_color = document.querySelectorAll('.color li a')
-const view = document.querySelector('.color_img img')
-console.log(tint_color,view)
-
-
 // header
 const my = document.querySelector('.inform')
 const menu = document.querySelector('.menu_inform')
@@ -38,25 +33,19 @@ menu_img.addEventListener('mouseout',(e)=>{
     menu.style.display = 'none'
 })
 
-view.style.display = 'none'
 
 
-//컬러명 위에 마우스를 올리면
-tint_color.forEach((t,i)=>{
-    t.addEventListener('mouseover',(e)=>{
-        e.preventDefault() //a기능 막기
-        // console.log(i)
-        view.style.display = 'block'
-        view.src = `./images/best/tint_0${i+1}.jpg`
-    })
-    t.addEventListener('mouseout',(e)=>{
-        e.preventDefault() //a기능 막기
-        view.style.display = 'none'
-    })
-})
-
-// tint_color.addEventListener('mouseover',(e)=>{
-//     e.preventDefault()
-//     console.log(this)
-// })
-//이미지가 보임
+// 지도
+var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+var options = { //지도를 생성할 때 필요한 기본 옵션
+    center: new kakao.maps.LatLng(37.5042865,126.7621805), //지도의 중심좌표.
+    level: 3 //지도의 레벨(확대, 축소 정도)
+};
+var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+var markerPosition  = new kakao.maps.LatLng(37.5042865,126.7621805); 
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);

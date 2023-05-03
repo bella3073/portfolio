@@ -1,7 +1,9 @@
+$color1:#979ed5;
+$color2:#888;
+$color3:#ffbecf;
+@mixin background {background-size:cover; background-position:center;}
 @mixin flex-row {display:flex; flex-flow:row nowrap;}
 
-body,html {overflow-x:hidden;}
-// header
 header {
     .nav_g {
         width:100%;
@@ -26,7 +28,7 @@ header {
                 option {color:#000;}
             }
             > .dark {
-                padding:7px; margin-left:7px; color:#979ed5; font-weight:700;
+                padding:10px; margin-left:7px; color:#979ed5; font-weight:700;
                 text-transform:uppercase;  display:inline-block; border-radius:3px; background:#fff;
             }
             .dark:hover {background:rgba(0,0,0,0.3); border-radius:3px; color:#000;}
@@ -79,84 +81,20 @@ header {
         }
     }
 }//e:header
-main {
-    text-align:center; width:100%;
-    h1 {padding:170px 0 0; font-size:1.5rem; font-weight:700; color:#ff3b6f9d; text-transform: uppercase;}
-    > p {padding:15px 0 70px; font-weight:600; color:#888;}
-    // swiper
-    .bnr_g {width:100%;
-        .swiper-wrpper {
-            .swiper-slide {
-                height:690px; width:100%;
+main {text-align:center;
+    h1 {padding-top:170px; font-size:1.5rem; font-weight:700; color:#ff3b6f9d; text-transform: uppercase;}
+    p { margin:100px 0 20px; color:$color2;}
+    form {
+        fieldset {
+            display:inline-flex; justify-content:center; align-items:center;
+            border:1px solid $color2; padding:5px 10px; border-radius:3px; margin-bottom:100px;
+            input {
+                border:none; outline:none; margin-right:5px;
             }
+            button {width:20px; img {width:100%;}}
         }
     }
-    .notice {
-        margin:100px 0 70px;
-        display:inline-block; width:700px; padding:50px 0;
-        border:3px dashed #ffbecf;
-        h2 {font-weight:600; font-size:1.1rem; margin-bottom:20px;}
-        p {}
-    }
-    .find {
-        a {background:#ff3b6f9d; color:#fff;
-            width:300px; margin:0 auto;
-            display:inline-block; border-radius:3px;
-            padding:20px 0; font-size:1.1rem; font-weight:600;
-            margin:0 10px 50px;
-        }
-        a:hover {box-shadow:0 0 10px #ff3b6f9d;}
-    }
-}
-
-//animation
-@keyframes text {
-    0% {transform:skew(-10deg); letter-spacing:0;}
-    100% {transform:skew(10deg); letter-spacing:0.05em;}
-}
-
-
-// 반응형
-@media screen and (min-width:1101px) {
-    .nav_g {
-        .h_right {
-            .menu {display:none;}
-        }
-    }
-}
-@media screen and (max-width:1100px) {
-    .nav_g {
-        nav {display:none;}
-    }
-}
-@media screen and (max-width:750px) {
-    main {
-        .notice {
-            width:95%;
-        }
-    }
-}
-@media screen and (max-width:670px) {
-    main {
-        .find {
-            a {width:180px;}
-        }
-    }
-}
-
-@media screen and (max-width:620px) {
-    header {
-        .nav_g {
-            .h_right {
-                > select {display:none;}
-                > .dark {display:none;}
-                .menu {
-                    .menu_inform {
-                        p {select {display:inline-block;}}
-                        > .dark {display:inline-block;}
-                    }
-                }
-            }
-        }
+    #map {
+        width:70%; height:700px; background:$color1; margin:0 auto 100px;
     }
 }

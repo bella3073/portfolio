@@ -42,7 +42,8 @@ header .nav_g .h_right select {
   color: #000;
 }
 header .nav_g .h_right select option {
-  color: #000;
+  color: #fff;
+  background: #000;
 }
 header .nav_g .h_right > .color {
   padding: 10px;

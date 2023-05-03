@@ -2,18 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benefit</title>
+    <title>매장찾기 | Benefit</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/location.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
-
-    <!-- css -->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header>
@@ -30,9 +26,9 @@
                     <option value="ko">KO</option>
                     <option value="en">EN</option>
                 </select>
-                <a href="./index_black.html" class="dark">Dark</a>
+                <a href="./location_black.html" class="dark">Dark</a>
                 <div class="inform_g">
-                    <a href="#"><img src="./images/icon.png" alt="내 정보"></a>
+                    <a href="#"><img src="./images/black/icon_p.png" alt="내 정보"></a>
                     <div class="inform">
                         <a href="#">로그인</a>
                         <a href="#">회원가입</a>
@@ -50,7 +46,7 @@
                         <a href="./product_list.html">제품보기</a>
                         <a href="./location.html">매장찾기</a>
                         <a href="./service.html">서비스예약</a>
-                        <a href="./index_black.html" class="dark">Dark</a>
+                        <a href="./location_black.html" class="dark">Dark</a>
                         <p>
                             <select name="LAN">
                                 <option value="ko">KO</option>
@@ -61,24 +57,23 @@
                 </div>
             </div>
         </div>        
-    </header>
+    </header> 
     <main>
+        <h1>find a store</h1>
+        <p>내 근처 매장 찾기</p>
+        <form>
+            <fieldset>
+                <input type="search" placeholder="검색어 입력">
+                <button type="button"><img src="./images/best/research.png" alt="확인"></button>
+            </fieldset>
+        </form>
+        <!-- 지도 -->
+        <div id="map">
+
+        </div>
     </main>
-    <footer>
-        <div class="sns">
-            <a href="#"><img src="./images/sns1.png" alt="페이스북"></a>
-            <a href="#"><img src="./images/sns2.png" alt="인스타그램"></a>
-            <a href="#"><img src="./images/sns3.png" alt="트위터"></a>
-            <a href="#"><img src="./images/sns4.png" alt="유튜브"></a>
-        </div>
-        <div class="f_text">
-            <p>개인정보 보호 책임자 : Benefit</p>
-            <p><a href="#">개인정보처리방침</a></p>
-            <p><a href="#">이용약관</a></p>
-            <p><a href="../benefit/index_black.html">화면색상변경</a></p>
-        </div>
-        <p>&copy; 2023. Benefit Cosmetics LLS, Designed by Min-magazine.</p>
-    </footer>
-    <script src="./script/main.js"></script>
+    <?php include("footer.php") ?>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b0a000cb3cb368eb3195c17497a1e6f1"></script>
+    <script src="./script/location.js"></script>
 </body>
 </html>

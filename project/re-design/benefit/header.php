@@ -234,7 +234,7 @@ display: none;
     </div>        
 </header>
 <script>
-    const my = document.querySelector('.inform')
+const my = document.querySelector('.inform')
 const menu = document.querySelector('.menu_inform')
 const my_img = document.querySelector('.inform_g')
 const menu_img = document.querySelector('.menu')

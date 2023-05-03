@@ -1,5 +1,4 @@
-body, html {
-  overflow-x: hidden;
+body {
   background: #000;
 }
 
@@ -166,111 +165,43 @@ header .nav_g .h_right .menu .menu_inform select:hover {
 
 main {
   text-align: center;
-  width: 100%;
 }
 main h1 {
-  padding: 170px 0 0;
+  padding-top: 170px;
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
 }
-main > p {
-  padding: 15px 0 70px;
-  font-weight: 600;
+main p {
+  margin: 100px 0 20px;
   color: #888;
 }
-main .bnr_g {
-  width: 100%;
-}
-main .bnr_g .swiper-wrpper .swiper-slide {
-  height: 690px;
-  width: 100%;
-}
-main .notice {
-  margin: 100px 0 70px;
-  display: inline-block;
-  width: 700px;
-  padding: 50px 0;
-  border: 3px dashed #fff;
-}
-main .notice h2 {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-main .notice p {
-  color: #fff;
-}
-main .find a {
-  background: #fff;
-  color: #000;
-  width: 300px;
-  margin: 0 auto;
-  display: inline-block;
+main form fieldset {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #888;
+  padding: 5px 10px;
   border-radius: 3px;
-  padding: 20px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 10px 50px;
+  margin-bottom: 100px;
 }
-main .find a:hover {
-  box-shadow: 0 0 10px #ffffff;
+main form fieldset input {
+  border: none;
+  outline: none;
+  margin-right: 5px;
+  background: #000;
+  color: #fff;
 }
-
-@-webkit-keyframes text {
-  0% {
-    transform: skew(-10deg);
-    letter-spacing: 0;
-  }
-  100% {
-    transform: skew(10deg);
-    letter-spacing: 0.05em;
-  }
+main form fieldset button {
+  width: 20px;
 }
-
-@keyframes text {
-  0% {
-    transform: skew(-10deg);
-    letter-spacing: 0;
-  }
-  100% {
-    transform: skew(10deg);
-    letter-spacing: 0.05em;
-  }
+main form fieldset button img {
+  width: 100%;
 }
-@media screen and (min-width: 1101px) {
-  .nav_g .h_right .menu {
-    display: none;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .nav_g nav {
-    display: none;
-  }
-}
-@media screen and (max-width: 750px) {
-  main .notice {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 670px) {
-  main .find a {
-    width: 180px;
-  }
-}
-@media screen and (max-width: 620px) {
-  header .nav_g .h_right > select {
-    display: none;
-  }
-  header .nav_g .h_right > .color {
-    display: none;
-  }
-  header .nav_g .h_right .menu .menu_inform p select {
-    display: inline-block;
-  }
-  header .nav_g .h_right .menu .menu_inform > .color {
-    display: inline-block;
-  }
-}/*# sourceMappingURL=service_black.css.map */
+main #map {
+  width: 70%;
+  height: 700px;
+  background: #979ed5;
+  margin: 0 auto 100px;
+}/*# sourceMappingURL=location_black.css.map */

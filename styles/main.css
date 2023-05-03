@@ -605,7 +605,7 @@ main .wrap4 .w4_contents .w4_right .process {
 main .wrap4 .figma_txt {
   position: absolute;
   bottom: 330px;
-  left: 150px;
+  left: 120px;
   width: 90px;
   height: 40px;
 }
@@ -630,7 +630,7 @@ main .wrap4 > p {
   font-size: 1.2rem;
   position: absolute;
   bottom: 330px;
-  left: 580px;
+  left: 545px;
   font-style: italic;
 }
 main .wrap4 > p span {
@@ -650,7 +650,7 @@ main .wrap4 .prev {
   display: inline-block;
   position: relative;
   top: -332px;
-  left: 0;
+  left: -50px;
   animation: direction2 0.7s linear alternate-reverse infinite;
 }
 main .wrap4 .next {
@@ -662,7 +662,7 @@ main .wrap4 .next {
   display: inline-block;
   position: relative;
   top: -332px;
-  right: -1190px;
+  right: -1240px;
   animation: direction 0.7s linear alternate-reverse infinite;
 }
 main .wrap4 .direction {
