@@ -91,3 +91,54 @@ book_key.addEventListener('mouseout',()=>{
     // console.log(this) 확인완료
     pen.classList.remove('hand')
 })
+
+//04.main re-design 부분
+const figma_view = document.querySelector('.figma_view')
+const proposal_view = document.querySelector('.proposal_view')
+const close = document.querySelector('.close')
+console.log(close,proposal_view,figma_view)
+
+proposal_view.style.display = 'none'
+
+//figma 클릭하면 proposal_view 나타남
+figma_view.addEventListener('click',(e)=>{
+    e.preventDefault()/* a tag 기본 기능 막기 */
+    // console.log(this) 작동확인
+    proposal_view.style.display = 'inline-block'
+})
+
+//닫기 버튼 누르면 화면이 사라짐
+close.addEventListener('click',(e)=>{
+    e.preventDefault()/* a tag 기본 기능 막기 */
+    proposal_view.style.display = 'none'
+})
+
+document.addEventListener('DOMContentLoaded',function(event){
+    var dataText = ["Click this img!"];
+    
+    function typeWriter(text, i, fnCallback) {
+    if (i < (text.length)) {
+    document.querySelector(".Wireframe").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+    setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+        }, 100);
+    }
+    else if (typeof fnCallback == 'function') {
+        setTimeout(fnCallback, 1000);
+    }
+    }
+    function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined'){
+            setTimeout(function() {
+                StartTextAnimation(0);
+            }, 1300);
+        }
+        else if (i < dataText[i].length) {
+            typeWriter(dataText[i], 0, function(){
+            StartTextAnimation(i + 1);
+            });
+        }   
+    }
+    StartTextAnimation(0);
+});
