@@ -1,0 +1,428 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, 0);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 20px 0;
+}
+header h1 {
+  width: 300px;
+}
+header h1 a img {
+  width: 100%;
+}
+header nav a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+header nav a:last-child {
+  margin-right: 0;
+}
+header nav a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  bottom: -10px;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+header nav a:hover::after {
+  transform: scaleX(1);
+}
+header .nav_right {
+  display: flex;
+  align-items: center;
+}
+header .nav_right .search {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 300px; /* 로고 너비와 동일한 너비를 주어 nav가 중앙에 위치하도록 설정 */
+}
+header .nav_right .search input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  background: none;
+  margin-right: 20px;
+  padding: 5px;
+  width: 150px;
+}
+header .nav_right .search input::-moz-placeholder {
+  color: #fff;
+}
+header .nav_right .search input:-ms-input-placeholder {
+  color: #fff;
+}
+header .nav_right .search input::placeholder {
+  color: #fff;
+}
+header .nav_right .search input:-ms-input-placeholder {
+  color: #fff;
+}
+header .nav_right .search textarea::-moz-placeholder {
+  color: #fff;
+}
+header .nav_right .search textarea:-ms-input-placeholder {
+  color: #fff;
+}
+header .nav_right .search textarea::placeholder {
+  color: #fff;
+}
+header .nav_right .search textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+header .nav_right .search textarea:-ms-input-placeholder {
+  color: #fff;
+}
+header .nav_right .search button {
+  width: 30px;
+}
+header .nav_right .search button img {
+  width: 100%;
+}
+header .nav_right .menu {
+  display: none;
+  position: relative;
+}
+header .nav_right .menu a {
+  display: inline-flex;
+  flex-flow: column;
+  padding: 20px 0 20px 15px;
+}
+header .nav_right .menu a span {
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+header .nav_right .menu a span:last-child {
+  margin-bottom: 0;
+}
+header .nav_right .menu .menu_a {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+  position: absolute;
+  bottom: -255px;
+  left: 50%;
+  width: 150px;
+  transform: translate(-50%, -50%);
+}
+header .nav_right .menu .menu_a a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+header .nav_right .menu .menu_a a:last-child {
+  margin-right: 0;
+}
+header .nav_right .menu .menu_a a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: relative;
+  bottom: -10px;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+header .nav_right .menu .menu_a a:hover::after {
+  transform: scaleX(1);
+}
+
+main {
+  overflow-x: hidden;
+  /* best 상품 */
+  /* text img 지나가는 animation */
+}
+main .bg {
+  position: relative;
+  background-image: url(../images/bg1.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+main .bg h1 { /* .bg 중앙 텍스트 부분 */
+  font-family: "Fjalla One", sans-serif;
+  font-size: 9rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+  width: 1000px;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  -webkit-animation: main_bg_text 2s ease alternate both;
+          animation: main_bg_text 2s ease alternate both;
+}
+main .bg > p {
+  width: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 85%;
+  left: 0;
+  z-index: 10;
+  animation: move 0.8s linear alternate-reverse infinite;
+}
+main .bg > p img {
+  width: 100%;
+}
+main .bg:after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  content: "";
+  width: 100%;
+  height: 100vh;
+}
+main .best {
+  text-align: center;
+}
+main .best h1 {
+  margin-top: 150px;
+  font-size: 3rem;
+  color: #0c008d;
+  font-weight: 700;
+}
+main .best > p {
+  line-height: 5;
+}
+main .best > p span {
+  color: #fff;
+  background: #0c008d;
+}
+main .best > p a {
+  color: #0c008d;
+  font-weight: 500;
+  display: inline-block;
+  animation: move2 0.8s ease alternate-reverse infinite;
+}
+main .best > p:nth-child(2) {
+  color: #888;
+}
+main .best .swiper {
+  width: 100%;
+}
+main .best .swiper .best_pro {
+  margin-top: 15px;
+}
+main .best .swiper .best_pro .pro {
+  border: 1px solid #0c008d;
+  width: 25%;
+  padding: 100px 0;
+  transition: filter 0.3s;
+}
+main .best .swiper .best_pro .pro .img {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+main .best .swiper .best_pro .pro .img img {
+  width: 100%;
+}
+main .best .swiper .best_pro .pro .img span {
+  display: inline-block;
+  content: "";
+  background: #fff;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .best .swiper .best_pro .pro p:last-child {
+  line-height: 1.3;
+  margin-top: 10px;
+}
+main .best .swiper .best_pro .pro01 {
+  position: relative;
+  top: 0;
+  left: 2px;
+}
+main .best .swiper .best_pro .pro02 {
+  position: relative;
+  top: 0;
+  left: 1px;
+}
+main .best .swiper .best_pro .pro04 {
+  position: relative;
+  top: 0;
+  right: 1px;
+}
+main .best .swiper .best_pro .pro05 {
+  position: relative;
+  top: 0;
+  right: 2px;
+}
+main .best .swiper .best_pro .pro06 {
+  position: relative;
+  top: 0;
+  right: 3px;
+}
+main .best .swiper .best_pro .pro:hover {
+  filter: grayscale(1);
+}
+main .text {
+  background: #fff url(../images/text_line.png) repeat-x;
+  width: 150%;
+  height: 150px;
+  animation: line_move 100s linear alternate-reverse infinite;
+}
+
+.after_e {
+  -webkit-animation: best 1.5s ease alternate both;
+          animation: best 1.5s ease alternate both;
+}
+
+@-webkit-keyframes main_bg_text {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.1em;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.05em;
+  }
+}
+
+@keyframes main_bg_text {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.1em;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.05em;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes line_move {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 5000px;
+  }
+}
+@keyframes line_move {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 5000px;
+  }
+}
+@-webkit-keyframes best {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes best {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@media screen and (max-width: 1140px) {
+  header {
+    width: 88%;
+  }
+  header nav {
+    display: none;
+  }
+  header .nav_right .menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 940px) {
+  main .bg h1 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  header h1 a {
+    display: inline-block;
+    width: 200px;
+  }
+  header h1 a img {
+    width: 100%;
+  }
+  header .nav_right .search {
+    width: 60px;
+  }
+  header .nav_right .search input {
+    display: none;
+  }
+  main .bg h1 {
+    font-size: 5rem;
+  }
+}/*# sourceMappingURL=main.css.map */

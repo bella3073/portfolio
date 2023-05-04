@@ -1,0 +1,210 @@
+$color1:#fff;
+$color2:#0c008d;
+$color3:#888;
+@mixin bk {background-size:cover; background-position:center;}
+@mixin transform {transform:translate(-50%,-50%);}
+
+html {scroll-behavior:smooth;}
+
+// header
+header {
+    position:fixed; top:0; left:50%; z-index:999;
+    transform:translate(-50%,0);
+    display:inline-flex; justify-content:space-between; align-items:center;
+    width:95%; padding:20px 0;
+    // logo 부분
+    h1 {width:300px;
+        a {img {width:100%;}}
+    }
+    // nav 부분
+    nav {
+        a {
+            display:inline-block; color:$color1; font-size:1.1rem; margin-right:10px;
+            padding:10px; border-bottom:2px solid transparent; transition:all 0.3s;
+        }
+        a:last-child {margin-right:0;}
+        a::after {
+            content:''; display:block;
+            width:100%; height:2px; background:$color1;
+            position:relative; bottom:-10px;
+            transform:scaleX(0); transition:all 0.3s;
+        }
+        a:hover::after {transform:scaleX(1);}
+    }
+    .nav_right {
+        display:flex; align-items:center;
+            // search 부분
+        .search {
+            display:flex; justify-content:right; align-items:center;
+            width:300px;/* 로고 너비와 동일한 너비를 주어 nav가 중앙에 위치하도록 설정 */
+            input {
+                outline:none; border:none; border-bottom:2px solid $color1; color:$color1; background:none;
+                margin-right:20px; padding:5px; width:150px;
+            }
+            // input placeholder text 색상 바꿈
+            input::placeholder {color:$color1;}
+            input::-webkit-input-placeholder {color:$color1;}
+            input:-ms-input-placeholder {color:$color1;}
+            textarea::placeholder {color:$color1;}
+            textarea::-webkit-input-placeholder {color:$color1;}
+            textarea:-ms-input-placeholder {color:$color1;}
+            button {width:30px; img {width:100%;}}
+        }
+        .menu {
+            display:none; position:relative;
+            a {display:inline-flex; flex-flow:column; padding:20px 0 20px 15px;
+                span {
+                    display:inline-block; content:''; height:5px; width:30px;
+                    background-color:$color1; border-radius: 5px; margin-bottom:4px;
+                }
+                span:last-child {margin-bottom:0;}
+            }
+            .menu_a {
+                display:flex; flex-flow:column; text-align:center;
+                background:rgba(0,0,0,0.4); padding:10px 0;
+                position:absolute; bottom:-255px; left:50%; width:150px;
+                transform:translate(-50%,-50%);
+                a {
+                    display:inline-block; color:$color1;
+                    padding:10px; border-bottom:1px solid transparent; transition:all 0.3s;
+                }
+                a:last-child {margin-right:0;}
+                a::after {
+                    content:''; display:block;
+                    width:100%; height:1px; background:$color1;
+                    position:relative; bottom:-10px;
+                    transform:scaleX(0); transition:all 0.3s;
+                }
+                a:hover::after {transform:scaleX(1);}
+            }
+        }
+    }
+}//e:header
+
+// main
+main {overflow-x:hidden;
+    .bg {
+        // 메인 첫 화면 bg 이미지 부분
+        position:relative;
+        background-image:url(../images/bg1.webp);
+        @include bk; width:100%; height:100vh;
+        h1 {/* .bg 중앙 텍스트 부분 */
+            font-family: 'Fjalla One', sans-serif;
+            font-size:9rem; color:#fff; letter-spacing:0.05em;
+            width:1000px; text-align: center;
+            position:absolute; top:45%; left:50%;
+            @include transform; z-index:10;
+            animation:main_bg_text 2s ease alternate both;
+        }
+        > p {
+            width:50px; margin:0 auto;
+            position:relative; top:85%; left:0; z-index:10;
+            animation:move 0.8s linear alternate-reverse infinite;
+            img {width:100%;}
+        }
+    }
+    .bg:after {
+        display:inline-block; position:absolute; top:0; left:0;
+        background:linear-gradient(transparent,rgba(0,0,0,0.7)); content:''; width:100%; height:100vh;
+    }
+    /* best 상품 */
+    .best {
+        text-align:center;
+        h1 {margin-top:150px; font-size:3rem; color:$color2; font-weight:700;}
+        > p {line-height:5;
+            span {color:#fff; background:$color2;}
+            a {
+                color:$color2; font-weight:500; display:inline-block;
+                animation:move2 0.8s ease alternate-reverse infinite;
+            }
+        }
+        > p:nth-child(2) {color:$color3;}
+        .swiper {width:100%;
+            .best_pro {
+                margin-top:15px;
+                .pro {
+                    border:1px solid $color2; width:25%; padding:100px 0; transition:filter 0.3s;
+                    .img {
+                        width:200px; margin:0 auto; position:relative;
+                        img {width:100%;}
+                        span {
+                            display:inline-block; content:''; background:$color1;
+                            width:200px; height:400px; position:absolute; top:0; left:0;
+                        }
+                    }
+                    p:last-child {line-height:1.3; margin-top:10px;}
+                }
+                .pro01 {position:relative; top:0; left:2px;}
+                .pro02 {position:relative; top:0; left:1px;}
+                .pro03 {}
+                .pro04 {position:relative; top:0; right:1px;}
+                .pro05 {position:relative; top:0; right:2px;}
+                .pro06 {position:relative; top:0; right:3px;}
+                .pro:hover {filter:grayscale(1);}
+            }
+        }
+    }
+    /* text img 지나가는 animation */
+    .text {
+        background:#fff url(../images/text_line.png) repeat-x;
+        width:150%; height:150px;
+        animation:line_move 100s linear alternate-reverse infinite;
+    }
+}//e:main
+
+.after_e {animation:best 1.5s ease alternate both;}
+// animation
+@keyframes main_bg_text {
+    0% {opacity:0; letter-spacing:0.1em;}
+    100% {opacity:1; letter-spacing:0.05em;}
+}
+@keyframes move {
+    0% {transform:translateY(-5px)}
+    100% {transform:translateY(5px)}
+}
+@keyframes move2 {
+    0% {transform:translateY(0)}
+    100% {transform:translateY(-10px)}
+}
+@keyframes line_move {
+    0% {background-position-x:0}
+    100% {background-position-x:5000px}
+}
+@keyframes best {
+    0% {width:200px;}
+    100% {width:0;}
+}
+
+//반응형
+@media screen and (max-width:1140px) {
+    header {
+        width:88%;
+        nav {display:none;}
+        .nav_right {
+            .menu {display:flex;}
+        }
+    }
+}
+@media screen and (max-width:940px) {
+    main {
+        .bg {
+            h1 {width:80%;}
+        }
+    }
+}
+@media screen and (max-width:550px) {
+    header {
+        
+        h1 {
+            a {display:inline-block; width:200px; img{width:100%;}}
+        }
+        .nav_right {
+            .search {width:60px; input {display:none;}}
+        }
+    }
+    main {
+        .bg {
+            h1 {font-size:5rem;}
+        }
+    }
+}

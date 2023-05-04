@@ -142,3 +142,40 @@ document.addEventListener('DOMContentLoaded',function(event){
     }
     StartTextAnimation(0);
 });
+
+//re-design
+const benefit = document.querySelector('.benefit')
+const absolut = document.querySelector('.absolut')
+const benefit_btn = document.querySelector('.benefit_btn')
+const absolut_btn = document.querySelector('.absolut_btn')
+const soon_btn = document.querySelector('.soon_btn')
+console.log(absolut,benefit_btn,absolut_btn,soon_btn)
+
+// 첫 화면에서 보이지 않을 부분 가리기
+absolut.style.display = 'none'
+
+// 해당버튼 클릭 시, 해당 리디자인이 나타남
+benefit_btn.addEventListener('click',(e)=>{
+    e.preventDefault()/* a tag 기본 기능 제어 */
+    // console.log(this) 확인완료
+    absolut.style.display = 'none'
+    benefit.style.display = 'flex'
+    benefit_btn.classList.add('active')
+    absolut_btn.classList.remove('active')
+})
+absolut_btn.addEventListener('click',(e)=>{
+    e.preventDefault()/* a tag 기본 기능 제어 */
+    // console.log(this) 확인완료
+    absolut.style.display = 'flex'
+    benefit.style.display = 'none'
+    benefit_btn.classList.remove('active')
+    absolut_btn.classList.add('active')
+})
+soon_btn.addEventListener('click',(e)=>{
+    e.preventDefault()/* a tag 기본 기능 제어 */
+    // console.log(this) 확인완료
+    // absolut.style.display = 'none'
+    // benefit.style.display = 'none'
+    // benefit_btn.classList.remove('active')
+    // absolut_btn.classList.remove('active')
+})

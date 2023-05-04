@@ -333,11 +333,11 @@ main {
         width:1400px; margin:140px auto;
         position:relative;
         .w4_contents {
-            @include row-nowrap; justify-content:space-around; align-items:center;
+            @include row-nowrap; justify-content:space-between; align-items:center;
             padding:110px 0;
             .w4_left {
-                text-align:center;
-                margin-left:70px;
+                text-align:center; margin-left:70px;
+                position:relative; top:0; left:110px;
                 p {font-size:1.3rem; font-weight:800;}
                 h1 {
                     font-size:2rem; font-weight:800;
@@ -356,6 +356,7 @@ main {
                         background-position:center;
                         transition:all 0.5s; filter:grayscale(50%);
                     }
+                    .absolut {background-image:url(../images/absolut_bg.png); background-repeat:no-repeat;}
                     a:hover {background-size:120%; filter:grayscale(0%);}
                 }
                 .concept {
@@ -363,15 +364,8 @@ main {
                     padding:20px 0 12px;
                     span {font-weight:600;}
                 }
-                .current {
-                    span {
-                        content:''; display:inline-block; width:8px; height:8px;
-                        border:1px solid $line-color; border-radius:50%;
-                    }
-                    .active {background-color:$line-color;}
-                }
             }//e:w4_left
-            .w4_right {
+            .w4_right {width:500px;
                 li {
                     margin-right:70px;
                     @include row-nowrap;
@@ -430,8 +424,19 @@ main {
                 .process {padding-top:30px;}
             }//e:w4_right
         }
+        .re_btn {
+            position:absolute; bottom:0; left:50%;
+            transform:translate(-50%,-50%);
+            a {
+                display:inline-block; border:1px solid #26150b;
+                padding:8px 10px; border-radius:3px; width:100px;
+                text-align:center; text-transform:capitalize;
+            }
+            .active {background:#aca18d; color:#fff; border:1px solid #aca18d;}
+            a:hover {background:#aca18d; color:#fff; border:1px solid #aca18d;}
+        }
         .figma_txt {
-            position:absolute; bottom:325px; left:120px;
+            position:absolute; bottom:275px; left:120px;
             width:135px; height:40px;
             border:1px solid $line-color; display:inline-block;
             text-align:center; border-radius:50%;
@@ -443,27 +448,23 @@ main {
                 animation: caratteri 1s steps(1) infinite;
             }
         }
-        .prev {
-            background-image:url(../images/direction.png);
-            background-size:cover;
-            background-position:center;
-            width:100px; height:30px; display:inline-block;
-            position:relative; top:-332px; left:-50px;
-            animation:direction2 0.7s linear alternate-reverse infinite;
-        }
-        .next {
-            background-image:url(../images/direction.png);
-            background-size:cover;
-            background-position:center;
-            width:100px; height:30px; display:inline-block;
-            position:relative; top:-332px; right:-1240px;
-            animation:direction 0.7s linear alternate-reverse infinite;
-        }
-        .direction {
-            @include row-nowrap; justify-content:space-between; align-items:center;
-            position:relative; bottom:332px; left:0;
-        }
     }//e:wrap4
+    .prev {
+        background-image:url(../images/direction.png);
+        background-size:cover;
+        background-position:center;
+        width:100px; height:30px; display:inline-block;
+        position:relative; top:-500px; left:200px;
+        animation:direction2 0.7s linear alternate-reverse infinite;
+    }
+    .next {
+        background-image:url(../images/direction.png);
+        background-size:cover;
+        background-position:center;
+        width:100px; height:30px; display:inline-block;
+        position:relative; top:-500px; right:-1510px;
+        animation:direction 0.7s linear alternate-reverse infinite;
+    }
     .wrap5 {
         width:1200px; margin:0 auto;
         border:1px solid $line-color;

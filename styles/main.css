@@ -511,13 +511,16 @@ main .wrap4 {
 main .wrap4 .w4_contents {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 110px 0;
 }
 main .wrap4 .w4_contents .w4_left {
   text-align: center;
   margin-left: 70px;
+  position: relative;
+  top: 0;
+  left: 110px;
 }
 main .wrap4 .w4_contents .w4_left p {
   font-size: 1.3rem;
@@ -553,6 +556,10 @@ main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 
   transition: all 0.5s;
   filter: grayscale(50%);
 }
+main .wrap4 .w4_contents .w4_left .img_box .absolut {
+  background-image: url(../images/absolut_bg.png);
+  background-repeat: no-repeat;
+}
 main .wrap4 .w4_contents .w4_left .img_box a:hover {
   background-size: 120%;
   filter: grayscale(0%);
@@ -564,16 +571,8 @@ main .wrap4 .w4_contents .w4_left .concept {
 main .wrap4 .w4_contents .w4_left .concept span {
   font-weight: 600;
 }
-main .wrap4 .w4_contents .w4_left .current span {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #26150b;
-  border-radius: 50%;
-}
-main .wrap4 .w4_contents .w4_left .current .active {
-  background-color: #26150b;
+main .wrap4 .w4_contents .w4_right {
+  width: 500px;
 }
 main .wrap4 .w4_contents .w4_right li {
   margin-right: 70px;
@@ -674,9 +673,34 @@ main .wrap4 .w4_contents .w4_right li:first-child {
 main .wrap4 .w4_contents .w4_right .process {
   padding-top: 30px;
 }
+main .wrap4 .re_btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .wrap4 .re_btn a {
+  display: inline-block;
+  border: 1px solid #26150b;
+  padding: 8px 10px;
+  border-radius: 3px;
+  width: 100px;
+  text-align: center;
+  text-transform: capitalize;
+}
+main .wrap4 .re_btn .active {
+  background: #aca18d;
+  color: #fff;
+  border: 1px solid #aca18d;
+}
+main .wrap4 .re_btn a:hover {
+  background: #aca18d;
+  color: #fff;
+  border: 1px solid #aca18d;
+}
 main .wrap4 .figma_txt {
   position: absolute;
-  bottom: 325px;
+  bottom: 275px;
   left: 120px;
   width: 135px;
   height: 40px;
@@ -695,7 +719,7 @@ main .wrap4 .figma_txt .Wireframe {
   -webkit-animation: caratteri 1s steps(1) infinite;
           animation: caratteri 1s steps(1) infinite;
 }
-main .wrap4 .prev {
+main .prev {
   background-image: url(../images/direction.png);
   background-size: cover;
   background-position: center;
@@ -703,11 +727,11 @@ main .wrap4 .prev {
   height: 30px;
   display: inline-block;
   position: relative;
-  top: -332px;
-  left: -50px;
+  top: -500px;
+  left: 200px;
   animation: direction2 0.7s linear alternate-reverse infinite;
 }
-main .wrap4 .next {
+main .next {
   background-image: url(../images/direction.png);
   background-size: cover;
   background-position: center;
@@ -715,18 +739,9 @@ main .wrap4 .next {
   height: 30px;
   display: inline-block;
   position: relative;
-  top: -332px;
-  right: -1240px;
+  top: -500px;
+  right: -1510px;
   animation: direction 0.7s linear alternate-reverse infinite;
-}
-main .wrap4 .direction {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  bottom: 332px;
-  left: 0;
 }
 main .wrap5 {
   width: 1200px;
