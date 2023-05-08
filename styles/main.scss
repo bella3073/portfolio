@@ -353,10 +353,10 @@ main {
                         margin-top:20px; overflow:hidden;
                         background-image:url(../images/benefit_main.png);
                         background-size:100%;
-                        background-position:center;
+                        background-position:top;
                         transition:all 0.5s; filter:grayscale(50%);
                     }
-                    .absolut {background-image:url(../images/absolut_bg.png); background-repeat:no-repeat;}
+                    .absolut {background-image:url(../images/absolut.png); background-position:top; background-repeat:no-repeat;}
                     a:hover {background-size:120%; filter:grayscale(0%);}
                 }
                 .concept {

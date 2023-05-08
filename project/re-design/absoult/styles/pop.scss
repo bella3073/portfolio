@@ -1,0 +1,36 @@
+$color1:#fff;
+$color2:#0c008d;
+$color3:#888;
+
+.popup {
+    position:fixed; top:0; left:50%;
+    transform:translate(-50%,0); text-align:center;
+    background-color:$color1; width:100%; height:100vh;
+    z-index:999;
+    h1 {width:650px; margin:40px auto 30px; img {width:100%;}}
+    .text_g {
+        width:500px; background:$color2; padding:30px; margin:20px auto 0; color:$color1;
+        p {line-height:1.5;}
+        .num {
+            display:inline-flex; flex-flow:column nowrap;
+            input {border:none; outline:none; padding:5px; margin-top:10px;}
+            a {
+                background:$color1; color:$color2; display:inline-block; width:100px;
+                line-height:2.5; margin:10px auto; font-weight:500;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:725px) {
+    .popup {
+        h1 {width:450px; img {width:100%;}}
+        .text_g {width:80%;}
+    }
+}
+@media screen and (max-width:470px) {
+    .popup {
+        h1 {width:280px; img {width:100%;}}
+        .text_g {width:80%;}
+    }
+}

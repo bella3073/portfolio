@@ -1,0 +1,70 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.popup h1 {
+  width: 650px;
+  margin: 40px auto 30px;
+}
+.popup h1 img {
+  width: 100%;
+}
+.popup .text_g {
+  width: 500px;
+  background: #0c008d;
+  padding: 30px;
+  margin: 20px auto 0;
+  color: #fff;
+}
+.popup .text_g p {
+  line-height: 1.5;
+}
+.popup .text_g .num {
+  display: inline-flex;
+  flex-flow: column nowrap;
+}
+.popup .text_g .num input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin-top: 10px;
+}
+.popup .text_g .num a {
+  background: #fff;
+  color: #0c008d;
+  display: inline-block;
+  width: 100px;
+  line-height: 2.5;
+  margin: 10px auto;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 725px) {
+  .popup h1 {
+    width: 450px;
+  }
+  .popup h1 img {
+    width: 100%;
+  }
+  .popup .text_g {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .popup h1 {
+    width: 280px;
+  }
+  .popup h1 img {
+    width: 100%;
+  }
+  .popup .text_g {
+    width: 80%;
+  }
+}/*# sourceMappingURL=pop.css.map */

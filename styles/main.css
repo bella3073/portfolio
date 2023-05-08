@@ -552,12 +552,13 @@ main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 
   overflow: hidden;
   background-image: url(../images/benefit_main.png);
   background-size: 100%;
-  background-position: center;
+  background-position: top;
   transition: all 0.5s;
   filter: grayscale(50%);
 }
 main .wrap4 .w4_contents .w4_left .img_box .absolut {
-  background-image: url(../images/absolut_bg.png);
+  background-image: url(../images/absolut.png);
+  background-position: top;
   background-repeat: no-repeat;
 }
 main .wrap4 .w4_contents .w4_left .img_box a:hover {
