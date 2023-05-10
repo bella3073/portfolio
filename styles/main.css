@@ -448,8 +448,8 @@ main .wrap2 .wrap3 .contents .b_left .bar_g li .bar7:after {
           animation: bar7 1.5s ease both;
 }
 main .wrap2 .wrap3 .contents .b_left .bar_g li .bar8:after {
-  -webkit-animation: bar6 2.3s linear both;
-          animation: bar6 2.3s linear both;
+  -webkit-animation: bar8 2.3s linear both;
+          animation: bar8 2.3s linear both;
 }
 main .wrap2 .wrap3 .contents .b_left .bar_g li .bar9:after {
   -webkit-animation: bar9 2s ease both;
@@ -460,8 +460,8 @@ main .wrap2 .wrap3 .contents .b_left .bar_g li .bar10:after {
           animation: bar10 1s ease both;
 }
 main .wrap2 .wrap3 .contents .b_left .bar_g li .bar11:after {
-  -webkit-animation: bar6 1.5s linear both;
-          animation: bar6 1.5s linear both;
+  -webkit-animation: bar11 1.5s linear both;
+          animation: bar11 1.5s linear both;
 }
 main .wrap2 .wrap3 .contents .b_right h1 {
   width: 150px;
@@ -580,7 +580,7 @@ main .wrap4 .w4_contents .w4_right li {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 5px 0;
+  padding: 7px 0;
   /* 기획안 이미지 부분 */
 }
 main .wrap4 .w4_contents .w4_right li .butterfly {
@@ -670,6 +670,13 @@ main .wrap4 .w4_contents .w4_right li .proposal_view .btn_g .close:hover {
 }
 main .wrap4 .w4_contents .w4_right li:first-child {
   margin-top: 30px;
+}
+main .wrap4 .w4_contents .w4_right li:nth-child(2) {
+  padding-bottom: 0;
+}
+main .wrap4 .w4_contents .w4_right .details {
+  font-size: 0.9rem;
+  padding-bottom: 10px;
 }
 main .wrap4 .w4_contents .w4_right .process {
   padding-top: 30px;

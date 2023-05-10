@@ -1,4 +1,18 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f6fc5;
+  border-radius: 5px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -166,7 +180,6 @@ main {
   overflow-x: hidden;
   /* best 상품 */
   /* text img 지나가는 animation */
-  /* 칵테일 레시피 */
 }
 main .bg {
   position: relative;
@@ -308,58 +321,7 @@ main .text {
   height: 150px;
   animation: line_move 100s linear alternate-reverse infinite;
 }
-main .cocktail_g {
-  text-align: center;
-  margin: 150px 0;
-}
-main .cocktail_g > p {
-  width: 50%;
-  margin: 0 auto;
-}
-main .cocktail_g > p img {
-  width: 100%;
-}
-main .cocktail_g h1 {
-  margin-top: 70px;
-  font-size: 2.5rem;
-  color: #0c008d;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-main .cocktail_g .cocktail {
-  display: flex;
-  flex-flow: row wrap;
-  width: 95%;
-  margin: 0 auto;
-}
-main .cocktail_g .cocktail .coc {
-  width: 30%;
-  margin: 0 auto;
-  /* 텍스트 부분 */
-  /* 이미지 부분 */
-}
-main .cocktail_g .cocktail .coc h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  margin: 120px 0 20px;
-}
-main .cocktail_g .cocktail .coc p {
-  color: #888;
-  font-weight: 500;
-}
-main .cocktail_g .cocktail .coc a {
-  display: inline-block;
-  width: 500px;
-  margin: 30px 0;
-}
-main .cocktail_g .cocktail .coc a img {
-  width: 100%;
-}
-main .cocktail_g .cocktail .coc a:hover {
-  filter: grayscale(1);
-  animation: rotate 0.8s linear alternate-reverse infinite;
-}
+
 footer {
   text-align: center;
   background-color: #0c008d;
@@ -409,10 +371,6 @@ footer p span {
 .after_e {
   -webkit-animation: best 1.5s ease alternate both;
           animation: best 1.5s ease alternate both;
-}
-
-.h2_color {
-  color: #d91c1c;
 }
 
 .nav_color {
@@ -518,11 +476,6 @@ footer p span {
   }
   100% {
     transform: rotate(-5deg);
-  }
-}
-@media screen and (max-width: 1400px) {
-  main .best .swiper .best_pro .pro {
-    width: 33.3%;
   }
 }
 @media screen and (max-width: 1140px) {

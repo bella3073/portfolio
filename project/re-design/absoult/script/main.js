@@ -3,14 +3,10 @@ const menu = document.querySelector('.menu_a')
 const best = document.querySelector('.best')
 const after = document.querySelectorAll('.img > span')
 
-const coc = document.querySelectorAll('.coc')
-const coc_h2 = document.querySelectorAll('.coc > h2')
-
 const header = document.querySelector('header')
 
 console.log(bar,menu)
 console.log(best,after)
-console.log(coc,coc_h2)
 console.log(header)
 
 // header
@@ -69,6 +65,7 @@ const swiper1 = new Swiper('.swiper',{
     autoplay:{delay:2000},
     loop:false, /* 태그 사용시 맨 마지막 -> 첫번째로 돌아가는 모습이 더 자연스러워짐 */
     loopAdditionalSlides : 1,
+    //반응형 swiper
     breakpoints: {
         // 화면의 넓이가 400px 이상일 때
         0: {
@@ -86,17 +83,3 @@ const swiper1 = new Swiper('.swiper',{
         }
     }
 })
-//반응형 swiper
-
-//칵테일 부분
-// 칵테일에 마우스 올리면 칵테일명 컬러가 바뀜
-for(let i=0; i<coc_h2.length; i++){
-    coc[i].addEventListener('mouseover',()=>{
-        // console.log(coc[i]) 확인완료
-        coc_h2[i].classList.add('h2_color')
-    })
-    coc[i].addEventListener('mouseout',()=>{
-        // console.log(coc[i]) 확인완료
-        coc_h2[i].classList.remove('h2_color')
-    })
-}

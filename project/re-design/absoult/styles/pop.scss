@@ -1,6 +1,13 @@
 $color1:#fff;
 $color2:#0c008d;
 $color3:#888;
+$color4:#000;
+$color5:#3f6fc5;
+
+// scroll bar
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:$color1;}
+::-webkit-scrollbar-thumb {background:$color5; border-radius:5px;}
 
 .popup {
     position:fixed; top:0; left:50%;

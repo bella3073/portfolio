@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f6fc5;
+  border-radius: 5px;
+}
+
 .popup {
   position: fixed;
   top: 0;

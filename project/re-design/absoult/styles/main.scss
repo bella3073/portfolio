@@ -1,8 +1,15 @@
 $color1:#fff;
 $color2:#0c008d;
 $color3:#888;
+$color4:#000;
+$color5:#3f6fc5;
 @mixin bk {background-size:cover; background-position:center;}
 @mixin transform {transform:translate(-50%,-50%);}
+
+// scroll bar
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:$color1;}
+::-webkit-scrollbar-thumb {background:$color5; border-radius:5px;}
 
 html {scroll-behavior:smooth;}
 
@@ -151,28 +158,6 @@ main {overflow-x:hidden;
         width:150%; height:150px;
         animation:line_move 100s linear alternate-reverse infinite;
     }
-    /* 칵테일 레시피 */
-    .cocktail_g {
-        text-align:center; margin:150px 0;
-        > p {width:50%; margin:0 auto; img {width:100%;}}
-        h1 {margin-top:70px; font-size:2.5rem; color:$color2; font-weight:700; text-transform:uppercase;}
-        .cocktail {
-            display:flex; flex-flow:row wrap;
-            width:95%; margin:0 auto;
-            .coc {
-                width:30%; margin:0 auto;
-                /* 텍스트 부분 */
-                h2 {font-size:1.5rem; font-weight:500; text-transform:capitalize; margin:120px 0 20px;}
-                p {color:$color3; font-weight:500;}
-                /* 이미지 부분 */
-                a {display:inline-block; width:500px; margin:30px 0; img {width:100%;}}
-                a:hover {
-                    filter:grayscale(1); animation:rotate 0.8s linear alternate-reverse infinite;
-                }
-            }
-            .coc01 {}
-        }
-    }
 }//e:main
 footer {
     text-align:center; background-color:$color2; margin-top:200px; color:#fff;
@@ -196,7 +181,6 @@ footer {
 }
 
 .after_e {animation:best 1.5s ease alternate both;}
-.h2_color {color:#d91c1c;}
 .nav_color {opacity:0;}
 
 // animation
@@ -226,17 +210,6 @@ footer {
 }
 
 //반응형
-@media screen and (max-width:1400px) {
-    main {
-        .best {
-            .swiper {
-                .best_pro {
-                    .pro {width:33.3%;}
-                }
-            }
-        }
-    }
-}
 @media screen and (max-width:1140px) {
     header {
         width:88%;

@@ -179,11 +179,6 @@ main {
                 animation:key02 1s linear alternate-reverse infinite;
                 img {width:100%;}
             }
-            // p {/* 손 이미지 ================================================================================ 04.27 확인 후 지울것*/
-            //     width:170px;
-            //     position:absolute; top:-110px; left:55px;
-            //     img {width:100%;}
-            // }
             p {
                 width:100px; font-weight:800;
                 position:absolute; top:-45px; left:30px;
@@ -291,10 +286,10 @@ main {
                             .bar5:after {animation:bar5 1s ease both;}/* scss */
                             .bar6:after {animation:bar6 1.5s linear both}/* j-script */
                             .bar7:after {animation:bar7 1.5s ease both;}/* j-query */
-                            .bar8:after {animation:bar6 2.3s linear both}/* php include */
+                            .bar8:after {animation:bar8 2.3s linear both}/* php include */
                             .bar9:after {animation:bar9 2s ease both;}/* figma */
                             .bar10:after {animation:bar10 1s ease both;}/* git hub */
-                            .bar11:after {animation:bar6 1.5s linear both}/* gunboard */
+                            .bar11:after {animation:bar11 1.5s linear both}/* gunboard */
                         }
                     }
                 }//e:book_left
@@ -370,7 +365,7 @@ main {
                     margin-right:70px;
                     @include row-nowrap;
                     align-items:center;
-                    padding:5px 0;
+                    padding:7px 0;
                     .butterfly {
                         width: 35px; padding-right: 10px;
                         img {width:100%;}
@@ -421,6 +416,8 @@ main {
                     }
                 }
                 li:first-child {margin-top:30px;}
+                li:nth-child(2) {padding-bottom:0;}
+                .details {font-size:0.9rem; padding-bottom:10px;}
                 .process {padding-top:30px;}
             }//e:w4_right
         }

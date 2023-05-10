@@ -1,0 +1,313 @@
+$color1:#fff;
+$color2:#0c008d;
+$color3:#888;
+$color4:#000;
+$color5:#3f6fc5;
+@mixin bk {background-size:cover; background-position:center;}
+@mixin transform {transform:translate(-50%,-50%);}
+
+
+// scroll bar
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:$color1;}
+::-webkit-scrollbar-thumb {background:$color5; border-radius:5px;}
+
+html {scroll-behavior:smooth;}
+
+// header
+header {
+    position:fixed; top:0; left:50%; z-index:990;
+    transform:translate(-50%,0);
+    display:inline-flex; justify-content:space-between; align-items:center;
+    width:95%; padding:20px 0;
+    // logo 부분
+    h1 {width:300px;
+        a {img {width:100%;}}
+    }
+    // nav 부분
+    nav {
+        a {
+            display:inline-block; color:$color4; font-size:1.1rem; margin-right:10px;
+            padding:10px; border-bottom:2px solid transparent; transition:all 0.3s;
+            text-transform:uppercase; letter-spacing:0.02em;
+        }
+        a:last-child {margin-right:0;}
+        a::after {
+            content:''; display:block;
+            width:100%; height:2px; background:$color4;
+            position:relative; bottom:-10px;
+            transform:scaleX(0); transition:all 0.3s;
+        }
+        a:hover::after {transform:scaleX(1);}
+    }
+    .nav_right {
+        display:flex; align-items:center;
+            // search 부분
+        .search {
+            display:flex; justify-content:right; align-items:center;
+            width:300px;/* 로고 너비와 동일한 너비를 주어 nav가 중앙에 위치하도록 설정 */
+            input {
+                outline:none; border:none; border-bottom:2px solid $color3; color:$color3; background:none;
+                margin-right:20px; padding:5px; width:150px;
+            }
+            // input placeholder text 색상 바꿈
+            input::placeholder {color:$color3;}
+            input::-webkit-input-placeholder {color:$color3;}
+            input:-ms-input-placeholder {color:$color3;}
+            textarea::placeholder {color:$color3;}
+            textarea::-webkit-input-placeholder {color:$color3;}
+            textarea:-ms-input-placeholder {color:$color3;}
+            button {width:30px; img {width:100%;}}
+        }
+        .menu {
+            display:none; position:relative;
+            a {display:inline-flex; flex-flow:column; padding:20px 0 20px 15px;
+                span {
+                    display:inline-block; content:''; height:5px; width:30px;
+                    background-color:$color4; border-radius: 5px; margin-bottom:4px;
+                }
+                span:last-child {margin-bottom:0;}
+            }
+            .menu_a {
+                display:flex; flex-flow:column; text-align:center;
+                background:rgba(0,0,0,0.4); padding:10px 0;
+                position:absolute; bottom:-255px; left:50%; width:150px;
+                transform:translate(-50%,-50%);
+                a {
+                    display:inline-block; color:$color1; text-transform:uppercase; letter-spacing:0.02em;
+                    padding:10px; border-bottom:1px solid transparent; transition:all 0.3s;
+                }
+                a:last-child {margin-right:0;}
+                a::after {
+                    content:''; display:block;
+                    width:100%; height:1px; background:$color1;
+                    position:relative; bottom:-10px;
+                    transform:scaleX(0); transition:all 0.3s;
+                }
+                a:hover::after {transform:scaleX(1);}
+            }
+        }
+    }
+}//e:header
+main {
+    /* 제조법 배우기 */
+    .learn {
+        display:inline-block; width:100px;
+        position:fixed; bottom:40px; right:30px; z-index:990;
+        animation:move 1s linear alternate-reverse infinite;
+        img {width:100%;}
+    }
+    .learn:hover {animation:none;}
+    .learn:after {
+        display:inline-block; content:'제조법 배우기'; width:100px; height:16px;
+        text-align:left;
+    }
+    /* 칵테일 레시피 */
+    .cocktail_g {
+        text-align:center; margin:250px 0;
+        > p {width:50%; margin:0 auto; img {width:100%;}}
+        h1 {margin-top:70px; font-size:2.5rem; color:$color2; font-weight:700; text-transform:uppercase;}
+        a {
+            display:inline-block; width:85%; text-align:right; padding:5px 8px;
+            text-transform:capitalize; font-weight:500; color:$color3; margin:10px 0;
+        }
+        .cocktail {
+            width:95%;
+            .coc {
+                width:30%; margin:0 auto;
+                /* 텍스트 부분 */
+                h2 {font-size:1.5rem; font-weight:500; text-transform:capitalize; margin:120px 0 20px;}
+                p {color:$color3; font-weight:500;}
+                /* 이미지 부분 */
+                a {display:inline-block; width:500px; margin:30px 0; img {width:100%;}}
+                a:hover {
+                    filter:grayscale(1); animation:rotate 0.8s linear alternate-reverse infinite;
+                }
+            }
+            .coc01 {}
+        }
+    }//e:cocktail_g
+    > p {
+        width:90%; text-align:right; color:$color2; text-transform:capitalize;
+        font-size:1.5rem; font-weight:600; margin-bottom:10px;
+    }
+    > a {
+        display:inline-block; width:90.3%; text-align:right; padding:5px;
+        text-transform:capitalize; font-weight:500; color:$color3; margin-bottom:30px;
+    }
+    .event_concept {
+        display:flex; justify-content:space-between; width:85%; margin:0 auto 150px;
+        height:70%; overflow-y:hidden;
+        /* 스와이퍼 (이벤트 배너 부분) */
+        .swiper {
+            width:600px; margin:0 auto;
+            .swiper-wrapper {
+                .swiper-slide {
+                    a {display:inline-block; img {width:100%;}}
+                }
+            }
+        }
+        /* 컨셉별 음료 부분 */
+        .concept {
+            width:800px;  position:relative; overflow-y:scroll; margin:0 auto;
+            /* 스크롤바 숨기기 */
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
+            a {display:inline-block; position:absolute; img {width:100%;}}
+            a:hover::after {
+                display:inline-block; background:rgba(0,0,0,0.5); position:absolute;
+                width:100%;
+            }
+            a:hover::before {display:inline-block; width:100%; position:absolute; text-align:center; color:$color1; z-index:10;}
+            .con01 {width:45%; top:1150px; left:200px; filter:grayscale(0.5); z-index:10;}
+            .con01:hover::after {content:'';height:100%; top:0; left:0;}
+            .con01:hover::before {
+                content:'간단 제조 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con02 {width:35%; top:600px; right:160px; filter:grayscale(0.5); z-index:10;}
+            .con02:hover::after {content:'';height:100%; top:0; left:0;}
+            .con02:hover::before {
+                content:'무알콜 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con03 {width:35%; top:300px; left:200px; z-index:10; filter:grayscale(0.5);}
+            .con03:hover::after {content:'';height:100%; top:0; left:0;}
+            .con03:hover::before {
+                content:'유명한 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con04 {width:50%; top:20px; right:50px;}
+            .con04:hover::after {content:''; height:100%; top:0; left:0;}
+            .con04:hover::before {
+                content:'20년대 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con05 {width:55%; top:800px; left:0; overflow:hidden; filter:grayscale(0.2);}
+            .con05:hover::after {content:''; height:100%; top:0; left:0;}
+            .con05:hover::before {
+                content:'봄 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con06 {width:43%; top:1600px; right:0; filter:grayscale(0.5);}
+            .con06:hover::after {content:''; height:100%; top:0; left:0;}
+            .con06:hover::before {
+                content:'할로윈 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+            .con07 {width:43%; top:1800px; left:0; filter:grayscale(0.5);}
+            .con07:hover::after {content:''; height:100%; top:0; left:0;}
+            .con07:hover::before {
+                content:'새해 파티 칵테일'; top:45%; left:50%;
+                transform:translate(-50%,0);
+            }
+        }
+        .concept::-webkit-scrollbar {
+            display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        }
+    }
+}
+
+.h2_color {color:#d91c1c;}
+
+/* animation */
+@keyframes rotate {
+    0% {transform:rotate(5deg);}
+    100% {transform:rotate(-5deg);}
+}
+@keyframes move {
+    0% {transform:translateY(0)}
+    100% {transform:translateY(10px)}
+}
+
+//반응형
+@media screen and (max-width:1270px) {
+    main {
+        .cocktail_g {
+            .cocktail {
+                width:80%;
+                .coc {
+                    a {width:400px;}
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1140px) {
+    header {
+        width:88%;
+        nav {display:none;}
+        .nav_right {
+            .menu {display:flex;}
+        }
+    }
+    main {
+        .cocktail_g {
+            > p {width:70%;}
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    main {
+        .event_concept {
+            flex-flow:column; width:80%;
+            overflow-y:scroll;
+            .swiper {
+                width:100%;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        a {margin:0 auto;}
+                    }
+                }
+            }
+            .concept {
+                width:95%; overflow-y:visible;
+                .con02 {top:650px; right:50px; width:30%;}
+                .con03 {top:350px; left:150px;}
+                .con04 {top:70px; right:0;}
+            }
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    main {
+        .cocktail_g {
+            margin:150px 0;
+        }
+    }
+}
+@media screen and (max-width:550px) {
+    header {
+        
+        h1 {
+            a {display:inline-block; width:200px; img{width:100%;}}
+        }
+        .nav_right {
+            .search {width:60px; input {display:none;}}
+        }
+    }
+    main {
+        .cocktail_g {
+            > p {width:90%;}
+            h1 {font-size:1.7rem;}
+            a {text-align:center;}
+        }
+    }
+}
+@media screen and (max-width:485px) {
+    main {
+        .event_concept {
+            .concept {
+                width:95%; overflow-y:visible;
+                a {font-size:0.85rem;}
+                .con01 {top:680px; left:135px; width:45%;}
+                .con02 {top:400px; right:70px; width:30%;}
+                .con03 {top:200px; left:50px; width:40%;}
+                .con04 {top:40px; right:0; width:60%;}
+                .con05 {top:490px; left:0; width:55%;}
+                .con06 {top:900px; left:50px; width:43%; z-index:10;}
+                .con07 {top:950px; left:0; width:43%;}
+            }
+        }
+    }
+}

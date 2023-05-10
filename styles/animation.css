@@ -109,11 +109,11 @@
 }
 @keyframes bar5 {
 0% {width:0;}
-100% {width:200px;}
+100% {width:225px;}
 }
 @keyframes bar6 {
 0% {width:0;}
-100% {width:150px;}
+100% {width:210px;}
 }
 @keyframes bar7 {
 0% {width:0;}
@@ -121,7 +121,7 @@
 }
 @keyframes bar8 {
 0% {width:0;}
-100% {width:100px;}
+100% {width:230px;}
 }
 @keyframes bar9 {
 0% {width:0;}
@@ -129,10 +129,10 @@
 }
 @keyframes bar10 {
 0% {width:0;}
-100% {width:190px;}
+100% {width:210px;}
 }
 @keyframes bar11 {
 0% {width:0;}
-100% {width:100px;}
+100% {width:150px;}
 }
 /* e::book left skill bar keyframes=================== */

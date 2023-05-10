@@ -1,0 +1,240 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f6fc5;
+  border-radius: 5px;
+}
+
+main {
+  text-align: center;
+  /* 상품 정보 부분 */
+  /* 칵테일 부분 */
+}
+main > h1 {
+  font-size: 2.5rem;
+  color: #0c008d;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 180px 0 70px;
+}
+main .pro {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .pro p {
+  width: 500px;
+}
+main .pro p img {
+  width: 100%;
+}
+main .pro .text {
+  background: #3f6fc5;
+  border-radius: 20px;
+  margin-left: 100px;
+  text-align: left;
+  padding: 30px 40px;
+}
+main .pro .text .txt {
+  margin-bottom: 40px;
+}
+main .pro .text .txt:nth-child(4) {
+  margin-bottom: 20px;
+}
+main .pro .text .txt:last-child {
+  margin: 0;
+}
+main .pro .text > p {
+  line-height: 1.5;
+  color: #fff;
+}
+main .pro .text > p span {
+  font-weight: 500;
+}
+main .cock {
+  /* 스와이퍼 */
+}
+main .cock h1 {
+  font-size: 2rem;
+  color: #0c008d;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 200px 0 100px;
+}
+main .cock .swiper {
+  width: 80%;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide {
+  border: 1px solid #0c008d;
+  position: relative;
+  padding: 100px 0;
+  transition: all 0.5s;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide .img a {
+  display: inline-block;
+  width: 33%;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide .img a img {
+  width: 100%;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide .img span {
+  display: inline-block;
+  content: "";
+  background: #fff;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide p {
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+main .cock .swiper .swiper-wrapper .swiper-slide:hover {
+  filter: grayscale(1);
+}
+main .cock .swiper .swiper-wrapper .coc01 {
+  top: 0;
+  left: 1px;
+}
+main .cock .swiper .swiper-wrapper .coc03 {
+  top: 0;
+  right: 1px;
+}
+main .cock .swiper .swiper-wrapper .coc04 {
+  top: 0;
+  right: 2px;
+}
+main .cock > p {
+  width: 35%;
+  margin: 200px auto 0;
+}
+main .cock > p img {
+  width: 100%;
+}
+main .cock > a {
+  display: none;
+  background: #3f6fc5;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-top: 50px;
+  border: 1px solid #3f6fc5;
+  animation: move 1s linear alternate-reverse infinite;
+}
+main .cock > a:hover {
+  background: none;
+  border: 1px solid #3f6fc5;
+  color: #3f6fc5;
+}
+main .cock .inform {
+  width: 800px;
+  margin: 50px auto;
+}
+main .cock .inform img {
+  width: 100%;
+}
+main .review h2 {
+  font-size: 2rem;
+  color: #0c008d;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 200px 0 100px;
+}
+.after_e {
+  -webkit-animation: coc 1.5s ease alternate both;
+          animation: coc 1.5s ease alternate both;
+}
+
+@-webkit-keyframes coc {
+  0% {
+    width: 400px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes coc {
+  0% {
+    width: 400px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .pro {
+    flex-flow: column nowrap;
+  }
+  main .pro .text {
+    margin: 0;
+  }
+  main .cock .text_img {
+    width: 60%;
+  }
+  main .review iframe {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 785px) {
+  main .cock > a {
+    display: inline-block;
+  }
+  main .cock .inform {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .pro {
+    flex-flow: column nowrap;
+  }
+  main .pro p {
+    width: 400px;
+    margin: 0 auto;
+  }
+  main .cock .text_img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 530px) {
+  main .pro {
+    flex-flow: column nowrap;
+  }
+  main .pro p {
+    width: 300px;
+    margin: 0 auto;
+  }
+  main .pro .text {
+    padding: 20px 30px;
+  }
+  main .cock .text_img {
+    width: 95%;
+  }
+}/*# sourceMappingURL=detail.css.map */

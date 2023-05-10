@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앱솔루트 보드카 | Absolut Vodka</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/vodka.png" type="image/x-icon">
+    <link rel="icon" href="./images/vodka.png" type="image/x-icon">
+    <!-- swiper cdn(필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js" integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css" integrity="sha512-0x5peylECh6ad58xDrjrNZL87Zhg9rdda76yOOHrfGr41VSEwUNmYaK72U/JVScMbSWG1n4Vj35LGmq8ggsqaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/detail.css">
+</head>
+<body>
+    <?php include("header.php") ?>
+    <main>
+        <h1>Absolut Vodka</h1>
+        <!-- 상품 정보 부분 -->
+        <div class="pro">
+            <p><img src="./images/detail/absolut01.png" alt="앱솔루트 보드카"></p>
+            <div class="text">
+                <p><span>상품명 : </span>Absolut Vodka</p>
+                <p><span>도수 : </span>40%</p>
+                <p><span>원료 : </span>물, 보드카(곡물 증류액)</p>
+                <p class="txt"><span>1회 제공량 : </span>30ml</p>
+                <p class="txt txt01">
+                    absolut vodka는 1979년 뉴욕에서 처음 출시되면서
+                    독창적이고 창조적인 보드카의 탄생을 세계에 알렸습니다.
+                    18세기 약병에서 영감을 받아 라벨이 없는 투명한 병 디자인으로
+                    선보여진 absolut는 당시 경쟁사들의 길고 화려한 컬렉션 가운데서
+                    눈에 띄게 돋보였고, 첫 출시부터 성공의 신호탄을 쏘아올렸습니다.
+                </p>
+                <p class="txt txt02">
+                    1985년 앤디 워홀을 시작으로 absolut는 예술가 및 철학자들과
+                    다양한 콜라보레이션을 선보였고, '앱솔루트 워홀'을 시작으로
+                    콜라보레이션이 릴레이처럼 이어져 스톡홀름에 있는
+                    'spirit museum'에 850점 이상 전시되어 있습니다.
+                </p>
+                <p class="txt txt03">
+                    시각적, 언어적 유희와 함께 absolut의 시그니처 병이 함께하는
+                    absolut 광고는 광고 역사상 가장 롱런하는 마케팅 캠페인으로
+                    손꼽히고 있습니다.
+                </p>
+                <p class="txt txt04">
+                    다양한 사교 모임을 완벽하게 완성시켜주는 키 플레이어로
+                    활약 중인 absolut vodka는 독보적인 아이덴티티를 갖고
+                    초심을 지켜가며 진화중입니다.
+                </p>
+            </div>
+        </div>
+        <!-- 해당 상품으로 만들 수 있는 칵테일 설명 부분 -->
+        <div class="cock">
+            <h1>make with absolut vodka</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide coc01">
+                        <p class="img">
+                            <a href="#"><img src="./images/detail/coc01.png" alt="보드카 마티니"></a>
+                            <span></span>
+                        </p>
+                        <p>vodka martini</p>
+                    </div>
+                    <div class="swiper-slide coc02">
+                        <p class="img">
+                            <a href="#"><img src="./images/detail/coc02.png" alt="보드카 마티니"></a>
+                            <span></span>
+                        </p>
+                        <p>absolut bloody mary</p>
+                    </div>
+                    <div class="swiper-slide coc03">
+                        <p class="img">
+                            <a href="#"><img src="./images/detail/coc03.png" alt="보드카 마티니"></a>
+                            <span></span>
+                        </p>
+                        <p>espresso martini</p>
+                    </div>
+                    <div class="swiper-slide coc04">
+                        <p class="img">
+                            <a href="#"><img src="./images/detail/coc04.png" alt="보드카 마티니"></a>
+                            <span></span>
+                        </p>
+                        <p>sea breeze</p>
+                    </div>
+                </div>
+            </div><!-- e:swiper -->
+            <p class="text_img"><img src="./images/detail/detail01.png" alt=""></p>
+            <a href="./images/detail/inform.png">영양정보</a>
+            <p class="inform"><img src="./images/detail/inform.png" alt="성분정보"></p>
+        </div>
+        <!-- 그누보드 리뷰게시판 -->
+        <div class="review">
+            <h2>review</h2>
+            <iframe src="http://bella3073.dothome.co.kr/gnuboard/bbs/board.php?bo_table=Review"
+            width="60%" height="500" name="con" frameborder="0" scrolling="no"
+            marginwidth="0" marginheight="0" allowpaymentrequest="true">
+            </iframe>
+        </div>
+    </main>
+    <?php include("footer.php") ?>
+    <script src="./script/detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+$color1:#fff;
+$color2:#0c008d;
+$color3:#888;
+$color4:#000;
+$color5:#3f6fc5;
+@mixin bk {background-size:cover; background-position:center;}
+@mixin transform {transform:translate(-50%,-50%);}
+
+// scroll bar
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:$color1;}
+::-webkit-scrollbar-thumb {background:$color5; border-radius:5px;}
+
+main {
+    text-align:center;
+    > h1 {font-size:2.5rem; color:$color2; font-weight:700; text-transform:uppercase; margin:180px 0 70px;}
+    /* 상품 정보 부분 */
+    .pro {
+        display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
+        p {width:500px; img {width:100%;}}
+        .text {background:$color5; border-radius:20px; margin-left:100px;
+            text-align:left; padding:30px 40px;
+            .txt {margin-bottom:40px;}
+            .txt:nth-child(4) {margin-bottom:20px;}
+            .txt:last-child {margin:0;}
+            > p {line-height:1.5;  color:$color1;
+                span {font-weight:500;}
+            }
+        }
+    }
+    /* 칵테일 부분 */
+    .cock {
+        h1 {font-size:2rem; color:$color2; font-weight:700; text-transform:uppercase; margin:200px 0 100px;}
+        /* 스와이퍼 */
+        .swiper {width:80%;
+            .swiper-wrapper {
+                .swiper-slide {
+                    border:1px solid $color2; position:relative;
+                    padding:100px 0; transition:all 0.5s;
+                    .img {
+                        a {display:inline-block; width:33%;
+                        img {width:100%;}
+                        }
+                        span {
+                            display:inline-block; content:''; background:$color1;
+                            width:400px; height:500px; position:absolute; top:0; left:0;
+                        }
+                    }
+                    p {margin-top:10px; text-transform:capitalize;}
+                }
+                .swiper-slide:hover {filter:grayscale(1);}
+                .coc01 {top:0; left:1px;}
+                .coc03 {top:0; right:1px;}
+                .coc04 {top:0; right:2px;}
+            }
+        }
+        > p {width:35%; margin:200px auto 0; img {width:100%;}}
+        > a {
+            display:none; background:$color5; color:$color1;
+            padding:8px 10px; border-radius:5px; margin-top:50px;
+            border:1px solid $color5;
+            animation:move 1s linear alternate-reverse infinite;
+        }
+        > a:hover {background:none; border:1px solid $color5; color:$color5}
+        .inform {
+            width:800px; margin:50px auto;
+            img {width:100%;}
+        }
+    }//e:cock
+    .review {
+        h2 {font-size:2rem; color:$color2; font-weight:700; text-transform:uppercase; margin:200px 0 100px;}
+        iframe {
+        }
+    }
+}
+
+
+
+.after_e {animation:coc 1.5s ease alternate both;}
+
+// animation
+@keyframes coc {
+    0% {width:400px;}
+    100% {width:0;}
+}
+@keyframes move {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-10px);}
+}
+
+//반응형
+@media screen and (max-width:1100px) {
+    main {
+        .pro {
+            flex-flow:column nowrap;
+            .text {margin:0;}
+        }
+        .cock {
+            .text_img {width:60%;}
+        }
+        .review {
+            iframe {width:80%;}
+        }
+    }
+}
+@media screen and (max-width:785px) {
+    main {
+        .cock {
+            > a {display:inline-block;}
+            .inform {display:none;}
+        }
+    }
+}
+@media screen and (max-width:650px) {
+    main {
+        .pro {
+            flex-flow:column nowrap; 
+            p {width:400px; margin:0 auto;}
+            .text {}
+        }
+        .cock {
+            .text_img {width:80%;}
+        }
+    }
+}
+@media screen and (max-width:530px) {
+    main {
+        .pro {
+            flex-flow:column nowrap; 
+            p {width:300px; margin:0 auto;}
+            .text {padding:20px 30px;}
+        }
+        .cock {
+            .text_img {width:95%;}
+        }
+    }
+}
