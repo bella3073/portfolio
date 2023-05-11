@@ -93,26 +93,38 @@ book_key.addEventListener('mouseout',()=>{
 })
 
 //04.main re-design 부분
-const figma_view = document.querySelector('.figma_view')
-const proposal_view = document.querySelector('.proposal_view')
-const close = document.querySelector('.close')
+const figma_view = document.querySelectorAll('.figma_view')
+const proposal_view = document.querySelectorAll('.proposal_view')
+const close = document.querySelectorAll('.close')
 console.log(close,proposal_view,figma_view)
 
-proposal_view.style.display = 'none'
+for(let i=0; i<proposal_view.length; i++){
+    proposal_view[i].style.display = 'none'
+}
 
 //figma 클릭하면 proposal_view 나타남
-figma_view.addEventListener('click',(e)=>{
-    e.preventDefault()/* a tag 기본 기능 막기 */
-    // console.log(this) 작동확인
-    proposal_view.style.display = 'inline-block'
-})
+
+for(let i=0; i<proposal_view.length; i++){
+    figma_view[i].addEventListener('click',(e)=>{
+        e.preventDefault()/* a tag 기본 기능 막기 */
+        // console.log(this) 작동확인
+        for(let j=0; j<proposal_view.length; j++){
+            proposal_view[j].style.display = 'inline-block'
+        }
+    })
+}
 
 //닫기 버튼 누르면 화면이 사라짐
-close.addEventListener('click',(e)=>{
-    e.preventDefault()/* a tag 기본 기능 막기 */
-    proposal_view.style.display = 'none'
-})
+for(let i=0; i<proposal_view.length; i++){
+    close[i].addEventListener('click',(e)=>{
+        e.preventDefault()/* a tag 기본 기능 막기 */
+        for(let j=0; j<proposal_view.length; j++){
+            proposal_view[j].style.display = 'none'
+        }
+    })
+}
 
+// 리디자인 화면 왼쪽 텍스트 부분
 document.addEventListener('DOMContentLoaded',function(event){
     var dataText = ["Click this img!"];
     

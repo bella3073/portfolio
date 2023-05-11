@@ -25,10 +25,27 @@ header .nav_g nav a {
   color: #fff;
   background: #000;
   border-radius: 3px;
+  transition: all 0.5s;
+  position: relative;
+}
+header .nav_g nav a span {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease;
 }
 header .nav_g nav a:hover {
-  background: rgba(225, 225, 225, 0.3);
-  border-radius: 3px;
+  color: #fff;
+}
+header .nav_g nav a:hover span {
+  transform: scale(1);
 }
 header .nav_g h1 a img {
   filter: grayscale(100%);
@@ -62,10 +79,10 @@ header .nav_g .h_right > .color {
   display: inline-block;
   border-radius: 3px;
   background: #000;
+  transition: all 0.5s;
 }
 header .nav_g .h_right > .color:hover {
-  background: rgba(225, 225, 225, 0.3);
-  border-radius: 3px;
+  color: #ff3b6f;
 }
 header .nav_g .h_right .inform_g {
   padding: 15px 20px;
@@ -190,13 +207,13 @@ main .top_list li .top_ca { /* 상위 카테고리명 */
   width: 100px;
   font-weight: 700;
   color: #888;
+  transition: all 0.5s;
 }
 main .top_list li .top_ca:last-child {
   margin-left: 0;
 }
 main .top_list li .top_ca:hover {
-  box-shadow: 0 0 10px #fff;
-  border-radius: 3px;
+  color: #fff;
 }
 main .top_list li .sub {
   display: flex;
@@ -211,9 +228,10 @@ main .top_list li .sub li a { /* 하위 카테고리명 */
   margin: 5px;
   color: #888;
   width: 100px;
+  transition: all 0.5s;
 }
 main .top_list li .sub li a:hover {
-  color: #000;
+  color: #fff;
 }
 main form fieldset {
   display: inline-flex;
@@ -379,6 +397,7 @@ main .bg_border .product_g .product .pro_text > a { /* 구매하기 */
   width: 100px;
   text-align: center;
   margin: 20px 0 70px;
+  transition: all 0.5s;
 }
 main .bg_border .product_g .product .pro_text > a:hover {
   box-shadow: 0 0 10px #fff;

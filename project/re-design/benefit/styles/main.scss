@@ -12,8 +12,19 @@ header {
             a {
             display:inline-block; text-align:center;
             width:90px;line-height:2; font-weight:700; color:#fff;
+            transition:all 0.5s; position:relative;
+            span {
+                display:inline-block; content:''; width:100%; height:1px;
+                background:#ff3b6f; position:absolute; bottom:0; left:0;
+                transform:scaleX(0); transform-origin:left; transition:all 0.5s ease;
             }
-            a:hover {background:rgba(246,83,125,0.3); border-radius:3px;}
+            }
+            a:hover {
+                color:#ff3b6f;
+                span {
+                    transform:scale(1);
+                }
+            }
         }
         h1 {a {img {}}}/* logo */
         .h_right {
@@ -26,9 +37,9 @@ header {
             }
             > .dark {
                 padding:10px; margin-left:7px; color:#fff; font-weight:700;
-                text-transform:uppercase;
+                transition:all 0.5s; text-transform:uppercase;
             }
-            .dark:hover {background:rgba(0,0,0,0.3); border-radius:3px;}
+            .dark:hover {color:#000;}
             .inform_g {padding:15px 20px; position:relative;
                 a {display:inline-block; width:25px;
                     img {width:100%;}
@@ -117,6 +128,10 @@ footer {
 @keyframes text {
     0% {transform:skew(-10deg); letter-spacing:0;}
     100% {transform:skew(10deg); letter-spacing:0.05em;}
+}
+@keyframes border {
+    0% {transform:scaleX(0);}
+    100% {transform:scaleX(100%);}
 }
 
 

@@ -551,7 +551,7 @@ main .wrap4 .w4_contents .w4_left .img_box a { /* 리디자인 이미지 넣을 
   margin-top: 20px;
   overflow: hidden;
   background-image: url(../images/benefit_main.png);
-  background-size: 100%;
+  background-size: 120%;
   background-position: top;
   transition: all 0.5s;
   filter: grayscale(50%);
@@ -562,7 +562,7 @@ main .wrap4 .w4_contents .w4_left .img_box .absolut {
   background-repeat: no-repeat;
 }
 main .wrap4 .w4_contents .w4_left .img_box a:hover {
-  background-size: 120%;
+  background-size: 100%;
   filter: grayscale(0%);
 }
 main .wrap4 .w4_contents .w4_left .concept {
@@ -605,6 +605,26 @@ main .wrap4 .w4_contents .w4_right li p .figma_view {
   border-radius: 50%;
   padding: 0 3px;
   animation: direction 1s linear alternate-reverse infinite;
+}
+main .wrap4 .w4_contents .w4_right li .details {
+  padding-bottom: 10px;
+}
+main .wrap4 .w4_contents .w4_right li .details a {
+  font-size: 0.9rem;
+  background: #e1d5b7;
+}
+main .wrap4 .w4_contents .w4_right li .details a::after {
+  display: inline-block;
+  content: "";
+  height: 13px;
+  width: 1px;
+  background: #26150b;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+main .wrap4 .w4_contents .w4_right li .details a:last-child::after {
+  display: none;
 }
 main .wrap4 .w4_contents .w4_right li .proposal_view {
   position: fixed;
@@ -674,10 +694,6 @@ main .wrap4 .w4_contents .w4_right li:first-child {
 main .wrap4 .w4_contents .w4_right li:nth-child(2) {
   padding-bottom: 0;
 }
-main .wrap4 .w4_contents .w4_right .details {
-  font-size: 0.9rem;
-  padding-bottom: 10px;
-}
 main .wrap4 .w4_contents .w4_right .process {
   padding-top: 30px;
 }
@@ -726,30 +742,6 @@ main .wrap4 .figma_txt .Wireframe {
   border-right: 0.05em solid;
   -webkit-animation: caratteri 1s steps(1) infinite;
           animation: caratteri 1s steps(1) infinite;
-}
-main .prev {
-  background-image: url(../images/direction.png);
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
-  position: relative;
-  top: -500px;
-  left: 200px;
-  animation: direction2 0.7s linear alternate-reverse infinite;
-}
-main .next {
-  background-image: url(../images/direction.png);
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
-  position: relative;
-  top: -500px;
-  right: -1510px;
-  animation: direction 0.7s linear alternate-reverse infinite;
 }
 main .wrap5 {
   width: 1200px;
@@ -807,6 +799,11 @@ main .wrap5 .contents .txt_box p span {
   font-weight: 800;
   font-size: 1.2rem;
 }
+main .wrap5 .contents .txt_box p .date {
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 2px;
+}
 main .wrap5 .contents .txt_box p a {
   display: inline-block;
   font-size: 1.2rem;
@@ -843,9 +840,12 @@ main .wrap5 .contents2 .txt_box {
 main .wrap5 .contents2 .txt_box p {
   padding: 0 50px 10px 0;
 }
+main .wrap5 .contents2 .txt_box p .date {
+  bottom: 1px;
+}
 main .wrap5 .contents3 h2 {
   bottom: 200px;
-  left: 120px;
+  left: 110px;
   z-index: 100;
 }
 main .wrap5 .contents3 .img_box {
@@ -859,7 +859,7 @@ main .wrap5 .contents3 .img_box img {
 }
 main .wrap5 .contents3 .img_box a {
   position: absolute;
-  left: 170px;
+  left: 150px;
   bottom: 205px;
 }
 main .wrap5 .contents3 .txt_box {
