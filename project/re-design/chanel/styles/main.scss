@@ -1,0 +1,227 @@
+$color1:#000;
+$color2:#fff;
+$color3:rgba(0,0,0,0.7);
+
+html {overflow-x:hidden;}
+
+header {
+    position:fixed; top:0; z-index:999; width:100%;
+    nav {
+        display:flex; flex-flow:row nowrap; justify-content:end; align-items:center; padding:20px 0;
+        width:97.5%;
+        > a {
+            display:inline-block; font-size:1.2rem; text-transform:capitalize;
+            margin-right:20px; position:relative; z-index:999; transition:all 0.5s;
+            span {
+                display:inline-block; content:''; background:$color3; width:0;
+                height:20px; position:absolute; top:0; left:0; 
+                transition:all 0.5s;  z-index:-1;
+            }
+        }
+        > a:nth-child(4) {margin-right:10px;}
+        > a:hover {color:$color2;
+            span {width:100%;}
+        }
+        /* 이모티콘 부분 */
+        .my {/* 사람 */
+            position:relative;
+            > a {
+                display:inline-block; width:30px; margin-right:5px;
+                img {width:100%;}
+            }
+            .my_d {/* 주문조회/위시리스트 부분 */ 
+                display:inline-block;
+                text-align:center; width:110px;
+                position:absolute; top:110px; left:50%;
+                transform:translate(-50%,-50%);
+                background:$color2; padding:10px; border:1px solid $color1;
+                > a {
+                    display:inline-block; position:relative;
+                    text-transform:capitalize; padding:8px 5px;
+                    /* hover 기능을 주기위한 준비 */
+                    span {
+                        display:inline-block; content:''; background:$color3; width:0;
+                        height:15px; position:absolute; top:3px; left:0; border-radius:50%;
+                        transition:all 0.3s;
+                    }
+                }
+                > a:hover {span {width:15px;}}
+            }
+        }
+        /* 장바구니 */
+        .bag {margin:0; width:30px; img {width:100%;}}
+    }
+}//e:header
+/* main */
+main {
+    background:$color2;
+    .bg {position:relative; height:100vh; overflow:hidden; margin-bottom:220px;
+        video {width:100%;}
+        p {
+            width:100%; position:absolute; top:0; left:0;
+            img {width:100%;}
+        }
+    }
+    /* 콜렉션부분 swiper */
+    .collection {
+        h1 {
+            text-align:center; margin:80px 0; font-size:2rem;
+            text-transform:capitalize; font-weight:800;
+        }
+        .swiper {}
+        .swiper-wrapper {
+            align-items:center; margin:70px 0;
+            .swiper-slide {
+                a {display:inline-block; filter:grayscale(0.5); transition:all 0.5s; img {}}
+                a:hover {filter:grayscale(0);}
+            }
+        }
+    }/* e:collection */
+    .gabrielle {position:relative;
+        p {width:48%; margin:180px auto 750px; padding-bottom:300px; img {width:100%;}}
+        /* 스스로 작성되는 text */
+        .drawsvg {
+            svg {width:100%;
+                position: absolute; top:0; left:0;
+                .fade-text {
+                    text {}
+                }
+                g {
+                    .stroke {
+                        stroke: #000;
+                        stroke-width: 1px;
+                        stroke-dasharray: 0 250;
+                        stroke-opacity: 1;
+                        fill: none;
+                        -webkit-animation: stroke_offset 8s infinite;
+                        animation: stroke_offset 8s infinite;
+                        -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+                        animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+                    }
+                    .fill {
+                        fill: #000;
+                        fill-opacity: 0;
+                        -webkit-animation: fill_offset 8s infinite;
+                        animation: fill_offset 8s infinite;
+                        -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+                        animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+                    
+                    }
+                }
+            }
+        }
+        .text {/* 가브리엘 샤넬 text 부분*/
+            position:absolute; bottom:95px; right:-5px; margin:0;
+            text-align:center; line-height:1.5;
+        }
+    }
+}//e:main
+footer {
+    position:fixed; bottom:0; left:0; width:100%; z-index:-1;
+    text-align:center; background-color:$color1; padding:250px 0 130px;
+    h1 {
+        color:$color2; text-transform:uppercase; font-size:3rem; font-family: 'Noto Sans JP', sans-serif;
+        margin-bottom:70px;
+    }
+    .f_g {
+        width:1000px; margin:0 auto;
+        display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:end;
+        video {width:60%;}
+        .f_right {
+            text-align:left; padding:10px 0;
+            .sns {
+                display:flex; flex-flow:row nowrap;
+                a {width:18px; display:inline-flex; margin-right:8px; img {width:100%;}}
+                a:nth-child(3) {position:relative; top:4px;}
+                a:hover {animation:sns 0.5s ease alternate both;}
+            }
+            .link {
+                a {
+                    display:inline-block; color:$color2; line-height:1.5; font-size:0.9rem; margin:10px 0;
+                    transition:all 0.5s; position:relative;
+                    span {
+                        display:inline-block; content:''; background:rgba(225,225,225,0.3); width:0;
+                        height:20px; position:absolute; top:0; left:0; 
+                        transition:all 0.5s; z-index:-1;
+                    }
+                }
+                a:hover {span {width:85%;}}
+                a:nth-child(3):hover {span {width:100%;}}
+                a::after {
+                    display:inline-block; content:''; width:1px; height:15px; background:$color2;
+                    margin:0 5px 0 10px; position:relative; top:2px;
+                }
+                a:last-child::after {display:none;}
+            }
+            > p {color:$color2; line-height:1.5; font-size:0.85rem; font-weight:100; text-transform:capitalize;}
+        }
+    }
+}
+
+@-webkit-keyframes stroke_offset {
+    100%,
+    25% {
+        stroke-dasharray: 0 250;
+        stroke-opacity: 1
+    }
+    50%,
+    75% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: .75
+    }
+    55%,
+    70% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: 0
+    }
+}
+@-webkit-keyframes fill_offset {
+    100%,
+    25%,
+    35%,
+    90% {
+        fill-opacity: 0
+    }
+    50%,
+    70% {
+        fill-opacity: 1
+    }
+}
+
+// animation
+@keyframes nav_a {
+    0% {width:0;}
+    100% {width:20px;}
+}
+@keyframes sns {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-10px);}
+}
+@keyframes stroke_offset {
+    100%, 25% {
+        stroke-dasharray: 0 250;
+        stroke-opacity: 1
+    }
+    50%,
+    75% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: .75
+    }
+    55%,
+    70% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: 0
+    }
+}
+@keyframes fill_offset {
+    100%,
+    25%,
+    35%,
+    90% {
+        fill-opacity: 0
+    }
+    50%,
+    70% {
+        fill-opacity: 1
+    }
+}
