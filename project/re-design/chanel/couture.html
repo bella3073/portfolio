@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haute Couture | Chanel</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- swiper cdn(필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js" integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css" integrity="sha512-0x5peylECh6ad58xDrjrNZL87Zhg9rdda76yOOHrfGr41VSEwUNmYaK72U/JVScMbSWG1n4Vj35LGmq8ggsqaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- design css -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/couture.css">
+</head>
+<body>
+    <?php include("header.php") ?>
+    <main>
+        <div class="text_g">
+            <!-- The two texts -->
+            <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>
+            </div>
+            <!-- The SVG filter used to create the merging effect -->
+            <svg id="filters">
+                <defs>
+                    <filter id="threshold">
+                        <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                        <feColorMatrix in="SourceGraphic"
+                                type="matrix"
+                                values="1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 255 -140" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="video"><video src="./video/fashion_show_1.mp4" autoplay muted loop></video></div>
+        <!-- 컬렉션부분 -->
+        <div class="collection">
+            <h1>muse, model vivian launer</h1>
+            <div class="swiper img">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical01.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical02.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical03.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical04.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical05.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"></a></div><!-- 빈공간을 만들기 위한 칸 추가용 -->
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical06.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical07.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"></a></div><!-- 빈공간을 만들기 위한 칸 추가용 -->
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical08.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/couture/mythical09.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"></a></div><!-- 빈공간을 만들기 위한 칸 추가용 -->
+                </div>
+            </div>
+        </div><!-- e:collection -->
+        <div class="animal">
+            <h1>mythical animal</h1>
+            <div class="ani">
+                <p class="ani_img"><img src="./images/couture/animal.png" alt=""></p>
+                <p class="ani_text">
+                    <span>프랑스 파리의 그랑 팔레 에페메르(Grand Palais Éphémère)에서 열린<br>
+                        샤넬 2023 S/S Haute Couture 패션쇼.<br>
+                        버지니 비아르는 이번 쇼를 위해 아티스트 자비에 베이앙(Xavier Veilhan)을 초청했습니다.</span>
+                    <span>그는 동물 우화집에서 영감을 얻어 샤넬 하우스의 역사를 수놓은 여러 상징물과 함께 아티스트 본인의 상상력에서 떠올린 시각적 형상들로 쇼를 장식했습니다.</span>
+                    <span>지난 2022년 1월,<br>비아르가 베이앙에게 제안해 시작된 창의적인 교감은 3부 형태로 구성되었고,<br>
+                        이번 작품은 3부의 마지막 작품입니다.</span>
+                </p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="news">
+            <div class="news01">
+                <p class="news_text">
+                    버지니 비아르가 신화적인 동물 조각상에서 영감을 얻어 준비한<br>
+                    샤넬 <span>2023 S/S Haute Couture</span> 컬렉션은<br>
+                    프랑스 파리의 깡봉가 31번지에 위치한 가브리엘 샤넬의 아파트에서 선보였습니다.
+                </p>
+                <p class="news_img"><img src="./images/couture/text01.jpg" alt=""></p>
+            </div>
+            <div class="news02">
+                <p class="text text1">Features of this collection</p>
+                <p class="text text2">Eye-catching<span></span> embroidery</p>
+                <p class="text text3">— Chanel 2023 S/S Haute Couture —</p>
+            </div>
+            <div class="news03">
+                <div class="text">
+                    <div class="video2"><video src="./video/animal.mp4" autoplay muted loop></video></div>
+                    <p>
+                        아티스트 자비에 베이앙(Xavier Veilhan)의 상상 속에<br>
+                        존재하던 거대한 새가 프랑스 파리의 깡봉가에<br>
+                        내려와 앉았습니다.<br>
+                        새와 함께 포즈를 취하는 컬렉션의 뮤즈,<br>
+                        모델 비비안 로너가 버지니 비아르가 지휘한<br>
+                        샤넬 2023 봄-여름 오뜨 꾸뛰르 쇼의 서막을 알리며,<br>
+                        베이앙이 떠올린 꿈속 세계와 샤넬의 역사를 수놓은<br>
+                        여러 상징물이 얽혀 탄생한<br>
+                        신화적인 동물 우화집을 탐구합니다.<br>
+                        <span>— a flap of wings of a fantasy —</span>
+                    </p>
+                </div>
+                <div class="img_g">
+                    <p><img src="./images/couture/text06.jpg" alt=""></p>
+                    <p><img src="./images/couture/text07.jpg" alt=""></p>
+                    <p><img src="./images/couture/text04.jpg" alt=""></p>
+                    <p><img src="./images/couture/text05.jpg" alt=""></p>
+                    <p><img src="./images/couture/text02.jpg" alt=""></p>
+                    <p><img src="./images/couture/text03.jpg" alt=""></p>
+                </div>
+            </div>
+            <div class="news04">
+                <p><img src="./images/menu.png" alt=""></p>
+                <p class="text">
+                    <span>Aren't you curious?</span>
+                    <span>What's next</span>
+                </p>
+            </div>
+        </div>
+    </main>
+    <?php include("footer.php") ?>
+    <script src="./script/couture.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js" integrity="sha512-zaTjCyJwbhpd8V594wpmUStv6Dy/SnmP7jR+XXnE49z2ayHkSirlNiP4XQc15Zgk+p5gXGe5ZUQYu4yRtShqkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

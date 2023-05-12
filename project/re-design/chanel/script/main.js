@@ -9,6 +9,7 @@ console.log(my,my_d)
 console.log(chanel,chanel_d,main)
 
 
+
 //header
 //1. my_d 부분 보이지 않음
 my_d.style.display = 'none'
@@ -69,4 +70,4 @@ const swiper1 = new Swiper('.swiper',{
             slidesPerView: 5
         }
     }
-}) 
+})
