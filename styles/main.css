@@ -561,6 +561,11 @@ main .wrap4 .w4_contents .w4_left .img_box .absolut {
   background-position: top;
   background-repeat: no-repeat;
 }
+main .wrap4 .w4_contents .w4_left .img_box .chanel {
+  background-image: url(../images/chanel_main.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
 main .wrap4 .w4_contents .w4_left .img_box a:hover {
   background-size: 100%;
   filter: grayscale(0%);
