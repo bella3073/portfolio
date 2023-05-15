@@ -1,0 +1,606 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5px;
+}
+
+html, body {
+  background-color: #000;
+  overflow-y: hidden;
+}
+
+main .hompi {
+  background-image: url(../images/bg2.jpg);
+  background-position: center;
+  width: 1300px;
+  height: 760px;
+  margin: 15vh auto 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative;
+  /* 애니메이션부분 */
+  /* 사이드 메뉴 */
+  /* 연결용 */
+  /* 내 정보 */
+}
+main .hompi .ani p {
+  z-index: 999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+}
+main .hompi .ani p img {
+  width: 100%;
+}
+main .hompi .ani .ani01 {
+  bottom: -50px;
+  left: 100px;
+  animation: ani01 3s 1s ease alternate;
+}
+main .hompi .ani .ani02 {
+  bottom: -50px;
+  left: 100px;
+  animation: ani02 3s ease alternate;
+}
+main .hompi .ani .ani03 {
+  bottom: -50px;
+  left: 120px;
+  animation: ani03 3s ease alternate;
+}
+main .hompi .ani .ani04 {
+  bottom: -50px;
+  left: 250px;
+  animation: ani02 5s ease alternate;
+}
+main .hompi .ani .ani05 {
+  bottom: -50px;
+  left: 300px;
+  animation: ani04 3s ease alternate;
+}
+main .hompi .ani .ani06 {
+  bottom: -50px;
+  left: 400px;
+  animation: ani02 4s ease alternate;
+}
+main .hompi .ani .ani07 {
+  bottom: -50px;
+  left: 410px;
+  animation: ani03 3s 1s ease alternate;
+}
+main .hompi .ani .ani08 {
+  bottom: -50px;
+  left: 440px;
+  animation: ani03 2s ease alternate;
+}
+main .hompi .ani .ani09 {
+  bottom: -50px;
+  left: 490px;
+  animation: ani02 3s ease alternate;
+}
+main .hompi .ani .ani10 {
+  bottom: -50px;
+  left: 550px;
+  animation: ani02 3s ease alternate;
+}
+main .hompi .ani .ani11 {
+  bottom: -50px;
+  left: 620px;
+  animation: ani03 2s ease alternate;
+}
+main .hompi .ani .ani12 {
+  bottom: -50px;
+  left: 700px;
+  animation: ani02 4s ease alternate;
+}
+main .hompi .ani .ani13 {
+  bottom: -50px;
+  left: 685px;
+  animation: ani02 3s 1s ease alternate;
+}
+main .hompi .ani .ani14 {
+  bottom: -50px;
+  left: 720px;
+  animation: ani02 2s ease alternate;
+}
+main .hompi .ani .ani15 {
+  bottom: -50px;
+  left: 800px;
+  animation: ani03 3s ease alternate;
+}
+main .hompi .ani .ani16 {
+  bottom: -50px;
+  left: 830px;
+  animation: ani03 3s ease alternate;
+}
+main .hompi .ani .ani17 {
+  bottom: -50px;
+  left: 900px;
+  animation: ani04 2s 1s ease alternate;
+}
+main .hompi .ani .ani18 {
+  bottom: -50px;
+  left: 950px;
+  animation: ani02 3s 1s ease alternate;
+}
+main .hompi .ani .ani19 {
+  bottom: -50px;
+  left: 1050px;
+  animation: ani02 2s ease alternate;
+}
+main .hompi .ani .ani20 {
+  bottom: -50px;
+  left: 1070px;
+  animation: ani03 3s ease alternate;
+}
+main .hompi .ani .ani21 {
+  bottom: -50px;
+  left: 1100px;
+  animation: ani02 5s ease alternate;
+}
+main .hompi .ani .ani22 {
+  bottom: -50px;
+  left: 1150px;
+  animation: ani03 3s ease alternate;
+}
+main .hompi .ani .ani23 {
+  bottom: -50px;
+  left: 1210px;
+  animation: ani03 4s 1s ease alternate;
+}
+main .hompi .ani .ani24 {
+  bottom: -50px;
+  left: 1230px;
+  animation: ani02 3s ease alternate;
+}
+main .hompi .ani .ani25 {
+  bottom: -50px;
+  left: 220px;
+  animation: ani03 2s 1s ease alternate;
+}
+main .hompi .menu {
+  position: absolute;
+  top: 65px;
+  right: -22px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .hompi .menu a {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 13px 8px 14px 15px;
+  text-align: right;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  font-style: italic;
+  color: #fff;
+}
+main .hompi .menu a:hover {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+main .hompi .menu .active {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+main .hompi .connection {
+  z-index: 999;
+  position: absolute;
+  top: 155px;
+  left: 325px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .hompi .connection p {
+  width: 60px;
+  height: 18px;
+  display: inline-block;
+  margin-bottom: 200px;
+  content: "";
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+main .hompi .proflie {
+  position: relative;
+  top: 22px;
+  background-color: #fff;
+  width: 23%;
+  height: 700px;
+  padding: 30px 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+  /* 투데이 수 */
+  /* 내 사진 */
+  /* 내 취미 */
+}
+main .hompi .proflie > p {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+main .hompi .proflie > p span {
+  color: #888;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+main .hompi .proflie > p span:first-child {
+  color: #cf2d2d;
+}
+main .hompi .proflie > p span:first-child::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #000;
+  margin: 0 5px 0 10px;
+}
+main .hompi .proflie > .line {
+  text-align: center;
+  margin: 15px auto 20px;
+  width: 270px;
+}
+main .hompi .proflie > .line #helllo span {
+  border-right: 0.05em solid;
+  animation: caratteri 1s steps(1) infinite;
+}
+main .hompi .proflie > .line > p {
+  display: inline-flex;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  border: 1px solid #000;
+  text-transform: uppercase;
+}
+main .hompi .proflie > .line > p > em {
+  display: inline-block;
+  width: 221px;
+  height: 275px;
+  background-image: url(../images/profile.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(30%);
+}
+main .hompi .proflie > .line p:nth-child(1) {
+  font-weight: 700;
+}
+main .hompi .proflie > .line p:nth-child(2) {
+  width: 145px;
+  position: relative;
+  top: 0;
+  right: 5px;
+}
+main .hompi .proflie > .line p:nth-child(3) {
+  position: relative;
+  top: -1px;
+  left: -2px;
+}
+main .hompi .proflie > .line > p:hover > em {
+  filter: grayscale(0);
+}
+main .hompi .proflie h2 {
+  width: 255px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .hompi .proflie .hobby {
+  width: 255px;
+  margin: 0 auto;
+}
+main .hompi .proflie .hobby a {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  border: 1px solid #000;
+  margin: 5px 1px;
+  position: relative;
+}
+main .hompi .proflie .hobby a span {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  transition: all 0.5s;
+}
+main .hompi .proflie .hobby a:hover span {
+  width: 100%;
+}
+main .hompi .proflie .insta, main .hompi .proflie .mail {
+  width: 255px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+main .hompi .proflie .insta > a, main .hompi .proflie .mail > a {
+  font-size: 0.85rem;
+  position: relative;
+}
+main .hompi .proflie .insta > a > span, main .hompi .proflie .mail > a > span {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  transition: all 0.5s;
+}
+main .hompi .proflie .insta > a:hover span, main .hompi .proflie .mail > a:hover span {
+  width: 100%;
+}
+main .hompi .proflie .insta p, main .hompi .proflie .mail p {
+  width: 20px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  animation: move 0.7s ease alternate-reverse infinite;
+}
+main .hompi .proflie .insta p img, main .hompi .proflie .mail p img {
+  width: 100%;
+}
+main .hompi .proflie .insta {
+  margin-top: 20px;
+}
+main .hompi .inform_g {
+  position: relative;
+  top: 22px;
+  width: 68%;
+  margin-left: 28px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 700px;
+  /* 감성이미지 부분 */
+}
+main .hompi .inform_g .inform {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .hompi .inform_g .inform .t_left {
+  margin: 30px 0 0 50px;
+  width: 450px;
+}
+main .hompi .inform_g .inform .t_left .name {
+  width: 300px;
+  margin-bottom: 20px;
+}
+main .hompi .inform_g .inform .t_left .name img {
+  width: 100%;
+}
+main .hompi .inform_g .inform .t_left .text_p {
+  border-right: 2px dashed #000;
+  display: flex;
+  flex-flow: row wrap;
+}
+main .hompi .inform_g .inform .t_left .text_p p {
+  line-height: 1.7;
+  text-transform: uppercase;
+  width: 100%;
+}
+main .hompi .inform_g .inform .t_left .text_p p span {
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+}
+main .hompi .inform_g .inform .t_left .text_p p span:after {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -7px;
+}
+main .hompi .inform_g .inform .t_left .text_p p:nth-child(1) {
+  width: 120px;
+}
+main .hompi .inform_g .inform .t_left .text_p p:nth-child(2) {
+  width: 190px;
+}
+main .hompi .inform_g .inform .t_left .text_p p:nth-child(3) {
+  width: 120px;
+}
+main .hompi .inform_g .inform .t_left .text_p p:nth-child(4) {
+  margin: 5px 0;
+}
+main .hompi .inform_g .inform .t_right {
+  /* 집게 */
+  /* 체크리스트 */
+}
+main .hompi .inform_g .inform .t_right .tongs {
+  width: 250px;
+  position: relative;
+  top: -160px;
+  left: 85px;
+  z-index: 10;
+}
+main .hompi .inform_g .inform .t_right .tongs img {
+  width: 100%;
+}
+main .hompi .inform_g .inform .t_right .check {
+  position: relative;
+}
+main .hompi .inform_g .inform .t_right .check > p {
+  width: 325px;
+  position: absolute;
+  top: -215px;
+  right: -120px;
+  transform: rotate(-2deg);
+}
+main .hompi .inform_g .inform .t_right .check > p img {
+  width: 100%;
+}
+main .hompi .inform_g .inform .t_right .check .text_g {
+  width: 100%;
+  position: absolute;
+  top: -172px;
+  left: 80px;
+  transform: rotate(-1deg);
+}
+main .hompi .inform_g .inform .t_right .check .text_g h2 {
+  font-family: "Darumadrop One", cursive;
+  font-size: 2.4rem;
+  padding-bottom: 11px;
+  margin-bottom: 15px;
+  border-bottom: 2px dashed #000;
+}
+main .hompi .inform_g .inform .t_right .check .text_g .text p {
+  position: relative;
+  top: 0;
+  left: 5px;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1.4rem;
+  line-height: 1.55;
+}
+main .hompi .inform_g .inform .t_right .check .text_g .text p input {
+  margin-right: 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+main .hompi .inform_g .inform .t_right .check .text_g .text p input::after {
+  content: "";
+  display: block;
+  transition: all 0.3s;
+  background: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 2.5px;
+  left: 2px;
+}
+main .hompi .inform_g .inform .t_right .check .text_g .text p input:checked {
+  background: #000;
+}
+main .hompi .inform_g .inform .t_right .check .text_g .text p input:checked::after {
+  left: 13px;
+}
+main .hompi .inform_g .move {
+  background-image: url(../images/cat.gif);
+  background-position: top;
+  background-size: cover;
+  width: 95%;
+  margin: 0 auto;
+  height: 100px;
+  border-radius: 10px;
+  position: relative;
+  top: 25px;
+  left: 0;
+}
+main .hompi .inform_g .guest {
+  width: 93%;
+  margin: 0 auto;
+  margin-top: 15px;
+  height: 225px;
+  overflow-y: scroll;
+  /* 그누보드-방명록 */
+}
+main .hompi .inform_g .guest iframe {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  height: 1000px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes caratteri {
+  50% {
+    border-color: #000;
+  }
+}
+@keyframes ani01 {
+  0% {
+    bottom: -50px;
+    left: 100px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 200px;
+    left: 0;
+  }
+  100% {
+    bottom: 400px;
+    left: 0;
+    opacity: 0;
+  }
+}
+@keyframes ani02 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 300px;
+  }
+  100% {
+    bottom: 600px;
+    opacity: 0;
+  }
+}
+@keyframes ani03 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 350px;
+  }
+  100% {
+    bottom: 700px;
+    opacity: 0;
+  }
+}
+@keyframes ani04 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 400px;
+  }
+  100% {
+    bottom: 850px;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
