@@ -1,0 +1,807 @@
+@charset "UTF-8";
+html {
+  overflow-x: hidden;
+}
+
+main {
+  background: #fff;
+}
+main .main01 {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /* 세로 텍스트 애니메이션(왼쪽) */
+  /* 세로 텍스트 애니메이션(오른쪽) */
+}
+main .main01 .bg_left {
+  background-image: url(../images/about/text.jpg);
+  width: 50px;
+  height: 1600px;
+  display: inline-block;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+  animation: line_move 100s linear alternate-reverse infinite;
+}
+main .main01 .center {
+  position: relative;
+  width: 100%;
+}
+main .main01 .center .img {
+  width: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 110px;
+  right: 120px;
+}
+main .main01 .center .img img {
+  width: 100%;
+}
+main .main01 .center h1 {
+  font-size: 12rem;
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+}
+main .main01 .center .text {
+  position: absolute;
+  bottom: 280px;
+  left: 230px;
+  line-height: 1.5;
+}
+main .main01 .bg_right {
+  background-image: url(../images/about/text.jpg);
+  width: 50px;
+  height: 1600px;
+  display: inline-block;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(180deg);
+  animation: line_move2 100s linear alternate-reverse infinite;
+}
+main .main02 h2 {
+  text-align: center;
+  margin: 250px 0 150px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+main .main02 .swiper .swiper-wrapper {
+  align-items: center;
+}
+main .main02 .swiper .swiper-wrapper .swiper-slide a {
+  display: inline-block;
+  filter: grayscale(0.5);
+  transition: all 0.5s;
+}
+main .main02 .swiper .swiper-wrapper .swiper-slide a:hover {
+  filter: grayscale(0);
+}
+main .main03 {
+  position: relative;
+}
+main .main03 h2 {
+  text-align: center;
+  margin: 250px 0 0;
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  opacity: 0;
+  position: relative;
+  top: 150px;
+  left: -500px;
+  z-index: 1;
+}
+main .main03 .img {
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: -200px;
+}
+main .main03 .img img {
+  width: 100%;
+}
+main .main03 .text_g {
+  background: #fff;
+  position: absolute;
+  bottom: -100px;
+  right: 100px;
+  padding: 20px;
+  border: 1px solid #000;
+}
+main .main03 .text_g .text {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+main .main03 .text_g .text span {
+  display: inline-block;
+}
+main .main04 button {
+  margin: 200px 0 30px 20px;
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+}
+main .main04 .history {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-align: center;
+}
+main .main04 .history .his {
+  width: 95%;
+}
+main .main04 .history .his a {
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+  width: 90%;
+  height: 600px;
+}
+main .main04 .history .his p {
+  text-transform: capitalize;
+  margin: 30px 0;
+}
+main .main04 .history .his:nth-child(1) a {
+  background-image: url(../images/about/content02.jpg);
+}
+main .main04 .history .his:nth-child(2) a {
+  background-image: url(../images/about/content03.jpg);
+}
+main .main04 .history .his:nth-child(3) a {
+  background-image: url(../images/about/content04.png);
+}
+main .main04 .history .his:nth-child(4) a {
+  background-image: url(../images/about/content05.jpg);
+}
+main .main04 .history .his:nth-child(5) a {
+  background-image: url(../images/couture/text01.jpg);
+}
+main .main05 {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-around;
+  margin: 400px auto 0;
+}
+main .main05 > .left {
+  width: 500px;
+  height: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+main .main05 > .left h2 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-style: italic;
+}
+main .main05 > .left .his_img {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+main .main05 .right {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 55%;
+}
+main .main05 .right a {
+  border: 1px solid #000;
+  width: 100%;
+  height: 70px;
+  line-height: 75px;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+main .main05 .right a span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+main .main05 .right .active {
+  background-color: #000;
+  color: #fff;
+}
+main .flim {
+  text-align: center;
+}
+main .flim a {
+  display: inline-block;
+  padding: 20px 25px;
+  background: #000;
+  color: #fff;
+  margin: 100px auto 20px;
+}
+main .main06 > h2 {
+  margin: 400px 0 60px;
+  font-size: 5rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+main .main06 > p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  margin-bottom: 400px;
+}
+main .main06 .plan {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+main .main06 .plan .text {
+  position: relative;
+  margin-right: 250px;
+}
+main .main06 .plan .text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+main .main06 .plan .text p {
+  line-height: 1.5;
+  position: absolute;
+  top: 270px;
+  left: 150px;
+  width: 100%;
+}
+main .main06 .plan .img {
+  width: 600px;
+}
+main .main06 .plan .img img {
+  width: 100%;
+}
+main .main06 .target {
+  text-align: center;
+  margin: 300px 0;
+}
+main .main06 .target h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 100px;
+}
+main .main06 .target .ta_g {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+main .main06 .target .ta_g .ta {
+  margin-right: 80px;
+}
+main .main06 .target .ta_g .ta h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+main .main06 .target .ta_g .ta p {
+  display: inline-block;
+  line-height: 1.5;
+}
+main .main06 .target .ta_g .ta p span {
+  color: #888;
+}
+main .main06 .target .ta_g .ta:last-child {
+  margin-right: 0;
+}
+main .main06 .target .btn button {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  margin: 50px 30px 0 0;
+  font-size: 1.1rem;
+}
+main .main06 .target .btn button:last-child {
+  margin-right: 0;
+}
+main .main07 {
+  margin-bottom: 700px;
+  padding-bottom: 500px;
+}
+main .main07 .text {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main .main07 .text a {
+  text-transform: capitalize;
+  font-size: 5rem;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 42%;
+  display: inline-block;
+}
+main .main07 .text .active2 {
+  background-color: #000;
+  color: #fff;
+}
+main .main07 .fund {
+  text-align: center;
+}
+main .main07 .fund p {
+  text-align: center;
+  line-height: 1.5;
+  margin: 100px 0 70px;
+}
+main .main07 .fund button {
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+}
+main .main07 .foundation {
+  text-align: center;
+  margin-top: 100px;
+}
+main .main07 .foundation .img {
+  width: 500px;
+  margin: 0 auto;
+}
+main .main07 .foundation .img img {
+  width: 100%;
+}
+main .main07 .foundation h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 100px 0 30px;
+}
+main .main07 .foundation .text {
+  line-height: 1.5;
+}
+
+.text_ani {
+  -webkit-animation: text 1s alternate both;
+          animation: text 1s alternate both;
+}
+
+/* 애니메이션 */
+@-webkit-keyframes line_move {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 5000px;
+  }
+}
+@keyframes line_move {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 5000px;
+  }
+}
+@-webkit-keyframes line_move2 {
+  0% {
+    background-position-y: 5000px;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
+@keyframes line_move2 {
+  0% {
+    background-position-y: 5000px;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
+@-webkit-keyframes text {
+  0% {
+    font-size: 4rem;
+    opacity: 0;
+  }
+  100% {
+    font-size: 6rem;
+    opacity: 1;
+  }
+}
+@keyframes text {
+  0% {
+    font-size: 4rem;
+    opacity: 0;
+  }
+  100% {
+    font-size: 6rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes text2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1700px) {
+  main .main01 {
+    height: 125vh;
+  }
+  main .main01 .center .img {
+    width: 60%;
+    top: 44%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 8rem;
+    left: 150px;
+  }
+  main .main01 .center .text {
+    bottom: 70px;
+    left: 630px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  main .main01 {
+    height: 140vh;
+  }
+  main .main01 .center .img {
+    width: 60%;
+    top: 40%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 7rem;
+    bottom: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    bottom: -5.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1650px) {
+  main .main03 h2 {
+    left: 42%;
+    transform: translate(-50%, -50%);
+  }
+  main .main03 .img {
+    left: 25%;
+    transform: translate(-50%, 0);
+  }
+  main .main03 .text_g {
+    bottom: -500px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 900px;
+  }
+  main .main04 button {
+    margin-top: 700px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main .main01 {
+    height: 140vh;
+  }
+  main .main01 .center .img {
+    width: 60%;
+    top: 40%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 7rem;
+    bottom: 21%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 65%;
+    bottom: -5.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .main06 .plan {
+    width: 100%;
+  }
+  main .main06 .plan .text {
+    left: 100px;
+    top: 50px;
+    width: 100%;
+  }
+  main .main06 .plan .img {
+    position: relative;
+    right: 100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .main01 {
+    height: 120vh;
+  }
+  main .main01 .center {
+    width: 100%;
+  }
+  main .main01 .center .img {
+    width: 60%;
+    top: 35%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 6rem;
+    bottom: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -5.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main04 .history .his:nth-child(5) {
+    display: none;
+  }
+  main .main05 {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  main .main05 > .left {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+  }
+  main .main05 .right {
+    width: 95%;
+    margin: 0 auto;
+  }
+  main .main07 .text a {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .main01 {
+    height: 120vh;
+  }
+  main .main01 .center .img {
+    width: 80%;
+    top: 35%;
+    right: -28%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 5rem;
+    bottom: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -5.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 950px) {
+  main .main03 h2 {
+    top: 0;
+    left: 410px;
+    font-size: 3rem;
+    -webkit-animation: text2 1s ease alternate both;
+            animation: text2 1s ease alternate both;
+  }
+  main .main03 .img {
+    width: 60%;
+    left: 31%;
+    transform: translate(-50%, 0);
+  }
+  main .main03 .text_g {
+    display: none;
+  }
+  main .main04 button {
+    margin-top: 200px;
+  }
+  main .main04 .history .his:nth-child(4) {
+    display: none;
+  }
+  main .main06 h2 {
+    font-size: 3rem;
+  }
+  main .main06 p {
+    font-size: 1rem;
+  }
+  main .main06 .plan {
+    flex-flow: column nowrap;
+  }
+  main .main06 .plan .text {
+    margin-right: 0;
+  }
+  main .main06 .plan .text p {
+    left: 0;
+    width: 80%;
+  }
+  main .main06 .plan img {
+    display: none;
+  }
+  main .main06 .target {
+    margin-top: 450px;
+  }
+  main .main06 .target .ta_g .ta h3 {
+    font-size: 2.5rem;
+  }
+  main .main06 .target .ta_g .ta p {
+    font-size: 0.95rem;
+  }
+  main .main06 .target .ta_g .ta p span {
+    font-size: 0.95rem;
+  }
+  main .main07 .text a {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .main01 {
+    height: 120vh;
+  }
+  main .main01 .center .img {
+    width: 80%;
+    top: 35%;
+    right: -28%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 5rem;
+    bottom: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main02 h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .main06 .target .ta_g {
+    flex-flow: column nowrap;
+  }
+  main .main06 .target .ta_g .ta {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  main .main06 .plan .text {
+    left: 50px;
+  }
+  main .main06 .plan .text h2 {
+    width: 85%;
+    font-size: 1.5rem;
+  }
+  main .main06 .plan .text p {
+    top: 150px;
+  }
+  main .main07 .text {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  main .main07 .text a {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .main01 {
+    height: 100vh;
+  }
+  main .main01 .center .img {
+    width: 100%;
+    top: 35%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 5rem;
+    bottom: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main04 .history .his:nth-child(3) {
+    display: none;
+  }
+  main .main05 > .left {
+    width: 100%;
+  }
+  main .main05 .right a {
+    font-size: 1rem;
+  }
+  main .main05 .right a span {
+    font-size: 1.5rem;
+  }
+  main .main07 .foundation .img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 570px) {
+  main .main03 h2 {
+    font-size: 2rem;
+    left: 210px;
+  }
+  main .main04 .history .his:nth-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 555px) {
+  main .main01 .center .img {
+    width: 100%;
+    top: 35%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 2.5rem;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 470px) {
+  main .main01 .center .img {
+    width: 100%;
+    top: 35%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center h1 {
+    font-size: 2.5rem;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main01 .center .text {
+    width: 80%;
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .main07 .text a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  main .main01 .center .text {
+    font-size: 0.9rem;
+    bottom: -7%;
+  }
+}/*# sourceMappingURL=about.css.map */

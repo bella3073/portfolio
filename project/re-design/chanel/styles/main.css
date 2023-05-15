@@ -363,6 +363,8 @@ footer .f_g .f_right > p {
     fill-opacity: 1;
   }
 }
+@-webkit-keyframes hompi {}
+@keyframes hompi {}
 @-webkit-keyframes nav_a {
   0% {
     width: 0;
