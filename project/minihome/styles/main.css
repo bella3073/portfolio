@@ -48,127 +48,152 @@ main .hompi .ani p img {
 main .hompi .ani .ani01 {
   bottom: -50px;
   left: 100px;
-  animation: ani01 3s 1s ease alternate;
+  -webkit-animation: ani01 3s 1s ease alternate;
+          animation: ani01 3s 1s ease alternate;
 }
 main .hompi .ani .ani02 {
   bottom: -50px;
   left: 100px;
-  animation: ani02 3s ease alternate;
+  -webkit-animation: ani02 3s ease alternate;
+          animation: ani02 3s ease alternate;
 }
 main .hompi .ani .ani03 {
   bottom: -50px;
   left: 120px;
-  animation: ani03 3s ease alternate;
+  -webkit-animation: ani03 3s ease alternate;
+          animation: ani03 3s ease alternate;
 }
 main .hompi .ani .ani04 {
   bottom: -50px;
   left: 250px;
-  animation: ani02 5s ease alternate;
+  -webkit-animation: ani02 5s ease alternate;
+          animation: ani02 5s ease alternate;
 }
 main .hompi .ani .ani05 {
   bottom: -50px;
   left: 300px;
-  animation: ani04 3s ease alternate;
+  -webkit-animation: ani04 3s ease alternate;
+          animation: ani04 3s ease alternate;
 }
 main .hompi .ani .ani06 {
   bottom: -50px;
   left: 400px;
-  animation: ani02 4s ease alternate;
+  -webkit-animation: ani02 4s ease alternate;
+          animation: ani02 4s ease alternate;
 }
 main .hompi .ani .ani07 {
   bottom: -50px;
   left: 410px;
-  animation: ani03 3s 1s ease alternate;
+  -webkit-animation: ani03 3s 1s ease alternate;
+          animation: ani03 3s 1s ease alternate;
 }
 main .hompi .ani .ani08 {
   bottom: -50px;
   left: 440px;
-  animation: ani03 2s ease alternate;
+  -webkit-animation: ani03 2s ease alternate;
+          animation: ani03 2s ease alternate;
 }
 main .hompi .ani .ani09 {
   bottom: -50px;
   left: 490px;
-  animation: ani02 3s ease alternate;
+  -webkit-animation: ani02 3s ease alternate;
+          animation: ani02 3s ease alternate;
 }
 main .hompi .ani .ani10 {
   bottom: -50px;
   left: 550px;
-  animation: ani02 3s ease alternate;
+  -webkit-animation: ani02 3s ease alternate;
+          animation: ani02 3s ease alternate;
 }
 main .hompi .ani .ani11 {
   bottom: -50px;
   left: 620px;
-  animation: ani03 2s ease alternate;
+  -webkit-animation: ani03 2s ease alternate;
+          animation: ani03 2s ease alternate;
 }
 main .hompi .ani .ani12 {
   bottom: -50px;
   left: 700px;
-  animation: ani02 4s ease alternate;
+  -webkit-animation: ani02 4s ease alternate;
+          animation: ani02 4s ease alternate;
 }
 main .hompi .ani .ani13 {
   bottom: -50px;
   left: 685px;
-  animation: ani02 3s 1s ease alternate;
+  -webkit-animation: ani02 3s 1s ease alternate;
+          animation: ani02 3s 1s ease alternate;
 }
 main .hompi .ani .ani14 {
   bottom: -50px;
   left: 720px;
-  animation: ani02 2s ease alternate;
+  -webkit-animation: ani02 2s ease alternate;
+          animation: ani02 2s ease alternate;
 }
 main .hompi .ani .ani15 {
   bottom: -50px;
   left: 800px;
-  animation: ani03 3s ease alternate;
+  -webkit-animation: ani03 3s ease alternate;
+          animation: ani03 3s ease alternate;
 }
 main .hompi .ani .ani16 {
   bottom: -50px;
   left: 830px;
-  animation: ani03 3s ease alternate;
+  -webkit-animation: ani03 3s ease alternate;
+          animation: ani03 3s ease alternate;
 }
 main .hompi .ani .ani17 {
   bottom: -50px;
   left: 900px;
-  animation: ani04 2s 1s ease alternate;
+  -webkit-animation: ani04 2s 1s ease alternate;
+          animation: ani04 2s 1s ease alternate;
 }
 main .hompi .ani .ani18 {
   bottom: -50px;
   left: 950px;
-  animation: ani02 3s 1s ease alternate;
+  -webkit-animation: ani02 3s 1s ease alternate;
+          animation: ani02 3s 1s ease alternate;
 }
 main .hompi .ani .ani19 {
   bottom: -50px;
   left: 1050px;
-  animation: ani02 2s ease alternate;
+  -webkit-animation: ani02 2s ease alternate;
+          animation: ani02 2s ease alternate;
 }
 main .hompi .ani .ani20 {
   bottom: -50px;
   left: 1070px;
-  animation: ani03 3s ease alternate;
+  -webkit-animation: ani03 3s ease alternate;
+          animation: ani03 3s ease alternate;
 }
 main .hompi .ani .ani21 {
   bottom: -50px;
   left: 1100px;
-  animation: ani02 5s ease alternate;
+  -webkit-animation: ani02 5s ease alternate;
+          animation: ani02 5s ease alternate;
 }
 main .hompi .ani .ani22 {
   bottom: -50px;
   left: 1150px;
-  animation: ani03 3s ease alternate;
+  -webkit-animation: ani03 3s ease alternate;
+          animation: ani03 3s ease alternate;
 }
 main .hompi .ani .ani23 {
   bottom: -50px;
   left: 1210px;
-  animation: ani03 4s 1s ease alternate;
+  -webkit-animation: ani03 4s 1s ease alternate;
+          animation: ani03 4s 1s ease alternate;
 }
 main .hompi .ani .ani24 {
   bottom: -50px;
   left: 1230px;
-  animation: ani02 3s ease alternate;
+  -webkit-animation: ani02 3s ease alternate;
+          animation: ani02 3s ease alternate;
 }
 main .hompi .ani .ani25 {
   bottom: -50px;
   left: 220px;
-  animation: ani03 2s 1s ease alternate;
+  -webkit-animation: ani03 2s 1s ease alternate;
+          animation: ani03 2s 1s ease alternate;
 }
 main .hompi .menu {
   position: absolute;
@@ -258,7 +283,8 @@ main .hompi .proflie > .line {
 }
 main .hompi .proflie > .line #helllo span {
   border-right: 0.05em solid;
-  animation: caratteri 1s steps(1) infinite;
+  -webkit-animation: caratteri 1s steps(1) infinite;
+          animation: caratteri 1s steps(1) infinite;
 }
 main .hompi .proflie > .line > p {
   display: inline-flex;
@@ -536,6 +562,15 @@ main .hompi .inform_g .guest iframe {
   height: 1000px;
 }
 
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes move {
   0% {
     transform: translateY(-10px);
@@ -544,9 +579,30 @@ main .hompi .inform_g .guest iframe {
     transform: translateY(0);
   }
 }
+@-webkit-keyframes caratteri {
+  50% {
+    border-color: #000;
+  }
+}
 @keyframes caratteri {
   50% {
     border-color: #000;
+  }
+}
+@-webkit-keyframes ani01 {
+  0% {
+    bottom: -50px;
+    left: 100px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 200px;
+    left: 0;
+  }
+  100% {
+    bottom: 400px;
+    left: 0;
+    opacity: 0;
   }
 }
 @keyframes ani01 {
@@ -565,6 +621,19 @@ main .hompi .inform_g .guest iframe {
     opacity: 0;
   }
 }
+@-webkit-keyframes ani02 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 300px;
+  }
+  100% {
+    bottom: 600px;
+    opacity: 0;
+  }
+}
 @keyframes ani02 {
   0% {
     bottom: -50px;
@@ -578,6 +647,19 @@ main .hompi .inform_g .guest iframe {
     opacity: 0;
   }
 }
+@-webkit-keyframes ani03 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 350px;
+  }
+  100% {
+    bottom: 700px;
+    opacity: 0;
+  }
+}
 @keyframes ani03 {
   0% {
     bottom: -50px;
@@ -588,6 +670,19 @@ main .hompi .inform_g .guest iframe {
   }
   100% {
     bottom: 700px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ani04 {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 400px;
+  }
+  100% {
+    bottom: 850px;
     opacity: 0;
   }
 }

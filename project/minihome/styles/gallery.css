@@ -1,0 +1,101 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5px;
+}
+
+html, body {
+  background-color: #000;
+  overflow-y: hidden;
+}
+
+main .hompi {
+  background-image: url(../images/bg2.jpg);
+  background-position: center;
+  width: 1300px;
+  height: 760px;
+  margin: 15vh auto 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative;
+  /* 사이드메뉴 */
+  /* 연결용 */
+}
+main .hompi .menu {
+  position: absolute;
+  top: 65px;
+  right: -22px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .hompi .menu a {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 13px 8px 14px 15px;
+  text-align: right;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  font-style: italic;
+  color: #fff;
+}
+main .hompi .menu a:hover {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+main .hompi .menu .active {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+main .hompi .connection {
+  z-index: 999;
+  position: absolute;
+  top: 155px;
+  left: 325px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .hompi .connection p {
+  width: 60px;
+  height: 18px;
+  display: inline-block;
+  margin-bottom: 200px;
+  content: "";
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+main .hompi .cate {
+  position: relative;
+  top: 22px;
+  background-color: #fff;
+  width: 23%;
+  height: 700px;
+  padding: 30px 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+main .hompi .gallery {
+  position: relative;
+  top: 22px;
+  width: 68%;
+  margin-left: 28px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 700px;
+}/*# sourceMappingURL=gallery.css.map */

@@ -1,0 +1,55 @@
+$color1:#fff;
+$color2:#000;
+$color3:#888;
+$color4:#cf2d2d;
+$color5:rgba(0,0,0,0.3);
+$color6:rgba(0,0,0,0.7);
+@mixin flex {display:flex; flex-flow:row nowrap;}
+@mixin width {width:270px;}
+@mixin width2 {width:255px;}
+
+// 스크롤바
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:$color2;}
+::-webkit-scrollbar-thumb {background:$color1; border-radius:5px;}
+
+html,body {background-color:$color2; overflow-y:hidden;}
+
+main {
+    .hompi {
+        background-image:url(../images/bg2.jpg);
+        background-position:center; width:1300px; height:760px;
+        margin:15vh auto 0; border:1px solid $color2; border-radius:10px;
+        @include flex; justify-content:center; position:relative;
+        /* 사이드메뉴 */
+        .menu {
+            position:absolute; top:65px; right:-22px; display:flex; flex-flow:column nowrap;
+            a {
+                display:inline-block;  border:1px solid $color1;
+                border-radius:5px; padding:13px 8px 14px 15px; text-align:right;
+                margin-bottom:10px; background:$color5; font-style:italic; color:$color1;
+            }
+            a:hover {background:$color1; border:1px solid $color2; color:$color2;}
+            .active {background:$color1; border:1px solid $color2; color:$color2;}
+        }
+        /* 연결용 */
+        .connection {z-index:999;
+            position:absolute; top:155px; left:325px; display:flex;
+            flex-flow:column nowrap; 
+            p {
+                width:60px; height:18px; display:inline-block; margin-bottom:200px;
+                content:''; background-color:$color1; border-radius:20px;
+                border:1px solid $color2;
+            }
+        }
+        .cate {
+            position:relative; top:22px;
+            background-color:$color1; width:23%; height:700px; padding:30px 0;
+            border:1px solid $color2; border-radius:10px;
+        }
+        .gallery {
+            position:relative; top:22px; width:68%; margin-left:28px;
+            background:$color1; border:1px solid $color2; border-radius:10px; height:700px;
+        }
+    }
+}

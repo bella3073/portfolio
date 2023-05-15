@@ -46,7 +46,8 @@ main > .bg .text .bar {
   left: 0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: bar 6s ease alternate both;
+  -webkit-animation: bar 6s ease alternate both;
+          animation: bar 6s ease alternate both;
 }
 main > .bg .img {
   position: relative;
@@ -101,12 +102,29 @@ main > .bg .img .welcome p:nth-child(3) {
   animation: love 0.4s linear alternate-reverse infinite;
 }
 
+@-webkit-keyframes love {
+  0% {
+    width: 37px;
+  }
+  100% {
+    width: 42px;
+  }
+}
+
 @keyframes love {
   0% {
     width: 37px;
   }
   100% {
     width: 42px;
+  }
+}
+@-webkit-keyframes bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 @keyframes bar {
