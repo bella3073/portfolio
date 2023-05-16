@@ -85,11 +85,41 @@ main .hompi .cate {
   background-color: #fff;
   width: 23%;
   height: 700px;
-  padding: 30px 0;
+  padding: 30px 20px 0 20px;
   border: 1px solid #000;
   border-radius: 10px;
 }
-main .hompi .gallery {
+main .hompi .cate h2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+main .hompi .cate .img {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+main .hompi .cate .img img {
+  width: 100%;
+}
+main .hompi .cate .ca li {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 5px;
+  align-items: center;
+}
+main .hompi .cate .ca li p {
+  width: 20px;
+  margin-right: 5px;
+}
+main .hompi .cate .ca li p img {
+  width: 100%;
+}
+main .hompi .cate .ca li a {
+  font-size: 0.85rem;
+}
+main .hompi .ca_text {
   position: relative;
   top: 22px;
   width: 68%;
@@ -98,4 +128,13 @@ main .hompi .gallery {
   border: 1px solid #000;
   border-radius: 10px;
   height: 700px;
+  overflow-y: scroll;
+}
+main .hompi .ca_text iframe {
+  width: 100%;
+  height: 1000px;
+  padding: 30px 50px;
+}
+main .hompi .detail iframe {
+  height: 6100px;
 }/*# sourceMappingURL=gallery.css.map */

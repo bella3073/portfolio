@@ -17,9 +17,9 @@
         <div class="hompi">
             <!-- 사이드 메뉴 -->
             <div class="menu">
-                <a href="#">Home</a>
-                <a href="#" class="active">Gallery</a>
-                <a href="#">Board</a>
+                <a href="./index2.html">Home</a>
+                <a href="./gallery.html" class="active">Gallery</a>
+                <a href="./board.html">Board</a>
             </div>
             <!-- 연결고리 -->
             <div class="connection">
@@ -27,9 +27,45 @@
                 <p></p>
                 <p></p>
             </div>
-            <div class="cate"></div>
-            <div class="gallery"></div>
+            <div class="cate">
+                <!-- 왼쪽 -->
+                <h2>Category</h2>
+                <p class="img"><img src="./images/cat.gif" alt=""></p>
+                <ul class="ca">
+                    <li>
+                        <p><img src="./images/cat-black-face.png" alt=""></p>
+                        <a href="#" class="bnr_text">Banner Design</a>
+                    </li>
+                    <li>
+                        <p><img src="./images/cat-black-face.png" alt=""></p>
+                        <a href="#" class="sns_text">SNS Design</a>
+                    </li>
+                    <li>
+                        <p><img src="./images/cat-black-face.png" alt=""></p>
+                        <a href="#" class="detail_text">Detail Page</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ca_text banner">
+                <iframe src="http://bella3073.dothome.co.kr/gnuboard/bbs/board.php?bo_table=gallery"
+                    name="con" frameborder="0" scrolling="no"
+                    marginwidth="0" marginheight="0" allowpaymentrequest="true">
+                </iframe>
+            </div>
+            <div class="ca_text sns">
+                <iframe src="http://bella3073.dothome.co.kr/gnuboard/bbs/board.php?bo_table=sns"
+                    name="con" frameborder="0" scrolling="no"
+                    marginwidth="0" marginheight="0" allowpaymentrequest="true">
+                </iframe>
+            </div>
+            <div class="ca_text detail">
+                <iframe src="http://bella3073.dothome.co.kr/gnuboard/bbs/board.php?bo_table=Detail_Page"
+                    name="con" frameborder="0" scrolling="no"
+                    marginwidth="0" marginheight="0" allowpaymentrequest="true">
+                </iframe>
+            </div>
         </div>
     </main>
+    <script src="./script/gallery.js"></script>
 </body>
 </html>
