@@ -109,15 +109,31 @@ main .hompi .cate .ca li {
   margin-bottom: 5px;
   align-items: center;
 }
-main .hompi .cate .ca li p {
+main .hompi .cate .ca li > p {
   width: 20px;
   margin-right: 5px;
 }
-main .hompi .cate .ca li p img {
+main .hompi .cate .ca li > p img {
   width: 100%;
 }
-main .hompi .cate .ca li a {
+main .hompi .cate .ca li > a {
   font-size: 0.85rem;
+}
+main .hompi .cate .ca li > .sub li p {
+  width: 20px;
+  margin: 0 5px 0 7px;
+}
+main .hompi .cate .ca li > .sub li p img {
+  width: 100%;
+}
+main .hompi .cate .ca .text {
+  font-size: 0.85rem;
+  margin: 0 0 7px 21px;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 3px;
 }
 main .hompi .gallery {
   position: relative;
